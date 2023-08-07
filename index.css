@@ -194,7 +194,7 @@ body {
 /* Dropdown Styles */
 
 #drop-down {
-    background-color: #f9f9f9;
+    background-color: #d5d6e5;
     padding: 20px;
 }
 
@@ -239,15 +239,747 @@ body {
 
 /* Style the sub-items */
 .dropdown-content li {
-    display: block;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.dropdown-content li:last-child {
+    margin-right: 0;
 }
 
 .dropdown-content li a {
-    padding: 8px 15px;
+    display: flex;
+    /* width: 30%; */
+    padding: 0px 0px;
     color: #333;
     text-decoration: none;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .dropdown-content li a:hover {
-    background-color: #ddd;
+    background-color: #b7dadf;
 }
+
+
+/* Small screens (up to 600px) */
+@media (max-width: 600px) {
+    /* Adjust header */
+    #header {
+      padding: 20px 30px;
+    }
+  
+    #header .form {
+      width: 60%;
+    }
+  
+    #header input {
+      width: 70%;
+    }
+  
+    /* Adjust navigation bar */
+    #navbar {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    #navbar li {
+      padding: 10px 15px;
+    }
+  
+    #navbar li a {
+      font-size: 14px;
+    }
+  
+    #navbar li a.active::after,
+    #navbar li a:hover::after {
+      display: none;
+    }
+  
+    /* Adjust dropdown menu */
+    .dropdown-content li {
+      display: block;
+      margin-right: 0;
+    }
+  
+    .dropdown-content li a {
+      padding: 8px 15px;
+    }
+  
+    .dropdown-item {
+      margin-right: 0;
+    }
+  }
+  
+  /* Medium screens (up to 992px) */
+  @media (max-width: 992px) {
+    /* Adjust header */
+    #header input {
+      width: 100%;
+    }
+  
+    /* Adjust navigation bar */
+    #navbar {
+      justify-content: center;
+    }
+  }
+  
+  /* Large screens (up to 1200px) */
+  @media (max-width: 1200px) {
+    /* Add any additional adjustments for large screens if necessary */
+  }
+
+
+
+  /* feature */
+
+  #feature .fe-box{
+    width: 180px;
+    text-align: center;
+    padding: 25px 15px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 9px;
+    margin: 15px 30px;
+}
+
+#feature{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#feature .fe-box:hover{
+    box-shadow: rgba(0, 0, 0, 0.10) 15px 15px 10px 15px;
+}
+
+#feature .fe-box img{
+    width: 100%;
+    margin-bottom: 10px;
+
+}
+
+#feature .fe-box h6{
+    display: inline-block;
+    padding: 9px 8px 6px 8px;
+    line-height: 1;
+    border-radius: 4px;
+    color: #088178;
+    background-color: #fddde4;
+}
+
+#feature .fe-box:nth-child(2) h6{
+    background-color: #cdebbc;
+}
+#feature .fe-box:nth-child(3) h6{
+    background-color: #d1e8f2;
+}
+#feature .fe-box:nth-child(4) h6{
+    background-color: #cdd4f8;
+}
+#feature .fe-box:nth-child(5) h6{
+    background-color: #f6dbf6;
+}
+#feature .fe-box:nth-child(6) h6{
+    background-color: #fff2e5;
+}
+
+
+/* Product */
+
+#product1{
+  text-align: center;
+
+}
+
+#product1 .pro-container{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  flex-wrap: wrap;
+}
+
+#product1 .pro{
+  width: 23%;
+  min-width: 250px;
+  padding: 10px 12px;
+  border: 1px solid #cce7d0;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+  margin: 15px 0;
+  transition: 0.02s ease;
+  position: relative;
+}
+#product1 .pro:hover{
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+}
+
+#product1 .pro img{
+  width: 100%;
+  border-radius: 20px;
+}
+
+#product1 .pro .des{
+  text-align: start;
+  padding: 10px 0;
+}
+
+#product1 .pro .des span{
+  color: #606060;
+}
+
+#product1 .pro .des h5{
+  padding-top: 7px;
+  font-size: 14px;
+  color: #1a1a1a;
+}
+#product1 .pro .des i{
+  font-size: 12px;
+  color: #ffc64a;
+}
+
+#product1 .pro .des h4{
+  padding: 7px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #088178;
+}
+
+#product1 .pro .cart{
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50px;
+  background-color: #e8f6ea;
+  color: #088178;
+  border: 1px solid rgb(186, 223, 186);
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
+}
+
+
+#banner{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url("image/bottom_banner.jpg");
+  width: 100%;
+  height: 40vh;
+  background-size: cover;
+  background-position: center;
+}
+#banner h4{
+  color: white;
+  font-size: 16px;
+}
+#banner h2{
+  color: white;
+  font-size: 30px;
+  padding: 10px 0;
+}
+#banner h2 span{
+  color: rgb(84, 235, 46);   
+}
+
+#banner button:hover{
+  background-color: #088178;
+  color: white;
+}
+#sm-banner{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#sm-banner .banner-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  background-image:url("image/bannn3_1.jpg");
+  width: 830px;
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  padding: 30px;
+}
+
+#sm-banner h4{
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+#sm-banner h2{
+color: #fff;
+font-size: 28px;
+font-weight: 800; 
+}
+
+#sm-banner span{
+  color: white;
+  font-size: 14px;
+  font-weight:500;
+  padding-bottom: 15px;
+}
+
+#sm-banner .banner-box:hover button{
+  background-color: #088178;
+  border: 1px solid #088178;
+}
+
+#sm-banner .banner-box2{
+  background-image: url("image/camera_1.jpg");
+}
+#banner3{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 80px;
+}
+
+#banner3 .banner-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  background-image:url("https://images.moneycontrol.com/static-mcnews/2022/10/Nitro5-AN515-57-Hero-Banner-1-770x433.jpg?impolicy=website&width=770&height=431");
+  width: 30%;
+  height: 30vh;
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+#banner3 .banner-box2{
+  background-image:url("https://cdn.thewirecutter.com/wp-content/media/2021/02/gamecontrolers-2048px-00023-2x1-1.jpg?auto=webp&quality=75&crop=2:1&width=1024");
+}
+
+#banner3 .banner-box3{
+  background-image:url("https://blog.olx.com.pk/wp-content/uploads/2022/02/Mobile-phones-1-1024x573.jpg");
+}
+
+#banner3 h2{
+  color: white;
+  font-weight: 900;
+  font-size: 22px;
+
+}
+
+
+#banner3 h3{
+  color: rgb(235, 25, 25);
+  font-weight: 900;
+  font-size: 15px;
+  
+}
+
+#newsletter{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-image: url("img/banner/b14.png");
+  background-position: 20% 30%;
+  background-repeat: no-repeat;
+  background-color: #041e42;
+
+}
+
+#newsletter h4{
+  font-size: 2ch;
+  font-weight: 700;
+  color: #fff;
+}
+
+#newsletter p{
+  font-size: 14px;
+  font-weight: 600;
+  color: #d1d5db;
+}
+
+#newsletter p span{
+
+  color: #e9db5f;
+}
+
+#newsletter .form{
+  display: flex;
+  width: 40%;
+}
+
+#newsletter input{
+  height: 3.12rem;
+  padding: 0 1.25em;
+  width: 100%;
+  border: 1px solid transparent;
+  border: none;
+  border-radius: 5px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+#newsletter button{
+  background-color: #088178;
+  color: white;
+  white-space: nowrap;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+footer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+footer .col{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+footer .logo{
+  margin-bottom: 30px;
+}
+footer h4{
+  font-size: 14px;
+  padding-bottom: 20px;
+}
+footer p{
+  font-size: 13px;
+  margin:  0 0 8px 0;
+}
+footer a{
+  font-size: 13px;
+  text-decoration: none;
+  counter-reset: #222;
+  margin-bottom: 10px;
+
+}
+
+footer .follow{
+  margin-top: 20px;
+}
+
+footer .follow i{
+  color: #465b52;
+  padding-right: 4px;
+  cursor: pointer;
+}
+
+footer .install .row img{
+  border: 1px solid #088178;
+  border-radius: 6px;
+}
+
+footer .install img{
+  margin-top: 10px 0 15px 0px;
+}
+
+footer .follow i:hover,
+footer a:hover{
+  color: #088178;
+}
+
+footer .copyright{
+  width: 100%;
+  text-align: center;
+}
+
+@media (max-width:799px){
+  #navbar{
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      justify-content: flex-start;
+      position: fixed;
+      top: 0;
+      right: -300px;
+      height: 100vh;
+      width: 300px;
+      background-color: #E3e6f3;
+      box-shadow: 0 40px 60px rgba(0,0,0,0.1);
+      padding: 80px 0 0 10px ;
+      transition: 0.3s;
+  }
+
+  #navbar.active{
+      right: 0px;
+  }
+  #navbar li{
+      margin-bottom: 25px;
+  }
+  #mobile{
+      display: flex;
+      align-items: center;
+  }
+  #close{
+    display: none;
+  }
+  #mobile i{
+      color:#1a1a1a;
+      font-size: 24px;
+      padding-left: 20px;
+
+  }
+  #close{
+    display: initial;
+      position: absolute;
+      top: 30px;
+      left:30px;
+      color: #222;
+      font-size: 24px;
+  }
+#lg-bag{
+  display: none;
+}
+}
+
+
+/* Your existing styles here */
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  /* Add any additional adjustments for large screens if necessary */
+}
+
+@media (max-width: 992px) {
+  /* Adjust header for medium screens */
+  #header input {
+      width: 100%;
+  }
+
+  /* Adjust navigation bar for medium screens */
+  #navbar {
+      justify-content: center;
+  }
+
+  /* Adjust other elements as needed */
+}
+
+@media (max-width: 600px) {
+  /* Adjust header for small screens */
+  #header {
+      padding: 10px;
+  }
+
+  #header .form {
+      width: 60%;
+  }
+
+  #header input {
+      width: 70%;
+  }
+
+  /* Adjust navigation bar for small screens */
+  #navbar {
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+
+  #navbar li {
+      padding: 10px 15px;
+  }
+
+  #navbar li a {
+      font-size: 14px;
+  }
+
+  #navbar li a.active::after,
+  #navbar li a:hover::after {
+      display: none;
+  }
+
+  /* Adjust dropdown menu for small screens */
+  .dropdown-content li {
+      display: block;
+      margin-right: 0;
+  }
+
+  .dropdown-content li a {
+      padding: 8px 15px;
+  }
+
+  .dropdown-item {
+      margin-right: 0;
+  }
+
+  /* Adjust other elements as needed */
+}
+
+@media (max-width: 799px) {
+  /* Adjust header for extra small screens */
+  #header {
+      padding: 5px;
+  }
+
+  /* Adjust navigation bar for extra small screens */
+  #navbar {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      position: fixed;
+      top: 0;
+      right: -300px;
+      height: 100vh;
+      width: 300px;
+      background-color: #E3e6f3;
+      box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+      padding: 80px 0 0 10px;
+      transition: 0.3s;
+  }
+
+  #navbar.active {
+      right: 0px;
+  }
+
+  #navbar li {
+      margin-bottom: 25px;
+  }
+
+  #mobile {
+      display: flex;
+      align-items: center;
+  }
+
+  #close {
+      display: none;
+  }
+
+  #mobile i {
+      color: #1a1a1a;
+      font-size: 24px;
+      padding-left: 20px;
+  }
+
+  #close {
+      display: initial;
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      color: #222;
+      font-size: 24px;
+  }
+
+  #lg-bag {
+      display: none;
+  }
+
+  #bar {
+      display: none;
+  }
+
+  #navbar ul {
+      margin: 0;
+      padding: 0;
+  }
+
+  #navbar li {
+      padding: 10px;
+  }
+
+  #navbar li a {
+      font-size: 18px;
+      color: #fff;
+  }
+
+  #navbar li a.active {
+      color: #eda515;
+  }
+
+  /* Adjust other elements as needed */
+}
+
+/* Add any additional media queries for smaller screen sizes if necessary */
+
+/* Adjust the feature section for smaller screens */
+@media (max-width: 600px) {
+  #feature .fe-box {
+      width: 100%;
+      margin: 15px 0;
+  }
+
+  #feature .fe-box img {
+      width: 70%;
+  }
+
+  /* Adjust other elements as needed */
+}
+
+/* Adjust the product section for smaller screens */
+@media (max-width: 768px) {
+  #product1 .pro-container {
+      flex-direction: column;
+  }
+
+  #product1 .pro {
+      width: 100%;
+  }
+
+  /* Adjust other elements as needed */
+}
+
+/* Adjust the banner and sm-banner sections for smaller screens */
+@media (max-width: 992px) {
+  #banner {
+      height: 30vh;
+  }
+
+  #banner h2 {
+      font-size: 24px;
+  }
+
+  #sm-banner .banner-box {
+      width: 100%;
+  }
+
+  /* Adjust other elements as needed */
+}
+
+/* Add any additional media queries for specific sections if necessary */
+
+/* Adjust the feature section for smaller screens */
+@media (max-width: 600px) {
+  #feature {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #feature .fe-box {
+    width: 90%;
+    max-width: 300px;
+    margin: 15px 0;
+  }
+
+  #feature .fe-box img {
+    width: 100%;
+  }
+}
+
+/* Adjust the sm-banner section for smaller screens */
+@media (max-width: 992px) {
+  #sm-banner .banner-box {
+    width: 100%;
+    height: 40vh;
+    background-position: 50% 50%;
+  }
+
+  #sm-banner h2 {
+    font-size: 28px;
+  }
+
+  #sm-banner span {
+    font-size: 16px;
+  }
+
+  #newsletter .form {
+    width: 100%;
+  }
+}
+
