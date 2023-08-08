@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address Page</title>
+    <style>
+        /* Add your CSS styles here */
+    </style>
+</head>
+<body>
+    <div id="nav"></div>
+    <div>
+    <h1>Shipping Address</h1>
+    <div id="inner">
+    <form id="addressForm">
+        <label for="firstName">First Name*</label>
+        <input type="text" id="firstName" required><br><br>
+
+        <label for="lastName">Last Name*</label>
+        <input type="text" id="lastName" required><br><br>
+
+        <label for="address">Address*</label>
+        <input type="text" id="address" required><br><br>
+
+        <label for="apart">Apartment/suite*</label>
+        <input type="text" id="apart" required><br><br>
+
+        <label for="city">City:</label>
+        <input type="text" id="city" required><br><br>
+
+        <label for="state">State*</label>
+        <input type="text" id="state" required><br><br>
+
+        <label for="country">Country*</label>
+        <input type="text" id="country" required><br><br>
+
+        <label for="zipCode">ZIP Code:</label>
+        <input type="text" id="zipCode" required><br><br>
+
+        <label for="phoneNo">Phone Number*</label>
+        <input type="text" id="phoneNo" required><br><br>
+
+        <button type="submit">Continue to Payment</button>
+    </form>
+    </div>
+</div>
+<div id="footer"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const addressForm = document.getElementById("addressForm");
+            addressForm.addEventListener("submit", event => {
+                event.preventDefault();
+
+                const firstName = document.getElementById("firstName").value;
+                const lastName = document.getElementById("lastName").value;
+                const address = document.getElementById("address").value;
+                const apart = document.getElementById("apart").value;
+                const city = document.getElementById("city").value;
+                const state = document.getElementById("state").value;
+                const country = document.getElementById("country").value;
+                const zipCode = document.getElementById("zipCode").value;
+                const phoneNo = document.getElementById("phoneNo").value;
+
+                // You can save the address details to localStorage or send them to the server
+                // before proceeding to the payment page.
+                // Example: localStorage.setItem("shippingAddress", JSON.stringify({ fullName, address, city, zipCode }));
+
+                // For this example, we'll simulate navigation to the payment page.
+                alert("Shipping address saved! Proceeding to payment.");
+                window.location.href = "payment.html";
+            });
+        });
+    </script>
+</body>
+</html>
+
+

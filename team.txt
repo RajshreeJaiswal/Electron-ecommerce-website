@@ -1,5 +1,5 @@
-Team name:
-Project code: 
+Team name: Electron-Ecommerce website	
+Project code: glorious-calendar-2511	
 
 Team Members Name:
 1. Rajshree Jaiswal
