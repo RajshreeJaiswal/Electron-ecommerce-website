@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,10 @@
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
     <link rel="stylesheet" href="styles/slider.css">
+    <link rel="stylesheet" href="styles/shop.css">
 
 </head>
+
 <body>
     <section id="header">
         <a href="#"><img src="image/navbar_logo.jpg" class="logo" alt="" /></a>
@@ -19,13 +22,14 @@
         <div>
             <ul id="navbar">
                 <li><a class="active" href="index.html">Home</a></li>
-                <li><a href="sign up.html">Sign up</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="sign up.html">Account</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li id="lg-bag">
                     <a href="cart.html"><i class="fa-solid fa-cart-shopping fa-bounce" style="color: #dfab62;"></i></a>
-                    
+
                 </li>
             </ul>
         </div>
@@ -42,7 +46,7 @@
                     <li><a href="#">Apple</a></li>
                     <li><a href="#">Realme</a></li>
                     <li><a href="#">Vivo</a></li>
-        
+
                 </ul>
             </div>
             <div class="dropdown-item">
@@ -56,7 +60,7 @@
                     <li><a href="#">Gaming Laptop</a></li>
                     <li><a href="#">Mac Book</a></li>
                 </ul>
-            </div>         
+            </div>
             <div class="dropdown-item">
                 <a href="#">Gaming Accessories</a>
                 <ul class="dropdown-content">
@@ -99,9 +103,12 @@
         </div>
     </section>
     <div class="mainslider">
-        <img src="https://www.gonoise.com/cdn/shop/files/image_2023_08_03T07_28_18_180Z_1_1900x.png?v=1691047778" alt="" class="slide">
-        <img src="https://www.gonoise.com/cdn/shop/files/image_2023_05_30T04_53_55_818Z_1_1900x.png?v=1691147933" alt="" class="slide">
-        <img src="https://www.fireboltt.com/cdn/shop/files/Artboard_4_1e8a446a-82fa-47ef-9372-94f59759e9bf_1759x.jpg?v=1691403601" alt="" class="slide">
+        <img src="https://www.gonoise.com/cdn/shop/files/image_2023_08_03T07_28_18_180Z_1_1900x.png?v=1691047778" alt=""
+            class="slide">
+        <img src="https://www.gonoise.com/cdn/shop/files/image_2023_05_30T04_53_55_818Z_1_1900x.png?v=1691147933" alt=""
+            class="slide">
+        <img src="https://www.fireboltt.com/cdn/shop/files/Artboard_4_1e8a446a-82fa-47ef-9372-94f59759e9bf_1759x.jpg?v=1691403601"
+            alt="" class="slide">
     </div>
     <section id="feature" class="section-p1">
         <div class="fe-box">
@@ -819,16 +826,7 @@
         <p>© 2007-2023 Flipkart.com</p>
     </div>
 </footer>
+
 </html>
 <script src="Script/slider.js"></script>
 <script src="Script/responsive.js"></script>
-<script type="module">
-    import navbar  from "./component/navbar.js"
-
-    let container = document.querySelector("#header");
-    container.innerHTML = navbar();
-
-    import footer from ".component/footer.js"
-    let footerContainer = document.querySelector("mainFooter");
-    footerContainer.innerHTML = footerContainer();
-</script>
