@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <title>cart</title>
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
     <link rel="stylesheet" href="styles/slider.css">
     <link rel="stylesheet" href="styles/shop.css">
-
+    <link rel="stylesheet" href="styles/cart.css">
 
 </head>
 
@@ -23,28 +23,45 @@
         <div>
             <ul id="navbar">
                 <li><a href="index.html">Home</a></li>
-                <li><a class="active" href="shop.html">Shop</a></li>
+                <li><a href="shop.html">Shop</a></li>
                 <li><a href="sign up.html">Account</a></li>
+
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li id="lg-bag">
-                    <a href="cart.html"><i class="fa-solid fa-cart-shopping fa-bounce" style="color: #dfab62;"></i></a>
+                    <a class="active"  href="cart.html"><i class="fa-solid fa-cart-shopping fa-bounce" style="color: #dfab62;"></i></a>
 
                 </li>
             </ul>
         </div>
-    </section> 
-    <section id="page-header">
- 
     </section>
-    <section id="productList" class="product-section"></section>
-    <section id="pagination" class="section-p1">
-
-     
+    <section id="cart" class="section-p1">
+    
+        <table width="100%">
+            <thead>
+                <tr>
+                    <td>Remove</td>
+                    <td>Image</td>
+                    <td>Product</td>
+                    <td>Price</td>
+                    <td>Quantity</td>
+                    <td>Subtotal</td>
+                </tr>
+            </thead>
+            <tbody>
+        
+            </tbody>
+        </table>
+        <div class="total-section">
+            <p>Total: <span id="total">0.00</span></p>
+        </div>
+        <div class="checkout-button">
+            <a href="checkout.html" class="normal">Proceed to Checkout</a>
+        </div>
     </section>
+   
 
-</section>
 <section id="newsletter" class="section-p1 section-m1">
     <div class="newstext">
         <h4>Sign Up for Newsletter</h4>
@@ -109,8 +126,10 @@
         <p>© 2007-2023 Flipkart.com</p>
     </div>
 </footer>
-</body>
+
 </html>
 <script src="Script/slider.js"></script>
 <script src="Script/responsive.js"></script>
-<script src="Script/shop.js"></script>
+<script src="Script/search.js"></script>
+<script src="Script/cart.js"></script>
+<script src="Script/index.js"></script>

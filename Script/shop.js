@@ -1,5 +1,5 @@
-const productsPerPage = 10;
-const productList = document.getElementById("product1");
+const productsPerPage = 30;
+const productList = document.getElementById("productList");
 const paginationSection = document.getElementById("pagination");
 
 async function fetchProducts() {
@@ -13,11 +13,10 @@ async function showPage(pageNumber) {
     const startIndex = (pageNumber - 1) * productsPerPage;
     const endIndex = startIndex + productsPerPage;
 
-    productList.innerHTML = ""; // Clear previous content
+    productList.innerHTML = "";
 
-    const productsToShow = products.slice(startIndex, endIndex);
-
-    productsToShow.forEach(product => {
+    for (let i = startIndex; i < endIndex && i < products.length; i++) {
+        const product = products[i];
         const productItem = document.createElement("div");
         productItem.className = "pro-container";
         productItem.innerHTML = `
@@ -35,7 +34,7 @@ async function showPage(pageNumber) {
             </div>
         `;
         productList.appendChild(productItem);
-    });
+    }
 }
 
 function generateStars(rating) {
