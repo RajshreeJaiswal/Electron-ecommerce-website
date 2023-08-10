@@ -34,3 +34,5 @@ function addToCart(event) {
     alert('Item added to cart!');
 }
 
+
+

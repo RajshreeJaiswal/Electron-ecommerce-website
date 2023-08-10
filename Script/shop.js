@@ -1,64 +1,46 @@
-const productsPerPage = 30;
-const productList = document.getElementById("productList");
-const paginationSection = document.getElementById("pagination");
-
-async function fetchProducts() {
-    const response = await fetch("http://localhost:3000/products");
-    const data = await response.json();
-    return data;
+// Debounce function
+function debounce(func, delay) {
+    let timeoutId;
+    return function (...args) {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => {
+            func.apply(this, args);
+        }, delay);
+    };
 }
 
-async function showPage(pageNumber) {
-    const products = await fetchProducts();
-    const startIndex = (pageNumber - 1) * productsPerPage;
-    const endIndex = startIndex + productsPerPage;
+// Function to perform the search and display results
+function performSearch(query) {
+    // Simulate fetching data from db.json
+    fetch('db.json')
+        .then(response => response.json())
+        .then(data => {
+            const resultsContainer = document.getElementById('results');
+            resultsContainer.innerHTML = ''; // Clear previous results
 
-    productList.innerHTML = "";
+            const matchingItems = data.filter(item => item.name.toLowerCase().includes(query.toLowerCase()));
 
-    for (let i = startIndex; i < endIndex && i < products.length; i++) {
-        const product = products[i];
-        const productItem = document.createElement("div");
-        productItem.className = "pro-container";
-        productItem.innerHTML = `
-            <div class="pro">
-                <img src="${product.image}" alt="${product.name}" />
-                <div class="des">
-                    <span>Camera</span>
-                    <h5>${product.name}</h5>
-                    <div class="start">
-                        ${generateStars(product.rating)}
-                    </div>
-                    <h4>Rs.${product.price}</h4>
-                </div>
-                <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
-            </div>
-        `;
-        productList.appendChild(productItem);
-    }
-}
-
-function generateStars(rating) {
-    const starIcons = Array.from({ length: 5 }, (_, index) => {
-        const isActive = index < rating;
-        return `<i class="fas fa-star${isActive ? "" : "-empty"}"></i>`;
-    });
-    return starIcons.join("");
-}
-
-async function createPaginationLinks() {
-    const products = await fetchProducts();
-    const numPages = Math.ceil(products.length / productsPerPage);
-
-    for (let i = 1; i <= numPages; i++) {
-        const link = document.createElement("a");
-        link.href = "#";
-        link.textContent = i;
-        link.addEventListener("click", function () {
-            showPage(i);
+            if (matchingItems.length > 0) {
+                matchingItems.forEach(item => {
+                    const itemDiv = document.createElement('div');
+                    itemDiv.textContent = item.name;
+                    resultsContainer.appendChild(itemDiv);
+                });
+            } else {
+                resultsContainer.textContent = 'No results found.';
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
         });
-        paginationSection.appendChild(link);
-    }
 }
 
-showPage(1);
-createPaginationLinks();
+// Debounced version of the search function
+const debouncedSearch = debounce(performSearch, 300); // Adjust the debounce delay as needed
+
+// Attach event listener to the search input
+const searchInput = document.getElementById('searchInput');
+searchInput.addEventListener('input', function () {
+    const query = this.value;
+    debouncedSearch(query);
+});

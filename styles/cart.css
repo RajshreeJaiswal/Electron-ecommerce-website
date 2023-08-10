@@ -55,7 +55,7 @@ th, td {
 }
 
 .checkout-button a {
-    display: inline-block;
+    /* display:inline */
     padding: 10px 20px;
     background-color: #ce8d33;
     color: white;
@@ -173,6 +173,33 @@ font-size: 25px;
     }
 }
 
+
+
+.coupon-section {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.coupon-section input {
+    padding: 5px;
+    font-size: 14px;
+}
+
+.coupon-section button {
+    padding: 5px 10px;
+    font-size: 18px;
+    background-color: #ce8d33;
+    border: none;
+    color: white;
+}
+
+.coupon-applied {
+    background-color: #f3f3f3;
+    cursor: not-allowed;
+}
+
+
+
 /* Additional styles for even smaller screens */
 @media screen and (max-width: 480px) {
     #cart {
@@ -197,3 +224,4 @@ font-size: 25px;
         font-size: 18px;
     }
 }
+

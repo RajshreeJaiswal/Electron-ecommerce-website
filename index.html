@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
-    <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
     <link rel="stylesheet" href="styles/slider.css">
     <link rel="stylesheet" href="styles/shop.css">
     <link rel="stylesheet" href="styles/cart.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/about.css">
 
 </head>
 
@@ -20,16 +21,18 @@
             <input type="text" placeholder="Search any items" />
             <button class="normal">Search</button>
         </div>
+        <div id="results"></div>
         <div>
             <ul id="navbar">
                 <li><a class="active" href="index.html">Home</a></li>
                 <li><a href="shop.html">Shop</a></li>
                 <li><a href="sign up.html">Account</a></li>
-                <li><a href="blog.html">Blog</a></li>
+               
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li id="lg-bag">
                     <a href="cart.html"><i class="fa-solid fa-cart-shopping fa-bounce" style="color: #dfab62;"></i></a>
+                    <!-- <span class="cart-counter">0</span> -->
 
                 </li>
             </ul>
@@ -185,7 +188,7 @@
                     </div>
                     <h4 class="data-price">Rs.40999</h4>
                 </div>
-                <a href="#" class="addtoCart"><i class="fa-solid fa-cart-shopping cart"></i></a>
+                <a href="" class="addtoCart"><i class="fa-solid fa-cart-shopping cart"></i></a>
             </div>
             <div class="pro">
                 <img src="image/Home_product/2.jpg" alt="" />
@@ -361,7 +364,7 @@
                     </div>
                     <h4 class="data-price">Rs.50000</h4>
                 </div>
-                <a href="#" class="addtoCart"><i class="fa-solid fa-cart-shopping cart"></i></a>
+                <a href="" class="addtoCart"><i class="fa-solid fa-cart-shopping cart"></i></a>
             </div>
         </div>
     </section>
@@ -839,3 +842,4 @@
 <script src="Script/search.js"></script>
 <script src="Script/cart.js"></script>
 <script src="Script/index.js"></script>
+<script src="Script/shop.js"></script>
