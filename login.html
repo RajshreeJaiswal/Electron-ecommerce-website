@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SignIn</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="signUp">
+        <p><span class="be">Ee</span> Electron</p>
+        <div id="step1">
+           
+
+            <div>
+                
+
+                <p>Sign in</p>
+                <p>New user?  <a href="./signup.html">Create an account</a></p>
+                <label>Email address</label><br/>
+                <input type="email" id="email"/><br/>
+                <label>Password</label><br/>
+                <input type="password" id="pass"/>
+                
+                <button type="button" id="step1c">Continue</button>
+
+            </div>
+            <div>
+              Or
+              
+              <p>Google</p>
+          </div>
+        </div>
+        
+    </div>
+  
+</body>
+</html>
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+  import {
+    getAuth,
+    signInWithEmailAndPassword,
+    signOut,
+  } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
+
+  import {
+    getDatabase,
+    ref,
+    onValue,
+  } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js";
+
+  const firebaseConfig = {
+      apiKey: "AIzaSyDW-CMV7MCDmGJw4m13DQxOidgVzfLyzew",
+      authDomain: "thiruelectron.firebaseapp.com",
+    //   databaseURL: "https://thiruelectron-default-rtdb.firebaseio.com",
+      projectId: "thiruelectron",
+      storageBucket: "thiruelectron.appspot.com",
+      messagingSenderId: "190341230302",
+      appId: "1:190341230302:web:efe7c8cedc68a715789c4f"
+    };
+  
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+
+  console.log(app);
+
+  const auth = getAuth();
+  const db = getDatabase();
+
+  let step1c=document.querySelector('#step1c')
+  step1c.addEventListener("click", function (event) {
+    event.preventDefault();
+
+   let email=document.querySelector('#email').value
+   let    password=document.querySelector('#pass').value
+    let userId = localStorage.getItem("userId");
+
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+
+        const starCountRef = ref(db, "users/" + userId);
+        onValue(starCountRef, (snapshot) => {
+          const data = snapshot.val();
+          console.log(data);
+        });
+        console.log(user);
+        alert("you are logged in");
+        
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorMessage);
+        alert(`${errorMessage}`);
+      });
+  });
+
+  //for logout button
+  // document.getElementById("logout").addEventListener("click", function () {
+  //   signOut(auth)
+  //     .then(() => {
+  //       // Sign-out successful.
+  //       alert("logout successfully");
+  //       location.href = "./login.html";
+  //     })
+  //     .catch((error) => {
+  //       // An error happened.
+  //     });
+  // });
+</script>
+

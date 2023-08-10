@@ -1,11 +1,139 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SignUp</title>
+  <title>SignUp</title>
+  <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    
+    <div class="signUp">
+        <p><span class="be">Ee</span> Electron</p>
+        <div id="step1">
+            <div>
+                <p>Step <span class="step">1</span>of 2</p>
+                <h1>Create an account</h1>
+                <p>Google</p>
+            </div>
+
+            <div>
+                Or
+
+                <p>Sign up with email</p>
+                <p>Already have an account? <a href="./login.html">Sign in</a></p>
+                <label>Email address</label><br/>
+                <input type="email" id="email"/><br/>
+                <label>Password</label><br/>
+                <input type="password" id="pass"/>
+                <label>Conform Password</label><br/>
+                <input type="password" id="pass"/>
+                <button type="button" id="step1c">Continue</button>
+
+            </div>
+        </div>
+        <div id="step2" class="no">
+            <div>
+                <p>Step <span class="step">2</span>of 2</p>
+                <h1>Create an account</h1>
+                
+           
+                <p>Already have an account? <a href="./login.html">Sign in</a></p>
+                <label>First name</label><br/>
+                <input type="text" id="fn"/><br/>
+                <label>Last name</label><br/>
+                <input type="text" id="ln"/><br/><br/>
+                <p>Date of birth</p><br/>
+                <label>Month</label><br/>
+                <input type="text" id="mn"/><br/>
+                <label>Year</label><br/>
+                <input type="text" id="year"/><br/>
+                <label>Country</label><br/>
+                <input type="text" id="country"/>
+                <button type="button" id="step2c">Done</button>
+
+            </div>
+        </div>
+    </div>
+  
 </body>
 </html>
+<script type="module">
+    
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+    import {
+    getAuth,
+    createUserWithEmailAndPassword,
+  } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
+
+  import {
+    getDatabase,
+    ref,
+    set,
+  } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js";
+   
+    const firebaseConfig = {
+      apiKey: "AIzaSyDW-CMV7MCDmGJw4m13DQxOidgVzfLyzew",
+      authDomain: "thiruelectron.firebaseapp.com",
+    //   databaseURL: "https://thiruelectron-default-rtdb.firebaseio.com",
+      projectId: "thiruelectron",
+      storageBucket: "thiruelectron.appspot.com",
+      messagingSenderId: "190341230302",
+      appId: "1:190341230302:web:efe7c8cedc68a715789c4f"
+    };
+  
+    
+    const app = initializeApp(firebaseConfig);
+    console.log(app)
+
+    const database = getDatabase();
+  const auth = getAuth();
+
+    let step1c=document.querySelector('#step1c')
+  let email;
+  let password;
+  
+  step1c.addEventListener('click',(event)=>{
+    //   event.preventDefault();
+      let step1=document.querySelector('#step1')
+      step1.setAttribute('class','no')
+      let step2=document.querySelector('#step2')
+      step2.removeAttribute('class','no')
+       email=document.querySelector('#email').value
+       password=document.querySelector('#pass').value
+  })
+  
+  let step2c=document.querySelector('#step2c')
+  
+  step2c.addEventListener('click',(event)=>{
+      event.preventDefault();
+      let fn=document.querySelector('#fn').value
+      let ln=document.querySelector('#ln').value
+      let mn=document.querySelector('#mn').value
+      let year=document.querySelector('#year').value
+      let country=document.querySelector('#country').value
+      
+      let userId = Math.round(Math.random() * 10);
+
+      createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          // Signed in
+          const user = userCredential.user;
+          set(ref(database, "users/" + userId), {
+            username: `${fn} ${ln}`,
+            email: email,
+            dob:`${mn}-${year}`,
+            country:country,
+          });
+          localStorage.setItem("userId", userId);
+          console.log(user);
+          alert("registered successfully");
+          // ...
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+
+          console.log(errorMessage);
+          // ..
+        });
+  })
+  
+  </script>
