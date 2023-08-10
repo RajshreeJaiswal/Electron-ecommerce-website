@@ -1,0 +1,470 @@
+/* 700px styling change */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+  font-family: 'Poppins', 'sans-serif';
+}
+@media screen and (max-width: 700px) {
+  .subImg {
+      background-color: #a6b8c1;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+  }
+
+  .subImg img {
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      height: 100%;
+      border: 2px solid black;
+      border-radius: 15px;
+      margin-top: 5px;
+  }
+
+  /* Adjust other styles as needed for smaller screens */
+}
+
+
+body{
+
+    margin: 0px;
+    padding: 0px;
+}
+
+#header input{
+    height: 3.12rem;
+    padding: 0 1.25em;
+    width: 50%;
+    border: 1px solid transparent;
+    border: none;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-right: -13px;
+    border-radius: 6px;
+}
+
+#header button{
+    background-color:#eda515;
+    color: white;
+    white-space: nowrap;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+
+#header .form{
+    display: flex;
+    width: 40%;
+}
+
+#header button{
+    background-color: #eda515;
+    color: white;
+    white-space: nowrap;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-radius: 10px;
+   
+}
+
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background-color: #003f62;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+}
+
+
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#navbar li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+#navbar li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    color:white;
+    transition: 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active{
+    color: #eda515;
+}
+#navbar li a.active::after,
+#navbar li a:hover::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background-color: #eda515;;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    z-index: 1;
+}
+
+/* Show the drop-down menu content when the main item is hovered */
+#navbar li:hover .dropdown-content {
+    display: block;
+}
+
+
+.main{
+    justify-content: space-between;
+ display: flex;
+  padding: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.subImg{
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: 90px;
+}
+
+.subImg img{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 100%;
+    border :2px solid black;
+    border-radius: 15px;
+    margin-top: 5px;
+}
+.mainImg{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 500px;
+    border-radius: 10px;
+    background-color: #ccc;
+    margin: 10px;
+    margin-right: 20px;
+}
+.mainImg img{
+    border-radius: 10px;
+    height: 100%;
+    width:100%;
+}
+.details{
+    /* border: 2px solid blue; */
+    margin-left: 10PX;
+    width: 700px;
+}
+form{
+    margin-top: 30px;
+}
+#quantityInput {
+    width: 50px;
+    height: 30px;
+    margin-left: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.btn{
+    width: 150px;
+    margin: 10px;
+    padding: 10px;
+    height: 60px;
+    border-radius: 20px;
+    color: white;
+    
+    background-color: rgb(243, 197, 59);
+    box-shadow:#003f62  0px 5px 15px;
+}
+
+/* Style radio buttons */
+input[type="radio"] {
+    display: none; /* Hide the default radio button */
+  }
+  
+
+  /* Style radio button labels */
+  .color label {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid  black;/* Initial border for unselected radio buttons */
+  }
+  #blue + label {
+    background-color: blue;
+  }
+  
+  #red + label {
+    background-color: red;
+  }
+  
+  #black + label {
+    background-color: black;
+  }
+  input[type="radio"]:checked + label {
+    width: 15px;
+    height: 15px;
+    border: 3px solid gold;
+  }
+  .detailBar{
+    padding: 30 0px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    color: #eceae2;
+    background-color: black;
+  }
+  .detailBar h2 u{
+    color: red;
+  }
+  .advImg img ,video{
+    width: 100%;
+   margin: -5px;
+  }
+  
+  .spec{
+   width: 100%;
+   background-color:  #172d51;
+   color: rgb(238, 229, 42);
+   border-radius: 10px;
+   padding: 20px;
+  }
+  table td:nth-child(odd) {
+    color: rgb(233, 11, 96);
+  }
+  #faq h1{
+    text-align: center;
+  }
+  #faq{
+    background-color: #172d51;
+    color: white;
+    padding: 10px;
+  }
+  .review img{
+  width: 100%;
+  }
+
+  
+#newsletter{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-image: url("img/banner/b14.png");
+  background-position: 20% 30%;
+  background-repeat: no-repeat;
+  background-color: #041e42;
+
+}
+
+#newsletter h4{
+  font-size: 2ch;
+  font-weight: 700;
+  color: #fff;
+}
+
+#newsletter p{
+  font-size: 14px;
+  font-weight: 600;
+  color: #d1d5db;
+}
+
+#newsletter p span{
+
+  color: #e9db5f;
+}
+
+#newsletter .form{
+  display: flex;
+  width: 40%;
+}
+
+#newsletter input{
+  height: 3.12rem;
+  padding: 0 1.25em;
+  width: 100%;
+  border: 1px solid transparent;
+  border: none;
+  border-radius: 5px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+#newsletter button{
+  background-color: #088178;
+  color: white;
+  white-space: nowrap;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+footer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+footer .col{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+footer .logo{
+  margin-bottom: 30px;
+}
+footer h4{
+  font-size: 14px;
+  padding-bottom: 20px;
+}
+footer p{
+  font-size: 13px;
+  margin:  0 0 8px 0;
+}
+footer a{
+  font-size: 13px;
+  text-decoration: none;
+  counter-reset: #222;
+  margin-bottom: 10px;
+
+}
+
+footer .follow{
+  margin-top: 20px;
+}
+
+footer .follow i{
+  color: #465b52;
+  padding-right: 4px;
+  cursor: pointer;
+}
+
+footer .install .row img{
+  border: 1px solid #088178;
+  border-radius: 6px;
+}
+
+footer .install img{
+  margin-top: 10px 0 15px 0px;
+}
+
+footer .follow i:hover,
+footer a:hover{
+  color: #088178;
+}
+
+footer .copyright{
+  width: 100%;
+  text-align: center;
+}
+
+@media (max-width:799px){
+  #navbar{
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      justify-content: flex-start;
+      position: fixed;
+      top: 0;
+      right: -300px;
+      height: 100vh;
+      width: 300px;
+      background-color: #E3e6f3;
+      box-shadow: 0 40px 60px rgba(0,0,0,0.1);
+      padding: 80px 0 0 10px ;
+      transition: 0.3s;
+  }
+
+  #navbar.active{
+      right: 0px;
+  }
+  #navbar li{
+      margin-bottom: 25px;
+  }
+  #mobile{
+      display: flex;
+      align-items: center;
+  }
+  #close{
+    display: none;
+  }
+  #mobile i{
+      color:#1a1a1a;
+      font-size: 24px;
+      padding-left: 20px;
+
+  }
+  #close{
+    display: initial;
+      position: absolute;
+      top: 30px;
+      left:30px;
+      color: #222;
+      font-size: 24px;
+  }
+#lg-bag{
+  display: none;
+}
+}
+.relatedprod{
+  display: flex;
+  flex-wrap: wrap;
+ justify-content: space-around;
+ margin: 10px;
+}
+.relatedprod div{
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  padding: 4px;
+  width: 250px;
+  width: 250px;
+  border-radius: 10px;
+}
+.relatedprod div img{
+ width: 100%;
+}
+
+.relatedprod div h4{
+color: rgb(23, 72, 152);
+}
+.relatedprod div h2{
+color: crimson;
+}
+.relatedprod div *{
+ margin: 5px;
+ }
+ .adFlex{
+  background-color:#222;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+ }
+ .adFlex div{
+  background-color: black;
+  border-radius: 5px;
+  border: 1px solid whitesmoke;
+  width: 350px;
+  margin: 20px;
+ }
+ .adFlex div img{
+  border-radius: 5px;
+ width: 100%;
+ }
+ .adFlex div p{
+  margin: 5px;
+ color:white;
+ }
