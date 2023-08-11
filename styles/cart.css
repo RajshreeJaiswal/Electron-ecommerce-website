@@ -142,6 +142,41 @@ font-size: 25px;
     
 }
 
+#coupon-section {
+    margin-top: 20px;
+}
+
+#coupon-code {
+    padding: 5px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+#apply-coupon {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 18px;
+}
+
+#totals {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#discount-section {
+    color: #e74c3c;
+    font-size: 20px;
+}
+
+
 
 @media screen and (max-width: 768px) {
     table {

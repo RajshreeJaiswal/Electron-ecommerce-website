@@ -91,3 +91,38 @@ cartTableBody.addEventListener('click', event => {
 
 loadCartItems();
 updateCart();
+
+
+const applyCouponButton = document.getElementById('apply-coupon');
+const couponCodeInput = document.getElementById('coupon-code');
+const totalElement = document.getElementById('total');
+const discountElement = document.getElementById('discount');
+
+let couponApplied = false;
+
+applyCouponButton.addEventListener('click', () => {
+    if (couponApplied) {
+        return; // Coupon already applied, do not apply again
+    }
+
+    const couponCode = couponCodeInput.value;
+    let total = parseFloat(totalElement.textContent);
+    
+    if (couponCode === 'Masai30') {
+        const discount = total * 0.3; // 30% discount
+        total -= discount;
+
+        totalElement.textContent = total.toFixed(2);
+        discountElement.textContent = discount.toFixed(2);
+
+        couponApplied = true;
+
+        // Disable the coupon input and apply button
+        couponCodeInput.disabled = true;
+        applyCouponButton.disabled = true;
+
+        alert('Coupon successfully applied!');
+    } else {
+        alert('Wrong coupon code. Please enter a valid coupon code.');
+    }
+});

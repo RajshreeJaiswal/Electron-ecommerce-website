@@ -75,6 +75,37 @@ body {
   width: 100%;
 }
 
+/* Top */
+#top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 80px;
+  background-color: #ffffff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+}
+
+#top p{
+  font-size: 17px;
+  font-weight: 450;
+  font-family:sans-serif;
+  margin-top: 10px;
+}
+
+#topbar a{
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 300;
+  color: black;
+}
+
+#topbar a span{
+  font-size: 17px;
+  margin-left: 3px;
+}
+
+
+
 /* Header Start */
 
 #header input{
@@ -138,7 +169,7 @@ body {
 
 #navbar li a{
     text-decoration: none;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 700;
     color:white;
     transition: 0.3s ease;
@@ -194,12 +225,13 @@ body {
 /* Dropdown Styles */
 
 #drop-down {
-    background-color: #bcccdf;
+    background-color:#f4f4f4 ;
     padding: 20px;
 }
 
 .dropdown-container {
     display: flex;
+    margin-top: 10px;
 }
 
 .dropdown-item {
@@ -207,17 +239,21 @@ body {
     position: relative;
 }
 
+
 .dropdown-item a {
-    font-size: 16px;
-    font-weight: 700;
+    font-size: 20px;
+    font-weight:4100;
     color: #222;
     text-decoration: none;
     margin-left: 45px;
+    font-family: ui-sans-serif;
+ 
 }
 
 /* Arrow icon for the main dropdown items */
 .dropdown-item a i {
-    margin-left: 5px;
+  /* width: 50%; */
+    margin-left: 0px;
 }
 
 .dropdown-content {
@@ -403,7 +439,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-image: url("https://static-ecapac.acer.com/media/wysiwyg/New_Aspire_7_with_1TB_SSD_L.jpg");
+  background-image: url("/image/banner/bottombanner.png");
   width: 100%;
   height: 70vh;
   background-size: cover;
