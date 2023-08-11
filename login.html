@@ -5,32 +5,35 @@
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <div class="signUp">
-        <p><span class="be">Ee</span> Electron</p>
-        <div id="step1">
-           
+  <div class="parent"> 
+    
+    <h2>Existing Customers</h2>
+    <form id="form">
+      <div class="child">
+        <label for="email">* Email address</label>
+        <input type="email" id="email" required>
+      </div>
 
-            <div>
-                
+      <div class="child">
+        <label for="password" >* Password</label>
+        <input type="password" id="pass" required>
+      </div>
 
-                <p>Sign in</p>
-                <p>New user?  <a href="./signup.html">Create an account</a></p>
-                <label>Email address</label><br/>
-                <input type="email" id="email"/><br/>
-                <label>Password</label><br/>
-                <input type="password" id="pass"/>
-                
-                <button type="button" id="step1c">Continue</button>
-
-            </div>
-            <div>
-              Or
-              
-              <p>Google</p>
-          </div>
-        </div>
-        
-    </div>
+      <div class="child">
+        <button type="submit">Sign In</button>
+      </div>
+    </form>
+    <a href="" style="margin-top: 10px;">FORGOT YOUR PASSWORD?</a>
+  </div>
+  <div class="gl">
+    <h1>Or</h1>
+    <p>Sign In with </p>
+    <button id="google">Google</button>
+  </div>
+  <div class="parent">
+    <h2>New Customers</h2>
+    <button type="submit"><a href="./signUp.html">CONTINUE</a></button>
+  </div>
   
 </body>
 </html>
@@ -40,6 +43,8 @@
     getAuth,
     signInWithEmailAndPassword,
     signOut,
+    signInWithPopup, 
+    GoogleAuthProvider
   } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
 
   import {
@@ -67,8 +72,8 @@
   const auth = getAuth();
   const db = getDatabase();
 
-  let step1c=document.querySelector('#step1c')
-  step1c.addEventListener("click", function (event) {
+  let fm=document.querySelector('#form')
+  fm.addEventListener("submit", function (event) {
     event.preventDefault();
 
    let email=document.querySelector('#email').value
@@ -87,6 +92,7 @@
         });
         console.log(user);
         alert("you are logged in");
+        // location.href = "./home.html";
         
         // ...
       })
@@ -97,6 +103,35 @@
         alert(`${errorMessage}`);
       });
   });
+
+  let google=document.querySelector('#google')
+
+ const provider = new GoogleAuthProvider(); 
+ google.addEventListener('click',(event)=>{
+  event.preventDefault();
+
+  signInWithPopup(auth, provider)
+  .then((result) => {
+    
+    const credential = GoogleAuthProvider.credentialFromResult(result);
+    const token = credential.accessToken;
+    
+    const user = result.user;
+    console.log(user)
+    alert('you are logged in')
+    // location.href = "./home.html";
+  }).catch((error) => {
+    
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    
+    const email = error.customData.email;
+    
+    const credential = GoogleAuthProvider.credentialFromError(error);
+    
+  });
+
+ })
 
   //for logout button
   // document.getElementById("logout").addEventListener("click", function () {

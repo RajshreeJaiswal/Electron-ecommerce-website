@@ -5,53 +5,61 @@
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <div class="signUp">
-        <p><span class="be">Ee</span> Electron</p>
-        <div id="step1">
-            <div>
-                <p>Step <span class="step">1</span>of 2</p>
-                <h1>Create an account</h1>
-                <p>Google</p>
-            </div>
+  <div class="parent">
+    <h2>Create an  account</h2>
+    <form id="form">
+      
 
-            <div>
-                Or
+      <div class="child">
+        <label for="username">* Full Name</label>
+        <input type="text" id="name" required>
+      </div>
 
-                <p>Sign up with email</p>
-                <p>Already have an account? <a href="./login.html">Sign in</a></p>
-                <label>Email address</label><br/>
-                <input type="email" id="email"/><br/>
-                <label>Password</label><br/>
-                <input type="password" id="pass"/>
-                <label>Conform Password</label><br/>
-                <input type="password" id="pass"/>
-                <button type="button" id="step1c">Continue</button>
+      <div class="child">
+        <label for="email">* Email address</label>
+        <input type="email" id="email" required>
+      </div>
 
-            </div>
-        </div>
-        <div id="step2" class="no">
-            <div>
-                <p>Step <span class="step">2</span>of 2</p>
-                <h1>Create an account</h1>
-                
-           
-                <p>Already have an account? <a href="./login.html">Sign in</a></p>
-                <label>First name</label><br/>
-                <input type="text" id="fn"/><br/>
-                <label>Last name</label><br/>
-                <input type="text" id="ln"/><br/><br/>
-                <p>Date of birth</p><br/>
-                <label>Month</label><br/>
-                <input type="text" id="mn"/><br/>
-                <label>Year</label><br/>
-                <input type="text" id="year"/><br/>
-                <label>Country</label><br/>
-                <input type="text" id="country"/>
-                <button type="button" id="step2c">Done</button>
+      <div class="child">
+        <label for="confirmemail">* Confirm Email address</label>
+        <input type="email" id="cm" required>
+      </div>
 
-            </div>
-        </div>
-    </div>
+      <div class="child">
+        <label for="password" >* Password</label>
+        <input type="password" id="pass" required>
+      </div>
+
+      <div class="child">
+        <label for="confirmpassword">* Confirm Password</label>
+        <input type="password" id="cp" required>
+      </div>
+
+      <div class="child">
+        <label for="phone">Cell Phone Number</label>
+        <input type="number" id="pnumber" required>
+      </div>
+
+      <div class="child">
+        <label for="referal">Referral Code <span>(Optional)</span></label>
+        <input type="number" id="rnumber">
+      </div>
+
+      <div class="child">
+        <button type="submit">Sign Up</button>
+      </div>
+      
+    </form>
+  </div>
+  <div class="gl">
+    <h1>Or</h1>
+    <p>Sign Up with </p>
+    <button id="google">Google</button>
+  </div>
+  <div class="parent">
+    <h2>Already Existing Customers</h2>
+    <button type="button"><a href="./login.html">CONTINUE</a></button>
+  </div>
   
 </body>
 </html>
@@ -61,6 +69,8 @@
     import {
     getAuth,
     createUserWithEmailAndPassword,
+    signInWithPopup, 
+    GoogleAuthProvider
   } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
 
   import {
@@ -86,54 +96,78 @@
     const database = getDatabase();
   const auth = getAuth();
 
-    let step1c=document.querySelector('#step1c')
-  let email;
-  let password;
+    let fm=document.querySelector('#form')
   
-  step1c.addEventListener('click',(event)=>{
-    //   event.preventDefault();
-      let step1=document.querySelector('#step1')
-      step1.setAttribute('class','no')
-      let step2=document.querySelector('#step2')
-      step2.removeAttribute('class','no')
-       email=document.querySelector('#email').value
-       password=document.querySelector('#pass').value
-  })
+   
   
-  let step2c=document.querySelector('#step2c')
   
-  step2c.addEventListener('click',(event)=>{
+  fm.addEventListener('submit',(event)=>{
       event.preventDefault();
-      let fn=document.querySelector('#fn').value
-      let ln=document.querySelector('#ln').value
-      let mn=document.querySelector('#mn').value
-      let year=document.querySelector('#year').value
-      let country=document.querySelector('#country').value
+      let fn=document.querySelector('#name').value
+      let email=document.querySelector('#email').value
+      let cm=document.querySelector('#cm').value
+     let pass=document.querySelector('#pass').value
+     let cp=document.querySelector('#cp').value
+     let ph=document.querySelector('#pnumber').value
       
       let userId = Math.round(Math.random() * 10);
 
-      createUserWithEmailAndPassword(auth, email, password)
+      if(email===cm && pass===cp){
+        createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
           set(ref(database, "users/" + userId), {
-            username: `${fn} ${ln}`,
+            username: `${fn}`,
             email: email,
-            dob:`${mn}-${year}`,
-            country:country,
+            phoneNumber:ph,
+            
           });
           localStorage.setItem("userId", userId);
           console.log(user);
           alert("registered successfully");
+          // location.href = "./home.html";
           // ...
-        })
-        .catch((error) => {
+        }).catch((error) => {
           const errorCode = error.code;
           const errorMessage = error.message;
 
           console.log(errorMessage);
           // ..
         });
+      }else{
+        alert('email or password is mismatched')
+      }
+        
   })
   
+ let google=document.querySelector('#google')
+
+ const provider = new GoogleAuthProvider(); 
+ google.addEventListener('click',(event)=>{
+  event.preventDefault();
+
+  signInWithPopup(auth, provider)
+  .then((result) => {
+    
+    const credential = GoogleAuthProvider.credentialFromResult(result);
+    const token = credential.accessToken;
+    
+    const user = result.user;
+    console.log(user)
+    alert('Registered succesfull')
+    // location.href = "./home.html";
+  }).catch((error) => {
+    
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    
+    const email = error.customData.email;
+    
+    const credential = GoogleAuthProvider.credentialFromError(error);
+    
+  });
+
+ })
+
   </script>
