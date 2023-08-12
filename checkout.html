@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="styles/slider.css">
+    <style>
+     body, h1, h2, h3, h4, h5, h6, p, ul, li, input, button {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+}
+#inner {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#inner label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+}
+#inner input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#inner button {
+    background-color: #eda515;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 15px;
+    cursor: pointer;
+    width: 100%;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: #eda515;
+}
+    </style>
+</head>
+<body>
+    <!-- navbar start -->
+    <section id="header">
+        <a href="#"><img src="image/navbar_logo.jpg" class="logo" alt="" /></a>
+        <div class="form">
+            <input type="text" placeholder="Search any items" />
+            <button class="normal">Search</button>
+        </div>
+        <div>
+            <ul id="navbar">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="sign up.html">Account</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li id="lg-bag">
+                    <a href="cart.html"><i class="fa-solid fa-cart-shopping fa-bounce" style="color: #dfab62;"></i></a>
+
+                </li>
+            </ul>
+        </div>
+    </section>   
+    <div>
+    <h1 >Shipping Address</h1>
+    <div id="inner">
+    <form id="addressForm">
+        <!--form of checkout-->
+        <label for="firstName">First Name*</label>
+        <input type="text" id="firstName" required><br>
+
+        <label for="lastName">Last Name*</label>
+        <input type="text" id="lastName" required><br>
+
+        <label for="address">Address*</label>
+        <input type="text" id="address" required><br><br>
+
+        <label for="apart">Apartment/suite*</label>
+        <input type="text" id="apart" required><br><br>
+
+        <label for="city">City*</label>
+        <input type="text" id="city" required><br><br>
+
+        <label for="state">State*</label>
+        <input type="text" id="state" required><br><br>
+
+        <label for="country">Country*</label>
+        <input type="text" id="country" required><br><br>
+
+        <label for="zipCode">ZIP Code*</label>
+        <input type="text" id="zipCode" required><br><br>
+
+        <label for="phoneNo">Phone Number*</label>
+        <input type="text" id="phoneNo" required><br><br>
+
+        <button type="submit" >Continue to Payment</button>
+    </form>
+    </div>
+</div>
+<!--footer start-->
+<footer class="section-p1" id="mainFooter" style="background-color: #e2f4ff">
+    <div class="col">
+        <img class="logo" src="image/footer.jpg" alt="" />
+        <h4>Contact</h4>
+        <p>
+            <strong>Address:</strong> Flipkart Internet Private Limited,
+            Bengaluru, 560103, Karnataka, India
+        </p>
+        <p><strong>Phone:</strong>Telephone: 044-45614700</p>
+        <p><strong>Hours:</strong>10:00AM</p>
+        <div class="follow">
+            <h4>Follow us</h4>
+            <div class="icon">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-pinterest"></i>
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <h4>About</h4>
+        <a href="#">About Us</a>
+        <a href="#">Delivery Information</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Contact Us</a>
+    </div>
+    <div class="col">
+        <h4>My Account</h4>
+        <a href="#">Sign In</a>
+        <a href="#">View Cart</a>
+        <a href="#">My Wishlist</a>
+        <a href="#">Track My Order</a>
+        <a href="#">Help</a>
+    </div>
+    <div class="col install">
+        <h4>Install App</h4>
+        <p>From App Store or Google Play</p>
+        <div class="row">
+            <img src="img/pay/app.jpg" alt="">
+            <img src="img/pay/play.jpg" alt="">
+        </div>
+        <p>Secure Payment Gatewway</p>
+        <img src="img/pay/pay.png" alt="">
+    </div>
+    <div class="copyright">
+        <p>© 2007-2023 Flipkart.com</p>
+    </div>
+</footer>
+</body>
+</html>
+<script src="Script/slider.js"></script>
+<script src="Script/responsive.js"></script>
+<script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const addressForm = document.getElementById("addressForm");
+            addressForm.addEventListener("submit", event => {
+                event.preventDefault();
+
+                const firstName = document.getElementById("firstName").value;
+                const lastName = document.getElementById("lastName").value;
+                const address = document.getElementById("address").value;
+                const apart = document.getElementById("apart").value;
+                const city = document.getElementById("city").value;
+                const state = document.getElementById("state").value;
+                const country = document.getElementById("country").value;
+                const zipCode = document.getElementById("zipCode").value;
+                const phoneNo = document.getElementById("phoneNo").value;
+
+                alert("Shipping address saved! Proceeding to payment.");
+                window.location.href = "payment.html";
+            });
+        });
+</script>
+
+
+

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electron: Pay with razor pay</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="styles/slider.css">
+    <style>
+        body{
+            /* display: flex;
+            justify-content: center;
+            background-color: #EEEFEF; */
+            margin: 0;
+            padding: 0;
+            
+        }
+        *{
+            box-sizing: border-box;
+        }
+        
+        #rzp-button1{
+            width: 200px;
+            height: 50px;
+            background-color: #013e62 ;
+            /* border: 1px solid white; */
+            border-radius: 10px;
+            color: white;
+
+        }
+
+        #rzp-button1:hover{
+            cursor: pointer;
+           
+        }
+
+        #payDiv{
+            width: 100%;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="outermost_container">
+
+        <!-- navbar start -->
+        <section id="header">
+            <a href="#"><img src="image/navbar_logo.jpg" class="logo" alt="" /></a>
+            <div class="form">
+                <input type="text" placeholder="Search any items" />
+                <button class="normal">Search</button>
+            </div>
+            <div>
+                <ul id="navbar">
+                    <li><a class="active" href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="sign up.html">Account</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li id="lg-bag">
+                        <a href="cart.html"><i class="fa-solid fa-cart-shopping fa-bounce" style="color: #dfab62;"></i></a>
+    
+                    </li>
+                </ul>
+            </div>
+        </section>     
+        <!-- payment -->
+
+        <div id="payDiv">
+            <button id="rzp-button1">Pay with Razor pay</button>
+        </div>
+
+    </div>
+
+    <!-- footer -->
+<footer class="section-p1" id="mainFooter" style="background-color: #e2f4ff">
+    <div class="col">
+        <img class="logo" src="image/footer.jpg" alt="" />
+        <h4>Contact</h4>
+        <p>
+            <strong>Address:</strong> Flipkart Internet Private Limited,
+            Bengaluru, 560103, Karnataka, India
+        </p>
+        <p><strong>Phone:</strong>Telephone: 044-45614700</p>
+        <p><strong>Hours:</strong>10:00AM</p>
+        <div class="follow">
+            <h4>Follow us</h4>
+            <div class="icon">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-pinterest"></i>
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <h4>About</h4>
+        <a href="#">About Us</a>
+        <a href="#">Delivery Information</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Contact Us</a>
+    </div>
+    <div class="col">
+        <h4>My Account</h4>
+        <a href="#">Sign In</a>
+        <a href="#">View Cart</a>
+        <a href="#">My Wishlist</a>
+        <a href="#">Track My Order</a>
+        <a href="#">Help</a>
+    </div>
+    <div class="col install">
+        <h4>Install App</h4>
+        <p>From App Store or Google Play</p>
+        <div class="row">
+            <img src="img/pay/app.jpg" alt="">
+            <img src="img/pay/play.jpg" alt="">
+        </div>
+        <p>Secure Payment Gatewway</p>
+        <img src="img/pay/pay.png" alt="">
+    </div>
+    <div class="copyright">
+        <p>© 2007-2023 Flipkart.com</p>
+    </div>
+</footer>
+</body>
+</html>
+<script src="Script/slider.js"></script>
+<script src="Script/responsive.js"></script>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script></script>
+<script type="module">
+
+
+
+    let price = localStorage.getItem("finalPrice") * 100
+
+
+    var options = {
+        "key": "rzp_test_gRDqK4ZVKwc1es", // Enter the Key ID generated from the Dashboard
+        "amount": price, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+        "currency": "INR",
+        "name": "Electron",
+        "description": "Test Payment",
+        "image": "https://freevector-images.s3.amazonaws.com/uploads/vector/preview/36682/36682.png",
+        // "order_id": "order_Ef80WJDPBmAeNt", //Pass the `id` obtained in the previous step
+        // "account_id": "acc_Ef7ArAsdU5t0XL",
+        "handler": function (response){
+            alert(response.razorpay_payment_id);
+            alert(response.razorpay_order_id);
+            alert(response.razorpay_signature)
+        }
+    };
+    var rzp1 = new Razorpay(options);
+    document.getElementById('rzp-button1').onclick = function(e){
+        rzp1.open();
+        e.preventDefault();
+}
+</script>
