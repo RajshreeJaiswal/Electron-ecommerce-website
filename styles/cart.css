@@ -3,9 +3,11 @@ You can style the cart page here
 
 *{
     font-family: 'Times New Roman', Times, serif;
+    /* margin-top: 35px; */
 }
 #cart {
     padding: 20px;
+    height: 70vh;
 }
 
 table {
