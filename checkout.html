@@ -56,9 +56,12 @@ h1 {
     </style>
 </head>
 <body>
+    <section id="top">
+        
+    </section>
     <!-- navbar start -->
     <section id="header">
-        <a href="#"><img src="image/navbar_logo.jpg" class="logo" alt="" /></a>
+        <a href="#"><img src="/image/final.png" width="200px" height="120px" class="logo" alt="" /></a>
         <div class="form">
             <input type="text" placeholder="Search any items" />
             <button class="normal">Search</button>
@@ -72,12 +75,16 @@ h1 {
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li id="lg-bag">
-                    <a href="cart.html"><i class="fa-solid fa-cart-shopping fa-bounce" style="color: #dfab62;"></i></a>
-
+                    <a href="cart.html"><i class="fa-solid fa-cart-shopping" style="color: #e6c68e;"></i></i></a>
+    
                 </li>
             </ul>
         </div>
-    </section>   
+    </section>
+    <section id="drop-down">
+        
+
+    </section> 
     <div>
     <h1 >Shipping Address</h1>
     <div id="inner">
@@ -170,26 +177,27 @@ h1 {
 </html>
 <script src="Script/slider.js"></script>
 <script src="Script/responsive.js"></script>
-<script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const addressForm = document.getElementById("addressForm");
-            addressForm.addEventListener("submit", event => {
-                event.preventDefault();
+<script src="Script/checkout.js"></script>
+<script src="Script/payment.js"></script>
 
-                const firstName = document.getElementById("firstName").value;
-                const lastName = document.getElementById("lastName").value;
-                const address = document.getElementById("address").value;
-                const apart = document.getElementById("apart").value;
-                const city = document.getElementById("city").value;
-                const state = document.getElementById("state").value;
-                const country = document.getElementById("country").value;
-                const zipCode = document.getElementById("zipCode").value;
-                const phoneNo = document.getElementById("phoneNo").value;
+<script type="module">
 
-                alert("Shipping address saved! Proceeding to payment.");
-                window.location.href = "payment.html";
-            });
-        });
+    import topSec from "./component/topSection.js"
+    let topContainer = document.getElementById("top");
+    topContainer.innerHTML = topSec();
+
+
+    import dropdown from "./component/dropdown.js"
+    let dropdownContainer = document.getElementById("drop-down");
+    dropdownContainer.innerHTML = dropdown();
+
+    import newslater from "./component/newslater.js"
+    let newsContainer = document.getElementById("newsletter");
+    newsContainer.innerHTML = newslater();
+
+    import footer1 from "./component/footer.js"
+    let footerContainer = document.getElementById("mainFooter");
+    footerContainer.innerHTML = footer1();
 </script>
 
 

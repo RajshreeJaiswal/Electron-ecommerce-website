@@ -1,4 +1,4 @@
 function navbar(){
-    return `      `
+    return ` `
 }
 export default navbar;

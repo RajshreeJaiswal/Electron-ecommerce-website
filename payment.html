@@ -48,11 +48,14 @@
     </style>
 </head>
 <body>
+    <section id="top">
+        
+    </section>
     <div id="outermost_container">
 
         <!-- navbar start -->
         <section id="header">
-            <a href="#"><img src="image/navbar_logo.jpg" class="logo" alt="" /></a>
+            <a href="#"><img src="/image/final.png" width="200px" height="120px" class="logo" alt="" /></a>
             <div class="form">
                 <input type="text" placeholder="Search any items" />
                 <button class="normal">Search</button>
@@ -66,12 +69,12 @@
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li id="lg-bag">
-                        <a href="cart.html"><i class="fa-solid fa-cart-shopping fa-bounce" style="color: #dfab62;"></i></a>
-    
+                        <a href="cart.html"><i class="fa-solid fa-cart-shopping" style="color: #e6c68e;"></i></i></a>
+        
                     </li>
                 </ul>
             </div>
-        </section>     
+        </section>   
         <!-- payment -->
 
         <div id="payDiv">
@@ -137,32 +140,24 @@
 <script src="Script/slider.js"></script>
 <script src="Script/responsive.js"></script>
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-<script></script>
+<script src="Script/payment.js"></script>
+
 <script type="module">
 
+    import topSec from "./component/topSection.js"
+    let topContainer = document.getElementById("top");
+    topContainer.innerHTML = topSec();
 
 
-    let price = localStorage.getItem("finalPrice") * 100
+    import dropdown from "./component/dropdown.js"
+    let dropdownContainer = document.getElementById("drop-down");
+    dropdownContainer.innerHTML = dropdown();
 
+    import newslater from "./component/newslater.js"
+    let newsContainer = document.getElementById("newsletter");
+    newsContainer.innerHTML = newslater();
 
-    var options = {
-        "key": "rzp_test_gRDqK4ZVKwc1es", // Enter the Key ID generated from the Dashboard
-        "amount": price, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
-        "currency": "INR",
-        "name": "Electron",
-        "description": "Test Payment",
-        "image": "https://freevector-images.s3.amazonaws.com/uploads/vector/preview/36682/36682.png",
-        // "order_id": "order_Ef80WJDPBmAeNt", //Pass the `id` obtained in the previous step
-        // "account_id": "acc_Ef7ArAsdU5t0XL",
-        "handler": function (response){
-            alert(response.razorpay_payment_id);
-            alert(response.razorpay_order_id);
-            alert(response.razorpay_signature)
-        }
-    };
-    var rzp1 = new Razorpay(options);
-    document.getElementById('rzp-button1').onclick = function(e){
-        rzp1.open();
-        e.preventDefault();
-}
+    import footer1 from "./component/footer.js"
+    let footerContainer = document.getElementById("mainFooter");
+    footerContainer.innerHTML = footer1();
 </script>

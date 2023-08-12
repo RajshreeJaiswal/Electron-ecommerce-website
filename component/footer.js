@@ -1,6 +1,6 @@
 function footer() {
-    return `<div class="col">
-    <img class="logo" src="image/footer.jpg" alt="" />
+    return ` <div class="col">
+    <img class="logo" src="image/final.png" width="200px" height="120px"  alt="" />
     <h4>Contact</h4>
     <p>
         <strong>Address:</strong> Flipkart Internet Private Limited,
@@ -49,3 +49,5 @@ function footer() {
     <p>© 2007-2023 Flipkart.com</p>
 </div>`
 }
+
+export default footer;

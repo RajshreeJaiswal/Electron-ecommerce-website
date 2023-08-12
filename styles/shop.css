@@ -99,6 +99,7 @@ body {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     font-size: 16px;
+    /* border-radius: 16px; */
 }
 
 #banner{
@@ -134,7 +135,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 80px;
+    padding: 10px 56px;
     background-color: #003f62;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
 }

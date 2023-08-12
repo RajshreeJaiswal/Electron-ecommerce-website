@@ -14,27 +14,33 @@
 </head>
 
 <body>
+    <section id="top">
+        
+    </section>
     <section id="header">
-        <a href="#"><img src="image/navbar_logo.jpg" class="logo" alt="" /></a>
+        <a href="#"><img src="/image/final.png" width="200px" height="120px" class="logo" alt="" /></a>
         <div class="form">
             <input type="text" placeholder="Search any items" />
             <button class="normal">Search</button>
         </div>
         <div>
             <ul id="navbar">
-                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="index.html">Home</a></li>
                 <li><a href="shop.html">Shop</a></li>
                 <li><a href="sign up.html">Account</a></li>
-
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li id="lg-bag">
-                    <a class="active"  href="cart.html"><i class="fa-solid fa-cart-shopping fa-bounce" style="color: #dfab62;"></i></a>
-
+                    <a href="cart.html"><i class="fa-solid fa-cart-shopping" style="color: #e6c68e;"></i></i></a>
+    
                 </li>
             </ul>
         </div>
+    </section>
+    <section id="drop-down">
+        
+
     </section>
     <section id="cart" class="section-p1">
     
@@ -139,3 +145,25 @@
 <script src="Script/search.js"></script>
 <script src="Script/cart.js"></script>
 <script src="Script/index.js"></script>
+<script src="Script/payment.js"></script>
+<script src="Script/checkout.js"></script>
+
+<script type="module">
+
+    import topSec from "./component/topSection.js"
+    let topContainer = document.getElementById("top");
+    topContainer.innerHTML = topSec();
+
+
+    import dropdown from "./component/dropdown.js"
+    let dropdownContainer = document.getElementById("drop-down");
+    dropdownContainer.innerHTML = dropdown();
+
+    import newslater from "./component/newslater.js"
+    let newsContainer = document.getElementById("newsletter");
+    newsContainer.innerHTML = newslater();
+
+    import footer1 from "./component/footer.js"
+    let footerContainer = document.getElementById("mainFooter");
+    footerContainer.innerHTML = footer1();
+</script>

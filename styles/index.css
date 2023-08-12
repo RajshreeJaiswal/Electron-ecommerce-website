@@ -149,7 +149,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 80px;
+    padding: 2px 60px;
     background-color: #003f62;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
 }
@@ -246,7 +246,7 @@ body {
     color: #222;
     text-decoration: none;
     margin-left: 45px;
-    font-family: ui-sans-serif;
+    font-family: monospace;
  
 }
 
@@ -564,20 +564,23 @@ font-weight: 800;
   background-image: url("img/banner/b14.png");
   background-position: 20% 30%;
   background-repeat: no-repeat;
-  background-color: #041e42;
+  background-color: #003f62;
+  margin: 0px;
 
 }
 
 #newsletter h4{
-  font-size: 2ch;
+  font-size: 4ch;
   font-weight: 700;
   color: #fff;
+  font-family: monospace;
 }
 
 #newsletter p{
-  font-size: 14px;
+  font-size: 22px;
   font-weight: 600;
   color: #d1d5db;
+  font-family: monospace;
 }
 
 #newsletter p span{
@@ -593,7 +596,9 @@ font-weight: 800;
 #newsletter input{
   height: 3.12rem;
   padding: 0 1.25em;
-  width: 100%;
+  font-family: monospace;
+  font-size: 16px;
+  width: 70%;
   border: 1px solid transparent;
   border: none;
   border-radius: 5px;
@@ -602,9 +607,11 @@ font-weight: 800;
 }
 
 #newsletter button{
-  background-color: #088178;
+  background-color:  #eda515;
   color: white;
   white-space: nowrap;
+  font-family: monospace;
+  font-size: 16px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -613,6 +620,8 @@ footer{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  background-color: 
+  #e2f4ff;
 }
 
 footer .col{
@@ -624,19 +633,28 @@ footer .col{
 footer .logo{
   margin-bottom: 30px;
 }
+
+
 footer h4{
-  font-size: 14px;
+  font-size: 20px;
+  font-weight: bold;
   padding-bottom: 20px;
+  font-family: monospace;
+  color: #003f62;
 }
 footer p{
-  font-size: 13px;
+  font-size: 15px;
   margin:  0 0 8px 0;
 }
 footer a{
-  font-size: 13px;
+  font-size: 16px;
+  font-weight: bold;
   text-decoration: none;
   counter-reset: #222;
+  color: #003f62;
   margin-bottom: 10px;
+  font-family: monospace;
+
 
 }
 

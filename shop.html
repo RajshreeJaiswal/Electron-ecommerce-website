@@ -14,6 +14,9 @@
 </head>
 
 <body>
+    <section id="top">
+        
+    </section>
     <section id="header">
         <a href="#"><img src="image/navbar_logo.jpg" class="logo" alt="" /></a>
         <div class="form">
@@ -35,6 +38,10 @@
             </ul>
         </div>
     </section> 
+    <section id="drop-down">
+        
+
+    </section>
     <section id="page-header">
  
     </section>
@@ -114,3 +121,23 @@
 <script src="Script/slider.js"></script>
 <script src="Script/responsive.js"></script>
 <script src="Script/shop.js"></script>
+
+<script type="module">
+
+    import topSec from "./component/topSection.js"
+    let topContainer = document.getElementById("top");
+    topContainer.innerHTML = topSec();
+
+
+    import dropdown from "./component/dropdown.js"
+    let dropdownContainer = document.getElementById("drop-down");
+    dropdownContainer.innerHTML = dropdown();
+
+    import newslater from "./component/newslater.js"
+    let newsContainer = document.getElementById("newsletter");
+    newsContainer.innerHTML = newslater();
+
+    import footer1 from "./component/footer.js"
+    let footerContainer = document.getElementById("mainFooter");
+    footerContainer.innerHTML = footer1();
+</script>
