@@ -1,3 +1,30 @@
+function displayDeliveryAddress() {
+    const deliveryData = JSON.parse(localStorage.getItem('deliveryAddress'));
+    if (deliveryData) {
+        const addressBox = document.getElementById('deliveryAddressBox');
+
+        // Join first name and last name with a space in between
+        const fullName = `${deliveryData.firstName} ${deliveryData.lastName}`;
+        const pName = document.createElement('p');
+        pName.textContent = `Name: ${fullName}`;
+        addressBox.appendChild(pName);
+
+        // Join address details into one line
+        const fullAddress = `${deliveryData.address}, ${deliveryData.apart}, ${deliveryData.city}, ${deliveryData.state}, ${deliveryData.country}, ZIP: ${deliveryData.zipCode}, Phone: ${deliveryData.phoneNo}`;
+        const pAddress = document.createElement('p');
+        pAddress.textContent = `Address: ${fullAddress}`;
+        addressBox.appendChild(pAddress);
+    }
+    // Clear the localStorage item after using it
+    localStorage.removeItem('deliveryAddress');
+}
+
+
+
+displayDeliveryAddress();
+
+
+
 let price = parseInt(localStorage.getItem("finalPrice")) * 100;  // Convert to paise
 
 var options = {

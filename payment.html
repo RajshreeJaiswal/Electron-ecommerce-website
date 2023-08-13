@@ -45,6 +45,18 @@
             text-align: center;
         }
 
+        #deliveryAddressBox {
+    flex: 1;
+    /* display: flex; */
+    padding: 20px;
+    border: 2px solid black;
+    /* margin-right: 20px; */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+    border-radius: 5px; /* Optional: Rounds the corners */
+    margin: 35px 0px 55px 68px;
+}
+
+
     </style>
 </head>
 <body>
@@ -77,11 +89,21 @@
         </section>   
         <!-- payment -->
 
-        <div id="payDiv">
-            <button id="rzp-button1">Pay with Razor pay</button>
+        <div style="display: flex; justify-content: space-between;">
+            <!-- Delivery Address Box -->
+            <div id="deliveryAddressBox" style="flex: 1; padding: 20px; border: 1px solid #ccc; margin-right: 20px;">
+                <h2>Delivery Address</h2>
+                <!-- The details will be populated here -->
+            </div>
+        
+            <!-- Razor pay section -->
+            <div style="flex: 1; padding: 20px;">
+                <div id="payDiv">
+                    <button id="rzp-button1">Pay with Razor pay</button>
+                </div>
+            </div>
         </div>
-
-    </div>
+        
 
     <!-- footer -->
 <footer class="section-p1" id="mainFooter" style="background-color: #e2f4ff">

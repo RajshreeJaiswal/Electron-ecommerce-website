@@ -772,16 +772,9 @@ footer .copyright{
     min-width: unset;
   }
 
-  /* Adjust other styles as needed */
+  
 }
 
-/* Add more media queries as needed for different screen sizes */
-
-/* Original CSS styles */
-
-/* ... Your existing CSS code ... */
-
-/* Responsive CSS for smaller screens */
 
 @media (max-width: 768px) {
   body {
@@ -795,6 +788,7 @@ footer .copyright{
   #header .form {
     width: 60%;
   }
+  
   
   /* Adjust other styles as needed */
 }
