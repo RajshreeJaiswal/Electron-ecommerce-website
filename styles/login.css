@@ -1,0 +1,79 @@
+/* General styling for the form container */
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+/* Styling for the form labels */
+#register_form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Styling for the form input fields */
+#register_form input[type="email"],
+#register_form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Styling for the login button */
+#login_btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#login_btn:hover {
+    background-color: #0056b3;
+}
+
+/* Styling for the error message */
+.error-message {
+    color: red;
+    margin-bottom: 10px;
+    display: none; /* Initially hide the error message */
+}
+
+/* Styling for the logout button */
+#logout-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#logout-btn:hover {
+    background-color: #c82333;
+}
+
+/* Styling for the create account link */
+#register_form a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+#register_form a:hover {
+    text-decoration: underline;
+}

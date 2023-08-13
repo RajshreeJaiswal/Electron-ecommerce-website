@@ -7,63 +7,19 @@
     <title>Electron: Pay with razor pay</title>
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-    <link rel="stylesheet" href="styles/slider.css">
-    <style>
-        body{
-            /* display: flex;
-            justify-content: center;
-            background-color: #EEEFEF; */
-            margin: 0;
-            padding: 0;
-            
-        }
-        *{
-            box-sizing: border-box;
-        }
-        
-        #rzp-button1{
-            width: 200px;
-            height: 50px;
-            background-color: #013e62 ;
-            /* border: 1px solid white; */
-            border-radius: 10px;
-            color: white;
+    <!-- <link rel="stylesheet" href="/styles/slider.css"> -->
+    <link rel="stylesheet" href="/styles/shop.css">
+    <!-- <link rel="stylesheet" href="/styles/cart.css"> -->
+    <!-- <link rel="stylesheet" href="styles/checkout.css"> -->
+    <link rel="stylesheet" href="styles/payment.css">
 
-        }
-
-        #rzp-button1:hover{
-            cursor: pointer;
-           
-        }
-
-        #payDiv{
-            width: 100%;
-            height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-
-        #deliveryAddressBox {
-    flex: 1;
-    /* display: flex; */
-    padding: 20px;
-    border: 2px solid black;
-    /* margin-right: 20px; */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
-    border-radius: 5px; /* Optional: Rounds the corners */
-    margin: 35px 0px 55px 68px;
-}
-
-
-    </style>
+    
 </head>
 <body>
     <section id="top">
         
     </section>
-    <div id="outermost_container">
+    
 
         <!-- navbar start -->
         <section id="header">
@@ -85,85 +41,99 @@
         
                     </li>
                 </ul>
-            </div>
+
         </section>   
         <!-- payment -->
 
         <div style="display: flex; justify-content: space-between;">
             <!-- Delivery Address Box -->
-            <div id="deliveryAddressBox" style="flex: 1; padding: 20px; border: 1px solid #ccc; margin-right: 20px;">
+            <div id="deliveryAddressBox">
                 <h2>Delivery Address</h2>
+                <div class="line"></div> 
                 <!-- The details will be populated here -->
             </div>
         
             <!-- Razor pay section -->
             <div style="flex: 1; padding: 20px;">
                 <div id="payDiv">
-                    <button id="rzp-button1">Pay with Razor pay</button>
+                    <button id="rzp-button1">Click For Payment</button>
                 </div>
             </div>
         </div>
         
 
     <!-- footer -->
-<footer class="section-p1" id="mainFooter" style="background-color: #e2f4ff">
-    <div class="col">
-        <img class="logo" src="image/footer.jpg" alt="" />
-        <h4>Contact</h4>
-        <p>
-            <strong>Address:</strong> Flipkart Internet Private Limited,
-            Bengaluru, 560103, Karnataka, India
-        </p>
-        <p><strong>Phone:</strong>Telephone: 044-45614700</p>
-        <p><strong>Hours:</strong>10:00AM</p>
-        <div class="follow">
-            <h4>Follow us</h4>
-            <div class="icon">
-                <i class="fa-brands fa-facebook"></i>
-                <i class="fa-brands fa-twitter"></i>
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-pinterest"></i>
-                <i class="fa-brands fa-youtube"></i>
+    <section id="newsletter" class="section-p1 section-m1" style="margin-top: 230px;">
+        <!-- newlater section -->
+        <div class="newstext">
+            <h4>Subscribe Newsletter</h4>
+            <p>
+                Get E-mail update about out latest shop and
+                <span>Special Offers.</span>
+            </p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="Your email address" />
+            <button class="normal">Sign Up</button>
+        </div>
+    </section>
+    <footer class="section-p1" id="mainFooter">
+        <div class="col">
+            <img class="logo" src="image/final.png" width="200px" height="120px"  alt="" />
+            <h4>Contact</h4>
+            <p>
+                <strong>Address:</strong> Flipkart Internet Private Limited,
+                Bengaluru, 560103, Karnataka, India
+            </p>
+            <p><strong>Phone:</strong>Telephone: 044-45614700</p>
+            <p><strong>Hours:</strong>10:00AM</p>
+            <div class="follow">
+                <h4>Follow us</h4>
+                <div class="icon">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-pinterest"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="col">
-        <h4>About</h4>
-        <a href="#">About Us</a>
-        <a href="#">Delivery Information</a>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms & Conditions</a>
-        <a href="#">Contact Us</a>
-    </div>
-    <div class="col">
-        <h4>My Account</h4>
-        <a href="#">Sign In</a>
-        <a href="#">View Cart</a>
-        <a href="#">My Wishlist</a>
-        <a href="#">Track My Order</a>
-        <a href="#">Help</a>
-    </div>
-    <div class="col install">
-        <h4>Install App</h4>
-        <p>From App Store or Google Play</p>
-        <div class="row">
-            <img src="img/pay/app.jpg" alt="">
-            <img src="img/pay/play.jpg" alt="">
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact Us</a>
         </div>
-        <p>Secure Payment Gatewway</p>
-        <img src="img/pay/pay.png" alt="">
-    </div>
-    <div class="copyright">
-        <p>© 2007-2023 Flipkart.com</p>
-    </div>
-</footer>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <img src="img/pay/app.jpg" alt="">
+                <img src="img/pay/play.jpg" alt="">
+            </div>
+            <p>Secure Payment Gatewway</p>
+            <img src="img/pay/pay.png" alt="">
+        </div>
+        <div class="copyright">
+            <p>© 2007-2023 Flipkart.com</p>
+        </div>
+    </footer>
 </body>
 </html>
 <script src="Script/slider.js"></script>
 <script src="Script/responsive.js"></script>
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 <script src="Script/payment.js"></script>
-
 <script type="module">
 
     import topSec from "./component/topSection.js"
@@ -175,11 +145,5 @@
     let dropdownContainer = document.getElementById("drop-down");
     dropdownContainer.innerHTML = dropdown();
 
-    import newslater from "./component/newslater.js"
-    let newsContainer = document.getElementById("newsletter");
-    newsContainer.innerHTML = newslater();
-
-    import footer1 from "./component/footer.js"
-    let footerContainer = document.getElementById("mainFooter");
-    footerContainer.innerHTML = footer1();
+   
 </script>

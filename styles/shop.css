@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family:math;
 }
 
 html {
@@ -161,7 +161,7 @@ body {
     font-weight: 100;
     color:white;
     transition: 0.3s ease;
-    font-family: monospace;
+    font-family: math;
 }
 
 #navbar li a:hover,

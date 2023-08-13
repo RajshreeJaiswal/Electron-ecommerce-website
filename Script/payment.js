@@ -21,7 +21,13 @@ function displayDeliveryAddress() {
 
 
 
-displayDeliveryAddress();
+document.addEventListener('DOMContentLoaded', function() {
+    displayDeliveryAddress();
+});
+
+window.onload = function() {
+    displayDeliveryAddress();
+};
 
 
 
