@@ -28,6 +28,9 @@ function loadCartItems() {
 
 
 // Update cart items quantity and totals
+// ... (rest of the code remains the same)
+
+// Update cart items quantity and totals
 function updateCart() {
   let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
 
@@ -36,22 +39,15 @@ function updateCart() {
   cartItems.forEach((item) => {
     const row = document.createElement("tr");
     row.innerHTML = `
-            <td><button class="remove-item">Remove</button></td>
-            <td><img src="${item.image}" alt="${item.name}" /></td>
-            <td>${item.name}</td>
-            <td>${item.price}</td>
-            <td><input type="number" class="quantity" value="${
-              item.quantity
-            }" min="1"></td>
-            <td class="subtotal">${(
-              parseFloat(item.price.replace("Rs.", "")) * item.quantity
-            ).toFixed(2)}</td>
+    <td><img src="${item.image}" alt="${item.name}" /></td>
+    <td>${item.name}</td>
+    <td>${item.price}</td>
+    <td><input type="number" class="quantity" value="${item.quantity}" min="1"></td>
+    <td class="subtotal">${(parseFloat(item.price.replace("Rs.", "")) * item.quantity).toFixed(2)}</td>
+    <td><button class="remove-item">Remove</button></td>
         `;
     cartTableBody.appendChild(row);
   });
-
-
-
 
   // Update totals
   const subtotalElements = document.querySelectorAll(".subtotal");
@@ -63,47 +59,85 @@ function updateCart() {
 
   // Save the final total to localStorage
   localStorage.setItem("finalPrice", total.toFixed(2));
+
+  // Logic to hide/show cart contents based on cart items
+  const cartContents = document.querySelectorAll(".cart-content");
+  const shoppingButton = document.getElementById("shopping-button");
+  const rightSection = document.querySelector(".right-section"); // Assuming the class for the right section is "right-section"
+
+  const emptyCartSection = document.querySelector(".empty-cart-button"); // Select the "empty cart" section
+
+    if (cartItems.length === 0) {
+        // Hide cart contents, cart total, and discount
+        cartContents.forEach(element => {
+            element.style.display = "none";
+        });
+        rightSection.style.display = "none"; // Hide the right section
+        shoppingButton.style.display = "block";
+        emptyCartSection.style.display = "block"; // Show the "empty cart" section
+    } else {
+        // Show cart contents, cart total, and discount
+        cartContents.forEach(element => {
+            element.style.display = "block";
+        });
+        rightSection.style.display = "block"; // Show the right section
+        shoppingButton.style.display = "none";
+        emptyCartSection.style.display = "none"; // Hide the "empty cart" section
+    }
 }
 
-// Add input change event listener to update quantity and subtotal
-cartTableBody.addEventListener("change", (event) => {
-  if (event.target.classList.contains("quantity")) {
-    const row = event.target.closest("tr");
-    const productName = row.querySelector("td:nth-child(3)").textContent;
-    const newQuantity = parseInt(event.target.value);
+// ... (rest of the code remains the same)
 
-    let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-    const existingItem = cartItems.find((item) => item.name === productName);
-    if (existingItem) {
-      existingItem.quantity = newQuantity;
-      localStorage.setItem("cartItems", JSON.stringify(cartItems));
-      updateCart();
-    }
-  }
-});
-
-loadCartItems();
-updateCart();
 
 // ... (Previous code remains the same)
 
 // Add click event listener to remove buttons
+cartTableBody.addEventListener("input", (event) => {
+  if (event.target.classList.contains("quantity")) {
+      const row = event.target.closest("tr");
+      const productName = row.querySelector("td:nth-child(2)").textContent;
+      const quantity = parseInt(event.target.value);
+      const price = parseFloat(row.querySelector("td:nth-child(3)").textContent.replace("Rs.", ""));
+      const subtotalElement = row.querySelector(".subtotal");
+
+      // Update the subtotal for the item
+      subtotalElement.textContent = (price * quantity).toFixed(2);
+
+      // Update the item's quantity in local storage
+      let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+      const itemIndex = cartItems.findIndex(item => item.name === productName);
+      if (itemIndex !== -1) {
+          cartItems[itemIndex].quantity = quantity;
+          localStorage.setItem("cartItems", JSON.stringify(cartItems));
+      }
+
+      // Update the cart total
+      updateCart();
+  }
+});
+
 cartTableBody.addEventListener("click", (event) => {
   if (event.target.classList.contains("remove-item")) {
     const row = event.target.closest("tr");
-    const productName = row.querySelector("td:nth-child(3)").textContent;
+    const productName = row.querySelector("td:nth-child(2)").textContent;
 
+    // Remove the item from local storage
     let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-    const updatedCartItems = cartItems.filter(
-      (item) => item.name !== productName
-    );
-    localStorage.setItem("cartItems", JSON.stringify(updatedCartItems));
+    const itemIndex = cartItems.findIndex(item => item.name === productName);
+    if (itemIndex !== -1) {
+      cartItems.splice(itemIndex, 1);
+      localStorage.setItem("cartItems", JSON.stringify(cartItems));
+    }
 
+    // Remove the row from the DOM
     row.remove();
 
-    updateCart(); // Update totals after removing an item
+    // Update the cart total
+    updateCart();
   }
 });
+
+
 
 loadCartItems();
 updateCart();
@@ -155,4 +189,10 @@ function clearCart() {
     cartTableBody.innerHTML = "";
     document.getElementById("total").textContent = "0.00";
     document.getElementById("discount").textContent = "0.00";
+  
 }
+
+// ... (Previous code remains the same)
+
+
+

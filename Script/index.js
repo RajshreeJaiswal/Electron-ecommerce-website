@@ -7,6 +7,7 @@ addToCartButtons.forEach(button => {
 });
 
 function addToCart(event) {
+    event.preventDefault();
     const product = event.target.closest('.pro');
     const productName = product.querySelector('.data-name').textContent;
     const productPrice = product.querySelector('.data-price').textContent;

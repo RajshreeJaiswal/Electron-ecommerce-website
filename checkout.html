@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
     <link rel="stylesheet" href="styles/slider.css">
+    <link rel="stylesheet" href="styles/cart.css">
+    <link rel="stylesheet" href="styles/shop.css">
     <style>
      body, h1, h2, h3, h4, h5, h6, p, ul, li, input, button {
     margin: 0;
@@ -14,21 +16,28 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family:monospace;
     background-color: #f8f8f8;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Add box shadow */
+    min-height: 160vh; /* Increase the height of the page */
 }
+
+
 #inner {
     max-width: 600px;
-    margin: 0 auto;
+    margin: 50px auto; /* Added top and bottom margin */
     padding: 20px;
     background-color: #ffffff;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 #inner label {
     font-weight: bold;
     display: block;
+    font-size: 18px;
     margin-bottom: 8px;
+    font-family: monospace;
+    color:#003f62
 }
 #inner input {
     width: 100%;
@@ -46,12 +55,17 @@ body {
     padding: 15px;
     cursor: pointer;
     width: 100%;
+    font-size: 25px;
+    font-weight: 900;
+    font-family: monospace;
 }
 h1 {
     text-align: center;
     margin-bottom: 20px;
     font-size: 30px;
-    color: #eda515;
+    color:black;
+    font-size: 40px;
+    font-family: monospace;
 }
     </style>
 </head>
@@ -86,7 +100,7 @@ h1 {
 
     </section> 
     <div>
-    <h1 >Shipping Address</h1>
+    <h1>Shipping Address</h1>
     <div id="inner">
     <form id="addressForm">
         <!--form of checkout-->
@@ -122,56 +136,11 @@ h1 {
     </div>
 </div>
 <!--footer start-->
-<footer class="section-p1" id="mainFooter" style="background-color: #e2f4ff">
-    <div class="col">
-        <img class="logo" src="image/footer.jpg" alt="" />
-        <h4>Contact</h4>
-        <p>
-            <strong>Address:</strong> Flipkart Internet Private Limited,
-            Bengaluru, 560103, Karnataka, India
-        </p>
-        <p><strong>Phone:</strong>Telephone: 044-45614700</p>
-        <p><strong>Hours:</strong>10:00AM</p>
-        <div class="follow">
-            <h4>Follow us</h4>
-            <div class="icon">
-                <i class="fa-brands fa-facebook"></i>
-                <i class="fa-brands fa-twitter"></i>
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-pinterest"></i>
-                <i class="fa-brands fa-youtube"></i>
-            </div>
-        </div>
-    </div>
-    <div class="col">
-        <h4>About</h4>
-        <a href="#">About Us</a>
-        <a href="#">Delivery Information</a>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms & Conditions</a>
-        <a href="#">Contact Us</a>
-    </div>
-    <div class="col">
-        <h4>My Account</h4>
-        <a href="#">Sign In</a>
-        <a href="#">View Cart</a>
-        <a href="#">My Wishlist</a>
-        <a href="#">Track My Order</a>
-        <a href="#">Help</a>
-    </div>
-    <div class="col install">
-        <h4>Install App</h4>
-        <p>From App Store or Google Play</p>
-        <div class="row">
-            <img src="img/pay/app.jpg" alt="">
-            <img src="img/pay/play.jpg" alt="">
-        </div>
-        <p>Secure Payment Gatewway</p>
-        <img src="img/pay/pay.png" alt="">
-    </div>
-    <div class="copyright">
-        <p>© 2007-2023 Flipkart.com</p>
-    </div>
+<section id="newsletter" class="section-p1 section-m1">
+    <!-- newlater section -->
+</section>
+<footer class="section-p1" id="mainFooter">
+   
 </footer>
 </body>
 </html>

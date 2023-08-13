@@ -304,7 +304,7 @@ body {
     width: 180px;
     text-align: center;
     padding: 25px 15px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: rgba(134, 14, 14, 0.24) 0px 3px 8px;
     border-radius: 9px;
     margin: 15px 30px;
 }
@@ -331,24 +331,29 @@ body {
     padding: 9px 8px 6px 8px;
     line-height: 1;
     border-radius: 4px;
-    color: #088178;
-    background-color: #fddde4;
+    color:#003f62;
+    font-size: 18px;
+    font-family: system-ui;
+    /* background-color: #fddde4; */
 }
 
 #feature .fe-box:nth-child(2) h6{
-    background-color: #cdebbc;
+    /* background-color: #46a80d; */
 }
 #feature .fe-box:nth-child(3) h6{
-    background-color: #d1e8f2;
+    /* background-color: #d1e8f2; */
 }
 #feature .fe-box:nth-child(4) h6{
-    background-color: #cdd4f8;
+    /* background-color: #cdd4f8; */
 }
 #feature .fe-box:nth-child(5) h6{
-    background-color: #f6dbf6;
+    /* background-color: #f6dbf6; */
 }
 #feature .fe-box:nth-child(6) h6{
-    background-color: #fff2e5;
+    /* background-color: #3a8bd8; */
+}
+#feature .fe-box:nth-child(7) h6{
+  /* background-color: #3a8bd8; */
 }
 
 
@@ -403,9 +408,10 @@ body {
 }
 
 #product1 .pro .des h5{
-  padding-top: 7px;
+  padding-top: 10px;
   font-size: 14px;
   color: #1a1a1a;
+  font-family: system-ui
 }
 #product1 .pro .des i{
   font-size: 12px;
@@ -416,7 +422,7 @@ body {
   padding: 7px;
   font-size: 15px;
   font-weight: 700;
-  color: #088178;
+  color:#003f62;
 }
 
 #product1 .pro .cart{
@@ -424,8 +430,8 @@ body {
   height: 40px;
   line-height: 40px;
   border-radius: 50px;
-  background-color: #e8f6ea;
-  color: #088178;
+  background-color: white;
+  color:#003f62;
   border: 1px solid rgb(186, 223, 186);
   position: absolute;
   bottom: 20px;
