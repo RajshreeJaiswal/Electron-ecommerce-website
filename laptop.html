@@ -6,6 +6,12 @@
     <title>Laptops  </title>
     <link rel="stylesheet" href="./styles/index.css">
     <link rel="stylesheet" href="./productPage.css">
+    <style>
+      #products div img{
+        width: 100%;
+        height: 230px;
+      }
+    </style>
 </head>
 <body>
 
@@ -114,10 +120,10 @@
     <label for="filter" class="sp">Filter By:</label>
     <select id="filter" class="btn">
         <option value="all">All</option>
-        <option value="mp">megapixels</option>
-        <option value="4k">4K Camera</option>
-        <option value="DSLR">DSLR</option>
-        <option value="SLR">SLR</option>
+        <option value="ultrabook"> ultrabook</option>
+        <option value="MacBook">Mac Book </option>
+        <option value="2in1">2 in 1 tablet cum laptop</option>
+        <option value="notebook"> Note Book </option>
     </select>
 
     </div>
@@ -229,77 +235,109 @@
 <script>
   const products = [
   {
-    name: 'Sony Alpha A7 III',
-    price: 1999,
-    image: "https://m.media-amazon.com/images/I/711QykIMR4L._AC_UY327_FMwebp_QL65_.jpg",
-    megapixels: 24.2,
-    is4k: true,
-    type: 'Mirrorless'
+    name: 'HP Laptop 15s, 12th Gen Intel Core i3-1215U,FHD, 8GB DDR4, 512GB SSD, ',
+    price: 40990,
+    image: "https://m.media-amazon.com/images/I/816z4zx1peL._AC_UY327_FMwebp_QL65_.jpg",
+    type: 'ultrabook',
+  },
+ 
+  {
+    name: 'HP 14s, 11th Gen Intel Core i3-1115G4, 8GB RAM/256GB SSD 14-inch',
+    price: 35990,
+    image: "https://m.media-amazon.com/images/I/8154W2l-OOL._AC_UY327_FMwebp_QL65_.jpg",
+    type: 'ultrabook',
+  },
+ 
+  {
+    name: 'Honor MagicBook X16 (2023), 12th Gen Intel Core i5-12450H(8GB/512GB NVMe )',
+    price: 50990,
+    image: "https://m.media-amazon.com/images/I/61aaFLxqFKL._AC_UY327_FMwebp_QL65_.jpg",
+    type: 'ultrabook',
+  },
+ 
+  {
+    name: 'Sponsored Ad - Dell 14 Laptop, Intel i5-1135G7/8GB/512GB',
+    price: 46490,
+    image: "https://m.media-amazon.com/images/I/51hEf-tkHrL._AC_UY327_FMwebp_QL65_.jpg",
+    type: 'ultrabook',
   },
   {
-    name: 'Canon EOS 5D Mark IV',
-    price: 2499,
-    image: "https://m.media-amazon.com/images/I/51gN+8osCiL._AC_UY327_FMwebp_QL65_.jpg",
-    megapixels: 30.4,
-    is4k: false,
-    type: 'DSLR'
+    name: 'Apple 2022 MacBook Air Laptop with M2 chip: 34.46',
+    price: 110799,
+    image: "https://m.media-amazon.com/images/I/71eXNIDUGjL._AC_UY327_FMwebp_QL65_.jpg",
+    type: 'MacBook',
   },
   {
-    name: 'Nikon Z6',
-    price: 1799,
-    image: "https://m.media-amazon.com/images/I/71RuHCk5fGL._AC_UY327_FMwebp_QL65_.jpg",
-    megapixels: 24.5,
-    is4k: true,
-    type: 'Mirrorless'
+    name: 'Apple 2022 MacBook Air Laptop with M2 chip: 34.46 cm ',
+    price: 107990,
+    image: "https://m.media-amazon.com/images/I/710TJuHTMhL._AC_UY327_FMwebp_QL65_.jpg",
+    type: 'MacBook',
   },
   {
-    name: 'Panasonic Lumix GH5',
-    image: "https://m.media-amazon.com/images/I/516UhWTgkFL._AC_UY327_FMwebp_QL65_.jpg",
-    price: 1699,
-    megapixels: 20.3,
-    is4k: true,
-    type: 'Mirrorless'
+    name: 'Apple 2023 MacBook Air laptop with M2 chip: 38.91cm ',
+    price: 154990,
+    image: "https://m.media-amazon.com/images/I/81UFHe-hH5L._AC_UY327_FMwebp_QL65_.jpg",
+    type: 'MacBook',
   },
   {
-    name: 'Canon EOS Rebel T7i',
-    price: 699,
-    image: "https://m.media-amazon.com/images/I/710NRdecQtL._AC_UY327_FMwebp_QL65_.jpg",
-    megapixels: 24.2,
-    is4k: false,
-    type: 'SLR'
+    name: 'Apple 2023 MacBook Air laptop with M2 chip: 38.91cm',
+    price: 134990,
+    image: "https://m.media-amazon.com/images/I/81xW62KXNhL._AC_UY327_FMwebp_QL65_.jpg",
+    type: 'MacBook',
+  },
+  
+  {
+    name: 'Dell Inspiron 7420 2in1 Laptop, Intel i5-1235U, 16GB DDR4',
+    price: 84990,
+    image: "https://m.media-amazon.com/images/I/51tRMZKn4tL._AC_UY327_FMwebp_QL65_.jpg",
+    type: '2in1',
   },
   {
-    name: 'Canon EOS Rebel T7i',
-    price: 699,
-    image: "https://m.media-amazon.com/images/I/71tHNTGasKL._AC_UY327_FMwebp_QL65_.jpg",
-    megapixels: 24.2,
-    is4k: false,
-    type: 'SLR'
+    name: 'Samsung Galaxy Book3 Pro 360 Intel 13th Gen i7 EvoTM',
+    price: 164990,
+    image: "https://m.media-amazon.com/images/I/71ef1yicMJL._AC_UY327_FMwebp_QL65_.jpg",
+    type: '2in1',
   },
   {
-    name: 'Canon EOS Rebel T7i',
-    price: 699,
-    image: "https://m.media-amazon.com/images/I/61gGtqfZFlL._SX569_.jpg",
-    megapixels: 24.2,
-    is4k: false,
-    type: 'SLR'
+    name: 'Lenovo IdeaPad Flex 5 11th Gen Intel Core i7 14 inches(35cm)',
+    price: 134990,
+    image: "https://m.media-amazon.com/images/I/61ta6vDkCRL._AC_UY327_FMwebp_QL65_.jpg",
+    type: '2in1',
   },
   {
-    name: 'Canon EOS Rebel T7i',
-    price: 699,
-    image: "https://m.media-amazon.com/images/I/51hEf-tkHrL._SX679_.jpg",
-    megapixels: 24.2,
-    is4k: false,
-    type: 'SLR'
+    name: 'HP Envy x360 12th Gen Intel core i5-1235U 15.6inch(39.6cm)',
+    price: 79990,
+    image: "https://m.media-amazon.com/images/I/51lFjtu1lIL._AC_UY327_FMwebp_QL65_.jpg",
+    type: '2in1'
+
   },
   {
-    name: 'Canon EOS Rebel T7i',
-    price: 699,
-    image: "https://m.media-amazon.com/images/I/713dZHEY2YL._AC_UY327_FMwebp_QL65_.jpg",
-    megapixels: 24.2,
-    is4k: false,
-    type: 'SLR'
+    name: 'Xiaomi Notebook Ultra Max 11th Gen Intel Core i5-11320H Thin',
+    price: 42990,
+    image: "https://m.media-amazon.com/images/I/710aJMxsUXL._AC_UY327_FMwebp_QL65_.jpg",
+    type: 'notebook',
   },
+  {
+    name: 'Walker Notebook/Laptop Pc Model No-Nu14A1,14.1',
+    price: 16599,
+    image: "https://m.media-amazon.com/images/I/51Qy7Yjx5PL._AC_UY327_FMwebp_QL65_.jpg",
+    type: 'notebook',
+  },
+  {
+    name: 'Xiaomi [Smartchoice] Notebook Pro Qhd+Ips Antiglare Display',
+    price: 61690,
+    image: "https://m.media-amazon.com/images/I/71iiXU7HHkL._AC_UY327_FMwebp_QL65_.jpg",
+    type: 'notebook',
+  },
+  {
+    name: 'HP 250 G8 Notebook PC, 11th Gen Intel Core i3-1115G4',
+    price: 32890,
+    image: "https://m.media-amazon.com/images/I/71V2Q8g87XL._AC_UY327_FMwebp_QL65_.jpg",
+    type: 'notebook',
+  },
+
+
+ 
   // Add more product objects as needed
 ];
 
@@ -316,9 +354,9 @@
     var h3 = document.createElement('h3');
     var add=document.createElement('button');
     var buy=document.createElement('button');
-
+   
     h2.innerText = product.name;
-    h3.innerText = product.price;
+    h3.innerHTML = "&#8377;" + product.price;
     image.src = product.image;
     add.innerText="add to cart";
     buy.innerText="buy now";
@@ -359,14 +397,17 @@
 
       let filteredProducts = products;
   
-      if (filterValue === 'mp') {
-        filteredProducts = products.filter(product => product.megapixels);
-      } else if (filterValue === '4k') {
-        filteredProducts = products.filter(product => product.is4k);
-      } else if (filterValue === 'DSLR') {
-        filteredProducts = products.filter(product => product.type === 'DSLR');
-      } else if (filterValue === 'SLR') {
-        filteredProducts = products.filter(product => product.type === 'SLR');
+      if (filterValue === '2in1') {
+      filteredProducts = products.filter(product => product.type==='2in1');
+      }
+      else if (filterValue === 'notebook') {
+        filteredProducts = products.filter(product => product.type=='notebook');
+      }
+      else if (filterValue === 'ultrabook') {
+        filteredProducts = products.filter(product => product.type === 'ultrabook');
+      }
+      else if (filterValue === 'MacBook') {
+        filteredProducts = products.filter(product => product.type === 'MacBook');
       }
   
       displayProducts(filteredProducts);
