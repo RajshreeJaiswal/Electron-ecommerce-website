@@ -222,7 +222,6 @@ body {
 
 /* Drop-Down CSS */
 
-/* Dropdown Styles */
 
 #drop-down {
     background-color:#f4f4f4 ;
@@ -337,24 +336,7 @@ body {
     /* background-color: #fddde4; */
 }
 
-#feature .fe-box:nth-child(2) h6{
-    /* background-color: #46a80d; */
-}
-#feature .fe-box:nth-child(3) h6{
-    /* background-color: #d1e8f2; */
-}
-#feature .fe-box:nth-child(4) h6{
-    /* background-color: #cdd4f8; */
-}
-#feature .fe-box:nth-child(5) h6{
-    /* background-color: #f6dbf6; */
-}
-#feature .fe-box:nth-child(6) h6{
-    /* background-color: #3a8bd8; */
-}
-#feature .fe-box:nth-child(7) h6{
-  /* background-color: #3a8bd8; */
-}
+
 
 
 
@@ -692,6 +674,53 @@ footer .copyright{
   width: 100%;
   text-align: center;
 }
+
+
+.dropdown-1 {
+  position: relative;
+  display: inline-block;
+}
+
+/* Hide dropdown by default */
+.dropdown-content-1 {
+  display: none;
+  position: absolute;
+  background-color: #003f62;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Style dropdown links */
+.dropdown-content-1 a {
+  color: black;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Hover behavior for dropdown links */
+.dropdown-content-1 a:hover {
+  background-color: #334b06;
+}
+
+/* Show dropdown on hover */
+.dropdown-1:hover .dropdown-content-1 {
+  display: block;
+}
+
+/* Style for dropdown trigger button */
+.dropbtn-1 {
+  /* background-color: #333; */
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn-1:hover, .dropbtn-1:focus {
+  /* background-color: #555; */
+}
+
 
 
 /* Original CSS styles */

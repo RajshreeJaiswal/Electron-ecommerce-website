@@ -16,6 +16,9 @@
     font-weight: bold;
 }
 
+
+
+
 /* Styling for the form input fields */
 #register_form input[type="email"],
 #register_form input[type="password"] {

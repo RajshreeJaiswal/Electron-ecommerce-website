@@ -7,11 +7,11 @@
     <title>Homepage</title>
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-    <link rel="stylesheet" href="/styles/slider.css">
+    <!-- <link rel="stylesheet" href="/styles/slider.css"> -->
     <link rel="stylesheet" href="/styles/shop.css">
-    <link rel="stylesheet" href="/styles/cart.css">
-    <link rel="stylesheet" href="styles/checkout.css">
-    <link rel="stylesheet" href="styles/payment.css">
+    <!-- <link rel="stylesheet" href="/styles/cart.css"> -->
+    <!-- <link rel="stylesheet" href="styles/checkout.css"> -->
+    <!-- <link rel="stylesheet" href="styles/payment.css"> -->
     <link rel="stylesheet" href="styles/signup.css">
   
 
@@ -32,16 +32,23 @@
             <ul id="navbar">
                 <li><a class="active" href="index.html">Home</a></li>
                 <li><a href="shop.html">Shop</a></li>
-                <li><a href="sign up.html">Account</a></li>
+                <li class="dropdown-1">
+                    <a href="#" class="dropbtn-1">Account</a>
+                    <div class="dropdown-content-1">
+                        <a href="login.html">Login</a>
+                        <a href="signup.html">SignUp</a>
+                    </div>
+                </li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li id="lg-bag">
-                    <a href="cart.html"><i class="fa-solid fa-cart-shopping" style="color: #e6c68e;"></i></i></a>
+                    <a href="cart.html"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i></a>
                 </li>
             </ul>
         </div>
     </section>
+    
     <section id="drop-down">
         
 
@@ -50,6 +57,8 @@
     <section id="signup">
       <div class="container">
         <form id="register_form">
+            <h2>SignUp</h2>
+            <div class="line"></div>
             <div>
                 <label for="">Username</label>
                 <input type="text" id="username" placeholder="Enter Username" />
@@ -57,8 +66,8 @@
                 <input type="email" id="email" placeholder="Enter Email id" />
                 <label>Password</label>
                 <input type="password" id="password" placeholder="Enter password" />
-                <button type="button" id="register_btn">Signup</button>
-                <button type="button" id="google_signup_btn">Signup with Google</button>
+                <button type="button" id="register_btn" class="btn">Signup</button>
+                <button type="button" id="google_signup_btn" class="btn">Signup with Google</button>
             </div>
             <div style="margin-top: 10px;">
                 <a href="./login.html">Already Account Login</a>
