@@ -6,6 +6,12 @@
     <title>Gaiming Remote </title>
     <link rel="stylesheet" href="./styles/index.css">
     <link rel="stylesheet" href="./productPage.css">
+    <style>
+     #products div img{
+      width: 100%;
+      height: 400px;
+     }
+    </style>
 </head>
 <body>
 
@@ -114,10 +120,9 @@
     <label for="filter" class="sp">Filter By:</label>
     <select id="filter" class="btn">
         <option value="all">All</option>
-        <option value="mp">megapixels</option>
-        <option value="4k">4K Camera</option>
-        <option value="DSLR">DSLR</option>
-        <option value="SLR">SLR</option>
+        <option value="Programmable">Programmable</option>
+        <option value="wireless">Wireless</option>
+       
     </select>
 
     </div>
@@ -229,76 +234,58 @@
 <script>
   const products = [
   {
-    name: 'Sony Alpha A7 III',
+    name: 'Ant Esports GP300 Pro Wireless',
     price: 1999,
-    image: "https://m.media-amazon.com/images/I/711EqR0PGGL._SX679_.jpg",
-    megapixels: 24.2,
-    is4k: true,
-    type: 'Mirrorless'
+    image: "https://m.media-amazon.com/images/I/61Q0EXcljgL._AC._SR360,460.jpg",
+    type:  'wireless',
   },
   {
-    name: 'Canon EOS 5D Mark IV',
+    name: 'Amkette EvoFox One Universal',
     price: 2499,
-    image: "https://m.media-amazon.com/images/I/51gN+8osCiL._AC_UY327_FMwebp_QL65_.jpg",
-    megapixels: 30.4,
-    is4k: false,
-    type: 'DSLR'
+    image: "https://m.media-amazon.com/images/I/51JJKyRFcUL._AC._SR360,460.jpg",
+    type :'Programmable'
   },
   {
-    name: 'Nikon Z6',
+    name: 'Cosmic Byte C3070W  2.4G',
     price: 1799,
-    image: "https://m.media-amazon.com/images/I/71RuHCk5fGL._AC_UY327_FMwebp_QL65_.jpg",
-    megapixels: 24.5,
-    is4k: true,
-    type: 'Mirrorless'
+    image: "https://m.media-amazon.com/images/I/610-nMA3rKL._AC._SR360,460.jpg",
+    type :'Programmable'
   },
   {
     name: 'Panasonic Lumix GH5',
-    image: "https://m.media-amazon.com/images/I/516UhWTgkFL._AC_UY327_FMwebp_QL65_.jpg",
+    image: "https://m.media-amazon.com/images/I/71+l0IapOkL._AC._SR360,460.jpg",
     price: 1699,
-    megapixels: 20.3,
-    is4k: true,
-    type: 'Mirrorless'
+    type :'wireless'
   },
   {
-    name: 'Canon EOS Rebel T7i',
-    price: 699,
-    image: "https://m.media-amazon.com/images/I/710NRdecQtL._AC_UY327_FMwebp_QL65_.jpg",
-    megapixels: 24.2,
-    is4k: false,
-    type: 'SLR'
+    name: 'Amkette EvoFox Elite X Wireless',
+    price: 1099,
+    image: "https://m.media-amazon.com/images/I/51OJPhvBHkL._AC._SR360,460.jpg",
+    type :'Programmable'
   },
   {
-    name: 'Canon EOS Rebel T7i',
-    price: 699,
-    image: "https://m.media-amazon.com/images/I/71tHNTGasKL._AC_UY327_FMwebp_QL65_.jpg",
-    megapixels: 24.2,
-    is4k: false,
-    type: 'SLR'
+    name: 'Amkette Pro 4 Programmable',
+    price: 1299,
+    image: "https://m.media-amazon.com/images/I/51iefaxmqeL._AC._SR360,460.jpg",
+    type:  'wireless',
   },
   {
-    name: 'Canon EOS Rebel T7i',
-    price: 699,
-    image: "https://m.media-amazon.com/images/I/61gGtqfZFlL._SX569_.jpg",
-    megapixels: 24.2,
-    is4k: false,
-    type: 'SLR'
+    name: 'Ipega 2.4G Gamepad Controler',
+    price: 999,
+    image: "https://m.media-amazon.com/images/I/51Prg4Smx-L._AC._SR360,460.jpg",
+    type:  'wireless',
   },
   {
-    name: 'Canon EOS Rebel T7i',
+    name: ' EOS Rebel T7i',
     price: 699,
-    image: "https://m.media-amazon.com/images/I/51hEf-tkHrL._SX679_.jpg",
-    megapixels: 24.2,
-    is4k: false,
-    type: 'SLR'
+    image: "https://m.media-amazon.com/images/I/71XhN3d9GoL._AC._SR360,460.jpg",
+    type:  'wireless',
   },
   {
-    name: 'Canon EOS Rebel T7i',
-    price: 699,
-    image: "https://m.media-amazon.com/images/I/713dZHEY2YL._AC_UY327_FMwebp_QL65_.jpg",
-    megapixels: 24.2,
-    is4k: false,
-    type: 'SLR'
+    name: 'Canon EO10 Rebel eagle',
+    price: 989,
+    image: "https://m.media-amazon.com/images/I/610-nMA3rKL._AC_UL480_QL65_.jpg",
+    type:  'Programmable',
   },
   // Add more product objects as needed
 ];
@@ -311,15 +298,14 @@
 
   products.forEach(product => {
     var div = document.createElement('div');
-    var h2 = document.createElement('p');
-    // var imagebox= document.createElement('div');
+    var h2 = document.createElement('h4');
     var image = document.createElement('img');
     var h3 = document.createElement('h3');
     var add=document.createElement('button');
     var buy=document.createElement('button');
 
     h2.innerText = product.name;
-    h3.innerText = product.price;
+    h3.innerHTML = "&#8377;" + product.price;
     image.src = product.image;
     add.innerText="add to cart";
     buy.innerText="buy now";
@@ -360,14 +346,11 @@
 
       let filteredProducts = products;
   
-      if (filterValue === 'mp') {
-        filteredProducts = products.filter(product => product.megapixels);
-      } else if (filterValue === '4k') {
-        filteredProducts = products.filter(product => product.is4k);
-      } else if (filterValue === 'DSLR') {
-        filteredProducts = products.filter(product => product.type === 'DSLR');
-      } else if (filterValue === 'SLR') {
-        filteredProducts = products.filter(product => product.type === 'SLR');
+      if (filterValue === 'Programmable') {
+        filteredProducts = products.filter(product => product.type==='Programmable');
+      }
+      else if (filterValue === 'wireless') {
+        filteredProducts = products.filter(product => product.type==='wireless');
       }
   
       displayProducts(filteredProducts);

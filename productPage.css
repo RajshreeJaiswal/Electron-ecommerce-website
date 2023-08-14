@@ -38,9 +38,10 @@
 
 }
 #products div h4{
-    color: rgb(35, 25, 139);
+    color: rgb(31, 40, 102);
 }
 #products div h3{
+    padding: 5px;
     color: crimson;
 }
 #products div {
