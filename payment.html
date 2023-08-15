@@ -15,6 +15,10 @@
             background-color: #EEEFEF; */
             margin: 0;
             padding: 0;
+
+            background-image: url("https://st3.depositphotos.com/25878326/37482/v/450/depositphotos_374825734-stock-illustration-honeycombs-pattern-modern-background-web.jpg");
+            background-size: cover,contain; /* Adjust to your needs */
+            background-repeat: no-repeat;
             
         }
         *{
@@ -155,9 +159,8 @@
         // "order_id": "order_Ef80WJDPBmAeNt", //Pass the `id` obtained in the previous step
         // "account_id": "acc_Ef7ArAsdU5t0XL",
         "handler": function (response){
-            alert(response.razorpay_payment_id);
-            alert(response.razorpay_order_id);
-            alert(response.razorpay_signature)
+            window.location.href = "paymentSuccess.html";
+
         }
     };
     var rzp1 = new Razorpay(options);
