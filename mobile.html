@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobiles </title>
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./productPage.css">
+    <style>
+      #products div img {
+        height: 400px;
+      }
+    </style>
+</head>
+<body>
+
+    <section id="header">
+        <a href="#"><img src="image/navbar_logo.jpg" class="logo" alt="" /></a>
+        <div class="form">
+            <input type="text" placeholder="Search any items" />
+            <button class="normal">Search</button>
+        </div>
+        <div>
+            <ul id="navbar">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="sign up.html">Account</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li id="lg-bag">
+                    <a href="cart.html"><i class="fa-solid fa-cart-shopping fa-bounce" style="color: #dfab62;"></i></a>
+
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section id="drop-down">
+        <div class="dropdown-container">
+            <div class="dropdown-item">
+                <a href="#">Mobiles</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Oppo</a></li>
+                    <li><a href="#">Samsung</a></li>
+                    <li><a href="#">Infinix</a></li>
+                    <li><a href="#">Honor</a></li>
+                    <li><a href="#">Apple</a></li>
+                    <li><a href="#">Realme</a></li>
+                    <li><a href="#">Vivo</a></li>
+
+                </ul>
+            </div>
+            <div class="dropdown-item">
+                <a href="#">laptop</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">lenovo</a></li>
+                    <li><a href="#">Samsung</a></li>
+                    <li><a href="#">MSI</a></li>
+                    <li><a href="#">Acer</a></li>
+                    <li><a href="#">Hp</a></li>
+                    <li><a href="#">Gaming Laptop</a></li>
+                    <li><a href="#">Mac Book</a></li>
+                </ul>
+            </div>
+            <div class="dropdown-item">
+                <a href="#">Gaming Accessories</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Gaming laptop</a></li>
+                    <li><a href="#">Play Station</a></li>
+                    <li><a href="#">Gaming Remote</a></li>
+                    <li><a href="#">Gaming Mouse</a></li>
+                    <li><a href="#">Gaming Keyboard</a></li>
+                    <li><a href="#">Gaming Chair</a></li>
+                    <li><a href="#">Gaming Table</a></li>
+                </ul>
+            </div>
+            <div class="dropdown-item">
+                <a href="#">Electronics</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Soundbard</a></li>
+                    <li><a href="#">Home Thearters</a></li>
+                    <li><a href="#">Bluetooth Spekaers</a></li>
+                    <li><a href="#">Google Next</a></li>
+                    <li><a href="#">Camera lens</a></li>
+                    <li><a href="#">DSLR</a></li>
+                    <li><a href="#">Printer</a></li>
+                    <!-- Add more sub-items here -->
+                </ul>
+            </div>
+            <div class="dropdown-item">
+                <a href="#">Cameras</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Camera Lens</a></li>
+                    <li><a href="#">Sony Cameras</a></li>
+                    <li><a href="#">DSLR</a></li>
+                    <li><a href="#">Tripods</a></li>
+                    <li><a href="#">Camera Battery</a></li>
+                    <li><a href="#">Camera Bags</a></li>
+
+                    <!-- Add more sub-items here -->
+                </ul>
+            </div>
+
+        </div>
+    </section>
+    <div>
+    <img src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/fea9cb94-20cb-4947-9c13-79f7d58b25c2._CR0,0,1464,600_PT0_SX1464_V1__.jpg" alt="" id="slider"
+    style="height: 500px;"
+    >
+  </div>
+
+    <div id="sort" >
+  <span class="sp">  Sort Price by : </span>
+    <button onclick="lowToHigh()"  class="btn"> low to high</button>
+    <button onclick="highTolow()"  class="btn"> high to low</button>
+    <br>
+<br>
+    <label for="filter" class="sp">Filter By:</label>
+    <select id="filter" class="btn">
+        <option value="all">All</option>
+        <option value="5G">5G Mobiles</option>
+        <option value="gaming">Gaimg </option>
+        <option value="folding">Folding Mobiles</option>
+        <option value="abobe6ram"> ABove 6GB RAM</option>
+    </select>
+
+    </div>
+
+    
+    <section id="products">
+        <!-- Display product items here -->
+    </section>
+
+    
+<h1 style="color:#073e76" >Related <u style="color: #dfab62;" > Product </u></h1  >
+<div class="relatedprod" >
+
+     <div><img src="https://m.media-amazon.com/images/I/81Tr3Jo8DvL._SX679_.jpg"  alt=""> <h4>Amkette EvoFox Elite Ops Wireless Gamepad for Android TV | Google TV | 8+ Hours of Play Time | Zero Lag Connectivity Upto 12 Feets | USB Extender for TV Included | - Dusk Grey</h4> <a href="prodDetails1.html"> </a><h2>  &#8377; 1,469</h2>
+        <button  onclick="addToCart()" class="btn">Add to Cart</button></div>
+
+     <div><img src="https://m.media-amazon.com/images/I/51Prg4Smx-L._SX679_.jpg"  alt=""> <h4>Sony Alpha ILCE-7M4K Full-Frame Hybrid Camera 33MP Interchangeable-Lens Mirrorless Camera with 28-70mm Digital Zoom Lens 4K 60P Video Recording, Real-Time </h4> <a href="prodDetails2.html"></a><h2>
+        &#8377; 2,30,989  
+     </h2>
+     <button  onclick="addToCart()" class="btn">Add to Cart</button> </div>
+
+      <div><img src="https://m.media-amazon.com/images/I/71BCum1YVzL._SX679_.jpg" alt=""> <h4>MSI GF63 Thin, Intel Core i5-11260H, 40CM FHD 144Hz Gaming Laptop (8GB/512GB NVMe SSD/Windows 11 Home/Nvidia GeForce GTX 1650, GDDR6 4GB/Black/1.8Kg), 11SC-1477IN</h4> <a href="prodDetails4.html"></a> <h2>
+        &#8377; 49,990
+      </h2>
+      <button  onclick="addToCart()" class="btn">Add to Cart</button></div>
+
+     <div><img src="https://m.media-amazon.com/images/I/61abLrCfF7L._AC_UY327_FMwebp_QL65_.jpg"  alt=""> <h4>OnePlus Nord CE 3 5G </h4> <a href="./prodDetails1.html"></a> <h2>&#8377; 26,999</h2>
+        <button  onclick="addToCart()" class="btn">Add to Cart</button></div>
+
+     <div><img src="https://m.media-amazon.com/images/I/71VR6c3j2bL._AC_UY327_FMwebp_QL65_.jpg"  alt=""> <h4>
+        Zebronics Jet PRO Premium Wired Gaming , Intel Core i5-11260H, 40CM FHD 144Hz Gaming Laptop (8GB/512GB NVMe SSD/Windows 11 Home/Nvidia 
+        </h4> <a href="./prodDetails1.html"></a> <h2>&#8377; 900</h4>
+        <button  onclick="addToCart()" class="btn">Add to Cart</button>
+    </div>
+    </div>
+
+
+
+    <!-- footer start -->
+    <section id="newsletter" class="section-p1 section-m1">
+      <div class="newstext">
+          <h4>Sign Up for Newsletter</h4>
+          <p>
+              Get E-mail update about out latest shop and
+              <span>Special Offers.</span>
+          </p>
+      </div>
+      <div class="form">
+          <input type="text" placeholder="Your email address" />
+          <button class="normal">Sign Up</button>
+      </div>
+  </section>
+  <footer class="section-p1" id="mainFooter">
+      <div class="col">
+          <img class="logo" src="image/footer.jpg" alt="" />
+          <h4>Contact</h4>
+          <p>
+              <strong>Address:</strong> Flipkart Internet Private Limited,
+              Bengaluru, 560103, Karnataka, India
+          </p>
+          <p><strong>Phone:</strong>Telephone: 044-45614700</p>
+          <p><strong>Hours:</strong>10:00AM</p>
+          <div class="follow">
+              <h4>Follow us</h4>
+              <div class="icon">
+                  <i class="fa-brands fa-facebook"></i>
+                  <i class="fa-brands fa-twitter"></i>
+                  <i class="fa-brands fa-instagram"></i>
+                  <i class="fa-brands fa-pinterest"></i>
+                  <i class="fa-brands fa-youtube"></i>
+              </div>
+          </div>
+      </div>
+      <div class="col">
+          <h4>About</h4>
+          <a href="#">About Us</a>
+          <a href="#">Delivery Information</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
+          <a href="#">Contact Us</a>
+      </div>
+      <div class="col">
+          <h4>My Account</h4>
+          <a href="#">Sign In</a>
+          <a href="#">View Cart</a>
+          <a href="#">My Wishlist</a>
+          <a href="#">Track My Order</a>
+          <a href="#">Help</a>
+      </div>
+      <div class="col install">
+          <h4>Install App</h4>
+          <p>From App Store or Google Play</p>
+          <div class="row">
+              <img src="img/pay/app.jpg" alt="">
+              <img src="img/pay/play.jpg" alt="">
+          </div>
+          <p>Secure Payment Gatewway</p>
+          <img src="img/pay/pay.png" alt="">
+      </div>
+      <div class="copyright">
+          <p>© 2007-2023 Flipkart.com</p>
+      </div>
+  </footer>
+
+</body>
+</html>
+
+<script>
+  const products = [
+  {
+    name: 'realme narzo N55 (Prime Black, 6GB+128GB)',
+    price: 12999,
+    image: "https://m.media-amazon.com/images/I/81ogvU1j6qL._AC_UY327_FMwebp_QL65_.jpg",
+    is5g: false,
+    abobe6ram:true,
+    type:'typical',
+  },
+  {
+    name: 'OnePlus Nord CE 2 Lite 5G (Black Dusk, 6GB RAM, 128GB Storage)',
+    price: 18999,
+    image: "https://m.media-amazon.com/images/I/71V--WZVUIL._SX679_.jpg",
+    is5g: false,
+    type:'typical',
+    abobe6ram:true,
+  },
+  {
+    name: 'Samsung Galaxy S23 5G (Green, 8GB, 256GB Storage)',
+    price: 79999,
+    image: "https://m.media-amazon.com/images/I/61RZDb2mQxL._SX679_.jpg",
+    is5g: false,
+    abobe6ram:true,
+    type: 'typical'
+  },
+  {
+    name: 'Redmi A2 (Sea Green, 2GB RAM, 32GB Storage)',
+    image: "https://m.media-amazon.com/images/I/81bh6SxXQ+L._AC_UY327_FMwebp_QL65_.jpg",
+    price: 6499,
+   type:'typical',
+    is5g: false,
+    abobe6ram:false,
+  },
+  {
+    name: 'Samsung Galaxy M04 Dark Blue, 4GB RAM, 64GB Storage',
+    price: 9999,
+    image: "https://m.media-amazon.com/images/I/81t6Av5DvXL._AC_UY327_FMwebp_QL65_.jpg",
+   type:'typical',
+    is5g: false,
+    abobe6ram:false,
+  },
+  {
+    name: 'OnePlus Nord CE 2 Lite 5G (Black Dusk, 6GB RAM, 128GB Storage)',
+    price: 17999,
+    image: "https://m.media-amazon.com/images/I/71V--WZVUIL._AC_UY327_FMwebp_QL65_.jpg",
+    gaming:false,
+    abobe6ram:true,
+    is5g: true,
+  },
+  {
+    name: 'Vivo T2x 5G (Aurora Gold, 128 GB) (4 GB RAM)',
+    price: 14900,
+    image: "https://m.media-amazon.com/images/I/71q-C6DI7DL._AC_UY327_FMwebp_QL65_.jpg",
+    gaming:false,
+    is5g: false,
+    abobe6ram:false,
+  },
+  {
+    name: 'realme narzo 50i Prime (Dark Blue 4GB RAM+64GB Storage) ',
+    price: 7699,
+    image: "https://m.media-amazon.com/images/I/81WPIz1l5wL._AC_UY327_FMwebp_QL65_.jpg",
+    gaming:false,
+    is5g: false,
+    abobe6ram:false,
+  },
+  {
+    name: 'Oppo A58 (Dazzling Green, 6GB RAM, 128GB Storage)',
+    price: 14999,
+    image: "https://m.media-amazon.com/images/I/818r371d5hL._AC_UY327_FMwebp_QL65_.jpg",
+    gaming:false,
+    is5g: false,
+    abobe6ram:true,
+  },
+  {
+    name: 'iQOO 11 5G (Legend, 16GB RAM, 256 GB Storage)',
+    price: 59999,
+    image: "https://m.media-amazon.com/images/I/71ZeuCAbcSL._AC_UY327_FMwebp_QL65_.jpg",
+   type:'gaming',
+    is5g: true,
+    abobe6ram:true,
+  },
+  {
+    name: 'iQOO Neo 7 Pro 5G (Fearless Flame, 8GB RAM, 128GB Storage) ',
+    price: 34999,
+    image: "https://m.media-amazon.com/images/I/712pLRfzDYL._AC_UY327_FMwebp_QL65_.jpg",
+    type:'gaming',
+    is5g: true,
+    abobe6ram:true,
+  },
+  {
+    name: 'ASUS ROG Phone 2 (ZS660KL) Smartphone 8GB RAM 128GB ROM',
+    price: 22999,
+    image: "https://m.media-amazon.com/images/I/51+AUhQdgYL._AC_UY327_FMwebp_QL65_.jpg",
+   type:'gaming',
+    abobe6ram:true,
+    is5g: true,
+  },
+  {
+    name: 'iQOO Neo 7 Pro 5G (Dark Storm, 12GB RAM, 256GB Storage)',
+    price: 37999,
+    image: "https://m.media-amazon.com/images/I/611rQWZa5rL._AC_UY327_FMwebp_QL65_.jpg",
+   type: 'gaming',
+    is5g: true,
+    abobe6ram:true,
+  },
+  {
+    name: 'Samsung Galaxy Z Fold5 5G (ICY Blue, 12GB RAM, 512GB Storage)',
+    price: 16499,
+    image: "https://m.media-amazon.com/images/I/71XwXWxa6QL._SX679_.jpg",
+    is5g: true,
+    type: 'folding',
+    abobe6ram:true,
+  },
+  {
+    name: 'Samsung Galaxy Z 5G (Cream, 8GB RAM, 256GB Storage)',
+    price: 37999,
+    image: "https://m.media-amazon.com/images/I/31yBsncCE1L._AC_SR480,480_.jpg",
+    is5g: true,
+    abobe6ram:true,
+    type: 'folding'
+  },
+  {
+    name: 'Samsung  Flip3 5G (Phantom Black, 8GB RAM, 128GB Storage) ',
+    price: 42880,
+    image: "https://m.media-amazon.com/images/I/71yOawqM9bL._AC_UY327_FMwebp_QL65_.jpg",
+    is5g: true,
+    type: 'folding',
+    abobe6ram:true,
+  },
+  {
+    name: 'Motorola razr 40 (Vanilla Cream, 8GB RAM, 256GB Storage) |',
+    price: 59999,
+    image: "https://m.media-amazon.com/images/I/41CJbiuxNhL._AC_SR480,480_.jpg",
+    is5g: true,
+    type: 'folding',
+    abobe6ram:true,
+  },
+  {
+    name: 'Samsung ZFold5 5G (Phantom Black, 12GB RAM, 512GB )',
+    price: 170499,
+    image: "https://m.media-amazon.com/images/I/71RLYJvBidL._AC_UY327_FMwebp_QL65_.jpg",
+    abobe6ram:true,
+    is5g: true,
+    type: 'folding'
+  },
+  // Add more product objects as needed
+];
+
+
+    // Display products on the page
+    function displayProducts(products) {
+  const productsSection = document.getElementById('products');
+  productsSection.innerHTML = '';
+
+  products.forEach(product => {
+    var div = document.createElement('div');
+    var h2 = document.createElement('h4');
+    var image = document.createElement('img');
+    var h3 = document.createElement('h3');
+    var add=document.createElement('button');
+    var buy=document.createElement('button');
+
+    h2.innerText = product.name;
+    h3.innerHTML = "&#8377;" + product.price;
+    image.src = product.image;
+    add.innerText="add to cart";
+    buy.innerText="buy now";
+
+    add.setAttribute('class','btn');
+    buy.setAttribute('class','btn');
+    add.setAttribute('onclick','add()');
+    buy.setAttribute('onclick','buy()');
+
+    div.appendChild(image);
+    div.appendChild(h2);
+    div.appendChild(h3);
+    div.appendChild(add);
+    div.appendChild(buy);
+
+
+
+   
+    // Append the div to productsSection
+    productsSection.appendChild(div);
+  });
+}
+
+
+    function lowToHigh() {
+      products.sort((a, b) => a.price - b.price);
+      displayProducts(products);
+    }
+  
+    function highToLow() {
+      products.sort((a, b) => b.price - a.price);
+      displayProducts(products);
+    }
+  
+
+    // Function to filter products based on user selection
+    function filterProducts() {
+      const filterValue = document.getElementById('filter').value;
+
+      let filteredProducts = products;
+  
+      if (filterValue === '5G') {
+        filteredProducts = products.filter(product => product.is5g);
+      } else if (filterValue === 'abobe6ram') {
+        filteredProducts = products.filter(product => product.abobe6ram);
+      } else if (filterValue === 'gaming') {
+        filteredProducts = products.filter(product => product.type === 'gaming');
+      } else if (filterValue === 'folding') {
+        filteredProducts = products.filter(product => product.type === 'folding');
+      }
+  
+      displayProducts(filteredProducts);
+    }
+
+  
+    // Call filterProducts when the user selects an option
+    const filterSelect = document.getElementById('filter');
+    filterSelect.addEventListener('change', filterProducts);
+  
+    // Initially display all products
+    displayProducts(products);
+
+
+function add(){
+alert("someone clicked me")
+}
+function buy(){
+  alert("someone clicked me")
+}
+
+  </script>
+
+
+
+
+<!-- sliding image  -->
+<script>
+const images =[
+  "https://m.media-amazon.com/images/S/aplus-media-library-service-media/fea9cb94-20cb-4947-9c13-79f7d58b25c2._CR0,0,1464,600_PT0_SX1464_V1__.jpg",
+  "https://m.media-amazon.com/images/G/31/img21/Wireless/katariy/Apple/2022/i14/Aplus_14pro/iPhone_14_Pro_Product_Page_Flex_Module_Avail_Amazon_Desktop__en-IN_01._CB609619398_.jpg",
+  "https://m.media-amazon.com/images/S/aplus-media-library-service-media/62cec899-18e4-4a70-9a5c-c0da428eeff6.__CR0,0,1464,600_PT0_SX1464_V1___.jpg",
+  "https://m.media-amazon.com/images/S/aplus-media-library-service-media/beb1d0bf-5953-4cee-99a3-2e5bee176319.__CR0,0,970,600_PT0_SX970_V1___.jpg",
+];
+
+
+const sliderImage = document.getElementById('slider');
+let currentImageIndex = 0;
+
+function updateSliderImage() {
+  sliderImage.src = images[currentImageIndex];
+  currentImageIndex = (currentImageIndex + 1) % images.length;
+}
+// Set the interval to change the slider image every 3 seconds
+setInterval(updateSliderImage, 2000);
+</script>
