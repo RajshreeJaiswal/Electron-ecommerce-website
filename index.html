@@ -21,7 +21,7 @@
     </section>
 
     <section id="header">
-        <a href="#"><img src="/image/final.png" width="200px" height="120px" class="logo" alt="" /></a>
+        <a href="#"><img src="/image/final.png" width="160px" height="90px" class="logo" alt="" /></a>
         <div class="form">
             <input type="text" placeholder="Search any items" />
             <button class="normal">Search</button>
@@ -33,15 +33,18 @@
                 <li class="dropdown-1">
                     <a href="#" class="dropbtn-1">Account</a>
                     <div class="dropdown-content-1">
-                        <a href="login.html">Login</a>
-                        <a href="signup.html">SignUp</a>
+                        <span id="displayName"></span>
+                        <a href="login.html" id="loginLink">Login</a>
+                        <a href="signup.html" id="signupLink">SignUp</a>
+                        <a href="#" id="signoutLink" style="display: none;">SignOut</a>
                     </div>
                 </li>
-                <li><a href="blog.html">Blog</a></li>
+            
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li id="lg-bag">
                     <a href="cart.html"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i></a>
+                    <span id="cart-count">0</span> 
                 </li>
             </ul>
         </div>

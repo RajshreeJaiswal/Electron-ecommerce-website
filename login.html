@@ -23,7 +23,7 @@
     </section>
 
     <section id="header">
-      <a href="#"><img src="/image/final.png" width="200px" height="120px" class="logo" alt="" /></a>
+      <a href="#"><img src="/image/final.png"  width="160px" height="90px" class="logo" alt="" /></a>
       <div class="form">
           <input type="text" placeholder="Search any items" />
           <button class="normal">Search</button>
@@ -39,11 +39,12 @@
                       <a href="signup.html">SignUp</a>
                   </div>
               </li>
-              <li><a href="blog.html">Blog</a></li>
+             
               <li><a href="about.html">About</a></li>
               <li><a href="contact.html">Contact</a></li>
               <li id="lg-bag">
                   <a href="cart.html"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i></a>
+                  <span id="cart-count">0</span> 
               </li>
           </ul>
       </div>
@@ -57,18 +58,20 @@
     <section id="login">
       <div class="container">
         <form id="register_form">
+          <h2>Login</h2>
+          <div class="line"></div>
             <div id="error-message" class="error-message"></div> <!-- Error message placeholder -->
             <div>
                 <label>Email</label>
-                <input type="email" id="login_email" placeholder="Enter Email id" />
+                <input required type="email" id="login_email" placeholder="Enter Email id" />
                 <label>Password</label>
-                <input type="password" id="login_password" placeholder="Enter password" />
+                <input required type="password" id="login_password" placeholder="Enter password" />
                 <button type="button" id="login_btn">Login</button>
             </div>
             <div style="margin-top: 10px;">
                 <button id="logout-btn" style="display: none">logout</button>
             </div>
-            <div style="margin-top: 10px;">
+            <div class="signup-link">
                 <a href="./signUp.html">Create New Account</a>
             </div>
         </form>

@@ -146,12 +146,15 @@ body {
 }
 
 #header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 2px 60px;
-    background-color: #003f62;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 60px;
+  background-color: #003f62;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 0;      
+  z-index: 1000; 
 }
 
 
@@ -191,6 +194,48 @@ body {
 }
 
 
+/* Container for username and signout link */
+#userContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f4f4f4;
+  padding: 10px 20px;
+  border-radius: 5px;
+  max-width: 250px;
+  margin: 20px auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the displayed username */
+#displayName {
+  font-size: 22px;
+  font-weight: bold;
+  color: #f5ab4a;
+  margin-right: 20px;
+  width: 200px; /* space between the name and the signout link */
+  margin-top: 20px;
+  margin-bottom: 24px;
+  display: flex;
+}
+
+/* Style for the signout link */
+#signoutLink {
+  text-decoration: none;
+  background-color: #67d2ec;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+#signoutLink:hover {
+  background-color: #224663;
+}
+
+
+
 .dropdown-content {
     display: none;
     position: absolute;
@@ -219,6 +264,25 @@ body {
     background-color: #15ac47;
 }
 
+
+.cart-icon {
+  position: relative;
+  display: inline-block;
+}
+
+#cart-count {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 0 5px;
+  font-size: 12px;
+  line-height: 20px;
+  min-width: 20px;
+  text-align: center;
+}
 
 /* Drop-Down CSS */
 
@@ -554,6 +618,7 @@ font-weight: 800;
   background-repeat: no-repeat;
   background-color: #003f62;
   margin: 0px;
+  /* height: 15vh; */
 
 }
 
@@ -610,6 +675,7 @@ footer{
   justify-content: space-between;
   background-color: 
   #e2f4ff;
+  height: fit-content;
 }
 
 footer .col{
@@ -716,10 +782,8 @@ footer .copyright{
   border: none;
   cursor: pointer;
 }
+/* For the header */
 
-.dropbtn-1:hover, .dropbtn-1:focus {
-  /* background-color: #555; */
-}
 
 
 
@@ -847,10 +911,10 @@ footer .copyright{
     padding: 10px 20px;
   }
   
-  /* Adjust other styles as needed */
+
 }
 
-/* Add more media queries as needed for different screen sizes */
+
 
 
 

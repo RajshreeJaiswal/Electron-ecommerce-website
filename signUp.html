@@ -13,6 +13,8 @@
     <!-- <link rel="stylesheet" href="styles/checkout.css"> -->
     <!-- <link rel="stylesheet" href="styles/payment.css"> -->
     <link rel="stylesheet" href="styles/signup.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
   
 
 </head>
@@ -23,7 +25,7 @@
     </section>
 
     <section id="header">
-        <a href="#"><img src="/image/final.png" width="200px" height="120px" class="logo" alt="" /></a>
+        <a href="#"><img src="/image/final.png"  width="160px" height="90px" class="logo" alt="" /></a>
         <div class="form">
             <input type="text" placeholder="Search any items" />
             <button class="normal">Search</button>
@@ -35,11 +37,13 @@
                 <li class="dropdown-1">
                     <a href="#" class="dropbtn-1">Account</a>
                     <div class="dropdown-content-1">
-                        <a href="login.html">Login</a>
-                        <a href="signup.html">SignUp</a>
+                        <span id="displayName"></span>
+                        <a href="login.html" id="loginLink">Login</a>
+                        <a href="signup.html" id="signupLink">SignUp</a>
+                        <a href="#" id="signoutLink" style="display: none;">SignOut</a>
                     </div>
                 </li>
-                <li><a href="blog.html">Blog</a></li>
+              
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li id="lg-bag">
@@ -57,7 +61,7 @@
     <section id="signup">
       <div class="container">
         <form id="register_form">
-            <h2>SignUp</h2>
+            <h2>Sign up</h2>
             <div class="line"></div>
             <div>
                 <label for="">Username</label>
@@ -67,10 +71,13 @@
                 <label>Password</label>
                 <input type="password" id="password" placeholder="Enter password" />
                 <button type="button" id="register_btn" class="btn">Signup</button>
-                <button type="button" id="google_signup_btn" class="btn">Signup with Google</button>
+                <button type="button" id="google_signup_btn" class="btn">
+                    <i class="material-icons">account_circle</i> Signup with Google
+                 </button>
+                 
             </div>
             <div style="margin-top: 10px;">
-                <a href="./login.html">Already Account Login</a>
+                <a class="anchor" href="./login.html">Already Account? Please Login</a>
             </div>
         </form>
     </div>
@@ -178,4 +185,44 @@
               console.log(errorMessage);
           });
   });
+
+  import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
+
+// ... your existing code ...
+
+// Check for auth state changes
+onAuthStateChanged(auth, (user) => {
+    if (user) {
+        // User is signed in.
+        const displayNameElement = document.getElementById("displayName");
+        displayNameElement.innerText = user.displayName || 'User'; 
+        
+        // Show and hide relevant links
+        document.getElementById("loginLink").style.display = "none";
+        document.getElementById("signupLink").style.display = "none";
+        document.getElementById("signoutLink").style.display = "block";
+    } else {
+        // User is signed out.
+        const displayNameElement = document.getElementById("displayName");
+        displayNameElement.innerText = ''; 
+        
+        // Show and hide relevant links
+        document.getElementById("loginLink").style.display = "block";
+        document.getElementById("signupLink").style.display = "block";
+        document.getElementById("signoutLink").style.display = "none";
+    }
+});
+
+// Handle the sign-out
+document.getElementById("signoutLink").addEventListener("click", function (event) {
+    event.preventDefault();
+    signOut(auth).then(() => {
+        alert('Signed out successfully.');
+    }).catch((error) => {
+        console.error("Error signing out: ", error);
+    });
+});
+
+
+
 </script>

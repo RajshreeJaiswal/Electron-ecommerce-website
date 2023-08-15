@@ -73,7 +73,7 @@ function updateCart() {
             element.style.display = "none";
         });
         rightSection.style.display = "none"; // Hide the right section
-        shoppingButton.style.display = "block";
+        shoppingButton.style.display = "";
         emptyCartSection.style.display = "block"; // Show the "empty cart" section
     } else {
         // Show cart contents, cart total, and discount
@@ -81,7 +81,7 @@ function updateCart() {
             element.style.display = "block";
         });
         rightSection.style.display = "block"; // Show the right section
-        shoppingButton.style.display = "none";
+        shoppingButton.style.display = "block";
         emptyCartSection.style.display = "none"; // Hide the "empty cart" section
     }
 }
@@ -134,6 +134,8 @@ cartTableBody.addEventListener("click", (event) => {
 
     // Update the cart total
     updateCart();
+    updateCartCount();
+    
   }
 });
 
@@ -141,6 +143,9 @@ cartTableBody.addEventListener("click", (event) => {
 
 loadCartItems();
 updateCart();
+updateCartCount(); 
+
+// alert('Item added to cart!');
 
 const applyCouponButton = document.getElementById("apply-coupon");
 const couponCodeInput = document.getElementById("coupon-code");
@@ -189,10 +194,28 @@ function clearCart() {
     cartTableBody.innerHTML = "";
     document.getElementById("total").textContent = "0.00";
     document.getElementById("discount").textContent = "0.00";
-  
+    updateCartCount();
 }
 
 // ... (Previous code remains the same)
 
 
+function updateCartCount() {
+  const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+  console.log("Cart Items:", cartItems); // Debugging
+  let totalCount = 0;
+  cartItems.forEach(item => {
+    if (item.quantity) { // Ensure the item has quantity attribute
+      totalCount += item.quantity;
+    }
+  });
+  console.log("Total Count:", totalCount); // Debugging
+  document.getElementById('cart-count').textContent = totalCount;
+}
+
+window.addEventListener('storage', (event) => {
+  if (event.key === 'cartItems') {
+      updateCartCount();
+  }
+});
 
