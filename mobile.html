@@ -6,6 +6,13 @@
     <title>Mobiles </title>
     <link rel="stylesheet" href="./styles/index.css">
     <link rel="stylesheet" href="./productPage.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="/styles/slider.css">
+    <link rel="stylesheet" href="/styles/shop.css">
+    <link rel="stylesheet" href="/styles/cart.css">
+    <link rel="stylesheet" href="styles/checkout.css">
+    <link rel="stylesheet" href="styles/payment.css">
     <style>
       #products div img {
         height: 400px;
@@ -13,96 +20,44 @@
     </style>
 </head>
 <body>
+  <section id="top">
+        
+  </section>
 
-    <section id="header">
-        <a href="#"><img src="image/navbar_logo.jpg" class="logo" alt="" /></a>
-        <div class="form">
-            <input type="text" placeholder="Search any items" />
-            <button class="normal">Search</button>
-        </div>
-        <div>
-            <ul id="navbar">
-                <li><a class="active" href="index.html">Home</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="sign up.html">Account</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li id="lg-bag">
-                    <a href="cart.html"><i class="fa-solid fa-cart-shopping fa-bounce" style="color: #dfab62;"></i></a>
+  <section id="header">
+      <a href="#"><img src="/image/final.png" width="160px" height="90px" class="logo" alt="" /></a>
+      <div class="form">
+          <input type="text" placeholder="Search any items" />
+          <button class="normal">Search</button>
+      </div>
+      <div>
+          <ul id="navbar">
+              <li><a class="active" href="index.html">Home</a></li>
+              <li><a href="shop.html">Shop</a></li>
+              <li class="dropdown-1">
+                  <a href="#" class="dropbtn-1">Account</a>
+                  <div class="dropdown-content-1">
+                      <span id="displayName"></span>
+                      <a href="login.html" id="loginLink">Login</a>
+                      <a href="signup.html" id="signupLink">SignUp</a>
+                      <a href="#" id="signoutLink" style="display: none;">SignOut</a>
+                  </div>
+              </li>
+          
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li id="lg-bag">
+                  <a href="cart.html"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i></a>
+                  <span id="cart-count">0</span> 
+              </li>
+          </ul>
+      </div>
+  </section>
+  
+  <section id="drop-down">
+      
 
-                </li>
-            </ul>
-        </div>
-    </section>
-    <section id="drop-down">
-        <div class="dropdown-container">
-            <div class="dropdown-item">
-                <a href="#">Mobiles</a>
-                <ul class="dropdown-content">
-                    <li><a href="#">Oppo</a></li>
-                    <li><a href="#">Samsung</a></li>
-                    <li><a href="#">Infinix</a></li>
-                    <li><a href="#">Honor</a></li>
-                    <li><a href="#">Apple</a></li>
-                    <li><a href="#">Realme</a></li>
-                    <li><a href="#">Vivo</a></li>
-
-                </ul>
-            </div>
-            <div class="dropdown-item">
-                <a href="#">laptop</a>
-                <ul class="dropdown-content">
-                    <li><a href="#">lenovo</a></li>
-                    <li><a href="#">Samsung</a></li>
-                    <li><a href="#">MSI</a></li>
-                    <li><a href="#">Acer</a></li>
-                    <li><a href="#">Hp</a></li>
-                    <li><a href="#">Gaming Laptop</a></li>
-                    <li><a href="#">Mac Book</a></li>
-                </ul>
-            </div>
-            <div class="dropdown-item">
-                <a href="#">Gaming Accessories</a>
-                <ul class="dropdown-content">
-                    <li><a href="#">Gaming laptop</a></li>
-                    <li><a href="#">Play Station</a></li>
-                    <li><a href="#">Gaming Remote</a></li>
-                    <li><a href="#">Gaming Mouse</a></li>
-                    <li><a href="#">Gaming Keyboard</a></li>
-                    <li><a href="#">Gaming Chair</a></li>
-                    <li><a href="#">Gaming Table</a></li>
-                </ul>
-            </div>
-            <div class="dropdown-item">
-                <a href="#">Electronics</a>
-                <ul class="dropdown-content">
-                    <li><a href="#">Soundbard</a></li>
-                    <li><a href="#">Home Thearters</a></li>
-                    <li><a href="#">Bluetooth Spekaers</a></li>
-                    <li><a href="#">Google Next</a></li>
-                    <li><a href="#">Camera lens</a></li>
-                    <li><a href="#">DSLR</a></li>
-                    <li><a href="#">Printer</a></li>
-                    <!-- Add more sub-items here -->
-                </ul>
-            </div>
-            <div class="dropdown-item">
-                <a href="#">Cameras</a>
-                <ul class="dropdown-content">
-                    <li><a href="#">Camera Lens</a></li>
-                    <li><a href="#">Sony Cameras</a></li>
-                    <li><a href="#">DSLR</a></li>
-                    <li><a href="#">Tripods</a></li>
-                    <li><a href="#">Camera Battery</a></li>
-                    <li><a href="#">Camera Bags</a></li>
-
-                    <!-- Add more sub-items here -->
-                </ul>
-            </div>
-
-        </div>
-    </section>
+  </section>
     <div>
     <img src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/fea9cb94-20cb-4947-9c13-79f7d58b25c2._CR0,0,1464,600_PT0_SX1464_V1__.jpg" alt="" id="slider"
     style="height: 500px;"
@@ -488,4 +443,23 @@ function updateSliderImage() {
 }
 // Set the interval to change the slider image every 3 seconds
 setInterval(updateSliderImage, 2000);
+</script>
+<script type="module">
+
+  import topSec from "./component/topSection.js"
+  let topContainer = document.getElementById("top");
+  topContainer.innerHTML = topSec();
+
+
+  import dropdown from "./component/dropdown.js"
+  let dropdownContainer = document.getElementById("drop-down");
+  dropdownContainer.innerHTML = dropdown();
+
+  import newslater from "./component/newslater.js"
+  let newsContainer = document.getElementById("newsletter");
+  newsContainer.innerHTML = newslater();
+
+  import footer1 from "./component/footer.js"
+  let footerContainer = document.getElementById("mainFooter");
+  footerContainer.innerHTML = footer1();
 </script>
