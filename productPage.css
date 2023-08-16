@@ -1,0 +1,88 @@
+#slider{
+    transition: 3s;
+    width: 100%;
+}
+#sort{
+    border-top-right-radius: 10px;
+  
+    margin: -5px;
+    width: 380px;
+    background-color:#003f62;
+    padding: 10px;
+}
+.btn{
+   border: 2px solid white;
+    color: white;
+    background-color: #eda515;
+    padding: 10px;
+    border-radius: 10px;
+}
+.sp{
+    color: whitesmoke;
+    font-size: 22px;
+}
+
+#products {
+    padding-top: 40px;
+    padding-bottom: 60px;
+    background-color: #003f62;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* Use auto-fill to create as many columns as possible while maintaining the minimum size */
+    gap: 20px;
+  }
+  
+#products div img{
+     border-radius: 10px;
+    width: 100%;
+    height: 250px; 
+
+}
+#products div h4{
+    color: rgb(31, 40, 102);
+}
+#products div h3{
+    padding: 5px;
+    color: crimson;
+}
+#products div {
+    background-color: aliceblue;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 7px;
+}
+
+.relatedprod{
+    display: flex;
+    flex-wrap: wrap;
+   justify-content: space-around;
+   margin: 10px;
+  }
+  .relatedprod div{
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    padding: 4px;
+    width: 250px;
+    width: 250px;
+    border-radius: 10px;
+  }
+  .relatedprod div img{
+    width: 100%;
+  }
+  .relatedprod div h4{
+   font-size: 15px;
+  color: rgb(23, 72, 152);
+  }
+  .relatedprod div h2{
+  color: crimson;
+  font-size: 20px;
+  }
+  
+  .relatedprod div .btn{
+   position: relative;
+   margin-bottom: 1px;
+  }
+  
+
+  /* .relatedprod div *{
+   margin: 5px;
+   } */

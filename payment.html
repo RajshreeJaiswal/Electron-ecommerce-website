@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electron: Pay with razor pay</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <!-- <link rel="stylesheet" href="/styles/slider.css"> -->
+    <link rel="stylesheet" href="/styles/shop.css">
+    <!-- <link rel="stylesheet" href="/styles/cart.css"> -->
+    <!-- <link rel="stylesheet" href="styles/checkout.css"> -->
+    <link rel="stylesheet" href="styles/payment.css">
+
+    
+</head>
+<body>
+    <section id="top">
+        
+    </section>
+    
+
+        <!-- navbar start -->
+        <section id="header">
+            <a href="#"><img src="/image/final.png" width="200px" height="120px" class="logo" alt="" /></a>
+            <div class="form">
+                <input type="text" placeholder="Search any items" />
+                <button class="normal">Search</button>
+            </div>
+            <div>
+                <ul id="navbar">
+                    <li><a class="active" href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li class="dropdown-1">
+                        <a href="#" class="dropbtn-1">Account</a>
+                        <div class="dropdown-content-1">
+                            <a href="login.html">Login</a>
+                            <a href="signup.html">SignUp</a>
+                        </div>
+                    </li>
+                   
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li id="lg-bag">
+                        <a href="cart.html"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- payment -->
+
+        <div style="display: flex; justify-content: space-between;">
+            <!-- Delivery Address Box -->
+            <div id="deliveryAddressBox">
+                <h2>Delivery Address</h2>
+                <div class="line"></div> 
+                <!-- The details will be populated here -->
+            </div>
+        
+            <!-- Razor pay section -->
+            <div style="flex: 1; padding: 20px;">
+                <div id="payDiv">
+                    <button id="rzp-button1">Click For Payment</button>
+                </div>
+            </div>
+        </div>
+        
+
+    <!-- footer -->
+    <section id="newsletter" class="section-p1 section-m1" style="margin-top: 230px;">
+        <!-- newlater section -->
+        <div class="newstext">
+            <h4>Subscribe Newsletter</h4>
+            <p>
+                Get E-mail update about out latest shop and
+                <span>Special Offers.</span>
+            </p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="Your email address" />
+            <button class="normal">Sign Up</button>
+        </div>
+    </section>
+    <footer class="section-p1" id="mainFooter">
+        <div class="col">
+            <img class="logo" src="image/final.png" width="200px" height="120px"  alt="" />
+            <h4>Contact</h4>
+            <p>
+                <strong>Address:</strong> Flipkart Internet Private Limited,
+                Bengaluru, 560103, Karnataka, India
+            </p>
+            <p><strong>Phone:</strong>Telephone: 044-45614700</p>
+            <p><strong>Hours:</strong>10:00AM</p>
+            <div class="follow">
+                <h4>Follow us</h4>
+                <div class="icon">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-pinterest"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <img src="img/pay/app.jpg" alt="">
+                <img src="img/pay/play.jpg" alt="">
+            </div>
+            <p>Secure Payment Gatewway</p>
+            <img src="img/pay/pay.png" alt="">
+        </div>
+        <div class="copyright">
+            <p>© 2007-2023 Flipkart.com</p>
+        </div>
+    </footer>
+</body>
+</html>
+<script src="Script/slider.js"></script>
+<script src="Script/responsive.js"></script>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="Script/payment.js"></script>
+<script type="module">
+
+    import topSec from "./component/topSection.js"
+    let topContainer = document.getElementById("top");
+    topContainer.innerHTML = topSec();
+
+
+    import dropdown from "./component/dropdown.js"
+    let dropdownContainer = document.getElementById("drop-down");
+    dropdownContainer.innerHTML = dropdown();
+
+   
+</script>

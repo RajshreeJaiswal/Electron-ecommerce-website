@@ -1,0 +1,108 @@
+.container {
+  max-width: 440px;
+  margin: 0 auto;
+  /* height: 430px; */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  background-color: #fff;
+  margin-top: 70px;
+}
+
+#signup{
+  height: 70vh;
+}
+
+#register_form {
+  text-align: center; /* Centering everything inside the form */
+}
+
+.line {
+  height: 2px;
+  background-color: #ccc;
+  margin: 10px 0;
+}
+
+#register_form label {
+  display: block;
+  margin-bottom: 13px;
+  font-size: 20px;
+}
+
+label{
+  font-size: 27px;
+  font-weight: 900;
+  
+}
+a{
+
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+h2{
+     font-size: 46px;
+    line-height: 54px;
+    color: #003f62;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    
+}
+
+
+
+#register_form {
+  text-align: center; /* Centering everything inside the form */
+}
+
+
+#register_form input[type="text"],
+#register_form input[type="email"],
+#register_form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 23px;
+  font-size: 20px;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  margin: 10px 0;
+  border: none;
+  background-color: orange;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: 600;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#google_signup_btn {
+  background-color: #db4437; /* Google button color */
+  position: relative;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+#google_signup_btn .material-icons {
+  position: absolute;
+  left: 10px; /* Position the Google icon to the left */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+.btn:hover {
+  background-color:#088178;
+}
+
+#google_signup_btn:hover {
+  background-color: #088178;
+}
+

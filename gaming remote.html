@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaiming Remote </title>
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./productPage.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="/styles/slider.css">
+    <link rel="stylesheet" href="/styles/shop.css">
+    <link rel="stylesheet" href="/styles/cart.css">
+    <link rel="stylesheet" href="styles/checkout.css">
+    <link rel="stylesheet" href="styles/payment.css">
+    <style>
+     #products div img{
+      width: 100%;
+      height: 400px;
+     }
+    </style>
+</head>
+<body>
+
+  <section id="top">
+        
+  </section>
+
+  <section id="header">
+      <a href="#"><img src="/image/final.png" width="160px" height="90px" class="logo" alt="" /></a>
+      <div class="form">
+          <input type="text" placeholder="Search any items" />
+          <button class="normal">Search</button>
+      </div>
+      <div>
+          <ul id="navbar">
+              <li><a class="active" href="index.html">Home</a></li>
+              <li><a href="shop.html">Shop</a></li>
+              <li class="dropdown-1">
+                  <a href="#" class="dropbtn-1">Account</a>
+                  <div class="dropdown-content-1">
+                      <span id="displayName"></span>
+                      <a href="login.html" id="loginLink">Login</a>
+                      <a href="signup.html" id="signupLink">SignUp</a>
+                      <a href="#" id="signoutLink" style="display: none;">SignOut</a>
+                  </div>
+              </li>
+          
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li id="lg-bag">
+                  <a href="cart.html"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i></a>
+                  <span id="cart-count">0</span> 
+              </li>
+          </ul>
+      </div>
+  </section>
+  
+  <section id="drop-down">
+      
+
+  </section>
+
+    <div >
+    <img src="https://w.forfun.com/fetch/0b/0bc739968eeb709d8eebbdb132141cb8.jpeg" alt="" id="slider"
+    style="height:400px"
+    >
+  </div>
+
+    <div id="sort" >
+  <span class="sp">  Sort Price by : </span>
+    <button onclick="lowToHigh()"  class="btn"> low to high</button>
+    <button onclick="highTolow()"  class="btn"> high to low</button>
+    <br>
+<br>
+    <label for="filter" class="sp">Filter By:</label>
+    <select id="filter" class="btn">
+        <option value="all">All</option>
+        <option value="Programmable">Programmable</option>
+        <option value="wireless">Wireless</option>
+       
+    </select>
+
+    </div>
+
+    
+    <section id="products">
+        <!-- Display product items here -->
+    </section>
+
+    
+<h1 style="color:#073e76">Related <u style="color: #dfab62;"> Product </u></h1>
+<div class="relatedprod">
+
+     <div><img src="https://m.media-amazon.com/images/I/81Tr3Jo8DvL._SX679_.jpg"  alt=""> <h4>Amkette EvoFox Elite Ops Wireless Gamepad for Android TV | Google TV | 8+ Hours of Play Time | Zero Lag Connectivity Upto 12 Feets | USB Extender for TV Included | - Dusk Grey</h4> <a href="prodDetails1.html"> </a><h2>  &#8377; 1,469</h2>
+        <button  onclick="addToCart()" class="btn">Add to Cart</button></div>
+
+     <div><img src="https://m.media-amazon.com/images/I/51Prg4Smx-L._SX679_.jpg"  alt=""> <h4>Sony Alpha ILCE-7M4K Full-Frame Hybrid Camera 33MP Interchangeable-Lens Mirrorless Camera with 28-70mm Digital Zoom Lens 4K 60P Video Recording, Real-Time </h4> <a href="prodDetails2.html"></a><h2>
+        &#8377; 2,30,989  
+     </h2>
+     <button  onclick="addToCart()" class="btn">Add to Cart</button> </div>
+
+      <div><img src="https://m.media-amazon.com/images/I/71BCum1YVzL._SX679_.jpg" alt=""> <h4>MSI GF63 Thin, Intel Core i5-11260H, 40CM FHD 144Hz Gaming Laptop (8GB/512GB NVMe SSD/Windows 11 Home/Nvidia GeForce GTX 1650, GDDR6 4GB/Black/1.8Kg), 11SC-1477IN</h4> <a href="prodDetails4.html"></a> <h2>
+        &#8377; 49,990
+      </h2>
+      <button  onclick="addToCart()" class="btn">Add to Cart</button></div>
+
+     <div><img src="https://m.media-amazon.com/images/I/61abLrCfF7L._AC_UY327_FMwebp_QL65_.jpg"  alt=""> <h4>OnePlus Nord CE 3 5G </h4> <a href="./prodDetails1.html"></a> <h2>&#8377; 26,999</h2>
+        <button  onclick="addToCart()" class="btn">Add to Cart</button></div>
+
+     <div><img src="https://m.media-amazon.com/images/I/71VR6c3j2bL._AC_UY327_FMwebp_QL65_.jpg"  alt=""> <h4>
+        Zebronics Jet PRO Premium Wired Gaming , Intel Core i5-11260H, 40CM FHD 144Hz Gaming Laptop (8GB/512GB NVMe SSD/Windows 11 Home/Nvidia 
+        </h4> <a href="./prodDetails1.html"></a> <h2>&#8377; 900</h4>
+        <button  onclick="addToCart()" class="btn">Add to Cart</button>
+    </div>
+    </div>
+
+
+
+    <!-- footer start -->
+    <section id="newsletter" class="section-p1 section-m1">
+      <div class="newstext">
+          <h4>Sign Up for Newsletter</h4>
+          <p>
+              Get E-mail update about out latest shop and
+              <span>Special Offers.</span>
+          </p>
+      </div>
+      <div class="form">
+          <input type="text" placeholder="Your email address" />
+          <button class="normal">Sign Up</button>
+      </div>
+  </section>
+  <footer class="section-p1" id="mainFooter">
+      <div class="col">
+          <img class="logo" src="image/footer.jpg" alt="" />
+          <h4>Contact</h4>
+          <p>
+              <strong>Address:</strong> Flipkart Internet Private Limited,
+              Bengaluru, 560103, Karnataka, India
+          </p>
+          <p><strong>Phone:</strong>Telephone: 044-45614700</p>
+          <p><strong>Hours:</strong>10:00AM</p>
+          <div class="follow">
+              <h4>Follow us</h4>
+              <div class="icon">
+                  <i class="fa-brands fa-facebook"></i>
+                  <i class="fa-brands fa-twitter"></i>
+                  <i class="fa-brands fa-instagram"></i>
+                  <i class="fa-brands fa-pinterest"></i>
+                  <i class="fa-brands fa-youtube"></i>
+              </div>
+          </div>
+      </div>
+      <div class="col">
+          <h4>About</h4>
+          <a href="#">About Us</a>
+          <a href="#">Delivery Information</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
+          <a href="#">Contact Us</a>
+      </div>
+      <div class="col">
+          <h4>My Account</h4>
+          <a href="#">Sign In</a>
+          <a href="#">View Cart</a>
+          <a href="#">My Wishlist</a>
+          <a href="#">Track My Order</a>
+          <a href="#">Help</a>
+      </div>
+      <div class="col install">
+          <h4>Install App</h4>
+          <p>From App Store or Google Play</p>
+          <div class="row">
+              <img src="img/pay/app.jpg" alt="">
+              <img src="img/pay/play.jpg" alt="">
+          </div>
+          <p>Secure Payment Gatewway</p>
+          <img src="img/pay/pay.png" alt="">
+      </div>
+      <div class="copyright">
+          <p>© 2007-2023 Flipkart.com</p>
+      </div>
+  </footer>
+
+  
+</body>
+</html>
+
+<script>
+  const products = [
+  {
+    name: 'Ant Esports GP300 Pro Wireless',
+    price: 1999,
+    image: "https://m.media-amazon.com/images/I/61Q0EXcljgL._AC._SR360,460.jpg",
+    type:  'wireless',
+  },
+  {
+    name: 'Amkette EvoFox One Universal',
+    price: 2499,
+    image: "https://m.media-amazon.com/images/I/51JJKyRFcUL._AC._SR360,460.jpg",
+    type :'Programmable'
+  },
+  {
+    name: 'Cosmic Byte C3070W  2.4G',
+    price: 1799,
+    image: "https://m.media-amazon.com/images/I/610-nMA3rKL._AC._SR360,460.jpg",
+    type :'Programmable'
+  },
+  {
+    name: 'Panasonic Lumix GH5',
+    image: "https://m.media-amazon.com/images/I/71+l0IapOkL._AC._SR360,460.jpg",
+    price: 1699,
+    type :'wireless'
+  },
+  {
+    name: 'Amkette EvoFox Elite X Wireless',
+    price: 1099,
+    image: "https://m.media-amazon.com/images/I/51OJPhvBHkL._AC._SR360,460.jpg",
+    type :'Programmable'
+  },
+  {
+    name: 'Amkette Pro 4 Programmable',
+    price: 1299,
+    image: "https://m.media-amazon.com/images/I/51iefaxmqeL._AC._SR360,460.jpg",
+    type:  'wireless',
+  },
+  {
+    name: 'Ipega 2.4G Gamepad Controler',
+    price: 999,
+    image: "https://m.media-amazon.com/images/I/51Prg4Smx-L._AC._SR360,460.jpg",
+    type:  'wireless',
+  },
+  {
+    name: ' EOS Rebel T7i',
+    price: 699,
+    image: "https://m.media-amazon.com/images/I/71XhN3d9GoL._AC._SR360,460.jpg",
+    type:  'wireless',
+  },
+  {
+    name: 'Canon EO10 Rebel eagle',
+    price: 989,
+    image: "https://m.media-amazon.com/images/I/610-nMA3rKL._AC_UL480_QL65_.jpg",
+    type:  'Programmable',
+  },
+  // Add more product objects as needed
+];
+
+
+    // Display products on the page
+    function displayProducts(products) {
+  const productsSection = document.getElementById('products');
+  productsSection.innerHTML = '';
+
+  products.forEach(product => {
+    var div = document.createElement('div');
+    var h2 = document.createElement('h4');
+    var image = document.createElement('img');
+    var h3 = document.createElement('h3');
+    var add=document.createElement('button');
+    var buy=document.createElement('button');
+
+    h2.innerText = product.name;
+    h3.innerHTML = "&#8377;" + product.price;
+    image.src = product.image;
+    add.innerText="add to cart";
+    buy.innerText="buy now";
+
+    add.setAttribute('class','btn');
+    buy.setAttribute('class','btn');
+    add.setAttribute('onclick','add()');
+    buy.setAttribute('onclick','buy()');
+    div.appendChild(image);
+    div.appendChild(h2);
+    div.appendChild(h3);
+    div.appendChild(add);
+    div.appendChild(buy);
+
+
+
+   
+    // Append the div to productsSection
+    productsSection.appendChild(div);
+  });
+}
+
+
+    function lowToHigh() {
+      products.sort((a, b) => a.price - b.price);
+      displayProducts(products);
+    }
+  
+    function highToLow() {
+      products.sort((a, b) => b.price - a.price);
+      displayProducts(products);
+    }
+  
+
+    // Function to filter products based on user selection
+    function filterProducts() {
+      const filterValue = document.getElementById('filter').value;
+
+      let filteredProducts = products;
+  
+      if (filterValue === 'Programmable') {
+        filteredProducts = products.filter(product => product.type==='Programmable');
+      }
+      else if (filterValue === 'wireless') {
+        filteredProducts = products.filter(product => product.type==='wireless');
+      }
+  
+      displayProducts(filteredProducts);
+    }
+
+  
+    // Call filterProducts when the user selects an option
+    const filterSelect = document.getElementById('filter');
+    filterSelect.addEventListener('change', filterProducts);
+  
+    // Initially display all products
+    displayProducts(products);
+
+
+function add(){
+alert("someone clicked me")
+}
+
+function buy(){
+  alert("someone clicked me")
+}
+  
+  </script>
+
+
+
+
+<!-- sliding image images  -->
+<script>
+const images = [
+"https://m.media-amazon.com/images/S/aplus-media-library-service-media/13887602-80a3-4913-91da-a13f9697726c.__CR0,0,970,300_PT0_SX970_V1___.jpg",
+"https://m.media-amazon.com/images/S/aplus-media-library-service-media/507a4b37-c465-43f1-8437-5feb91fa5dec.__CR0,16,1464,453_PT0_SX970_V1___.jpg",
+"https://m.media-amazon.com/images/S/aplus-media-library-service-media/24f7d96a-2d54-437b-921c-0e75b267b626.__CR0,13,1464,453_PT0_SX970_V1___.jpg",
+"https://m.media-amazon.com/images/S/aplus-media-library-service-media/4169cf4d-cd20-4f32-85ab-332ddee89935.__CR0,147,1464,453_PT0_SX970_V1___.jpg"
+];
+
+const sliderImage = document.getElementById('slider');
+let currentImageIndex = 0;
+
+function updateSliderImage() {
+  sliderImage.src = images[currentImageIndex];
+  currentImageIndex = (currentImageIndex + 1) % images.length;
+}
+
+// Set the interval to change the slider image every 3 seconds
+setInterval(updateSliderImage, 2000);
+</script>
+<script type="module">
+
+  import topSec from "./component/topSection.js"
+  let topContainer = document.getElementById("top");
+  topContainer.innerHTML = topSec();
+
+
+  import dropdown from "./component/dropdown.js"
+  let dropdownContainer = document.getElementById("drop-down");
+  dropdownContainer.innerHTML = dropdown();
+
+  import newslater from "./component/newslater.js"
+  let newsContainer = document.getElementById("newsletter");
+  newsContainer.innerHTML = newslater();
+
+  import footer1 from "./component/footer.js"
+  let footerContainer = document.getElementById("mainFooter");
+  footerContainer.innerHTML = footer1();
+</script>

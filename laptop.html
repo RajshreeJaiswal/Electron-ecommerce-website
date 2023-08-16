@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptops  </title>
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./productPage.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="/styles/slider.css">
+    <link rel="stylesheet" href="/styles/shop.css">
+    <link rel="stylesheet" href="/styles/cart.css">
+    <link rel="stylesheet" href="styles/checkout.css">
+    <link rel="stylesheet" href="styles/payment.css">
+    <style>
+      #products div img{
+        width: 100%;
+        height: 230px;
+      }
+    </style>
+</head>
+<body>
+
+  <section id="top">
+        
+  </section>
+
+  <section id="header">
+      <a href="#"><img src="/image/final.png" width="160px" height="90px" class="logo" alt="" /></a>
+      <div class="form">
+          <input type="text" placeholder="Search any items" />
+          <button class="normal">Search</button>
+      </div>
+      <div>
+          <ul id="navbar">
+              <li><a class="active" href="index.html">Home</a></li>
+              <li><a href="shop.html">Shop</a></li>
+              <li class="dropdown-1">
+                  <a href="#" class="dropbtn-1">Account</a>
+                  <div class="dropdown-content-1">
+                      <span id="displayName"></span>
+                      <a href="login.html" id="loginLink">Login</a>
+                      <a href="signup.html" id="signupLink">SignUp</a>
+                      <a href="#" id="signoutLink" style="display: none;">SignOut</a>
+                  </div>
+              </li>
+          
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li id="lg-bag">
+                  <a href="cart.html"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i></a>
+                  <span id="cart-count">0</span> 
+              </li>
+          </ul>
+      </div>
+  </section>
+  
+  <section id="drop-down">
+      
+
+  </section>
+
+    <div >
+    <img src="https://w.forfun.com/fetch/0b/0bc739968eeb709d8eebbdb132141cb8.jpeg" alt="" id="slider"
+    style="height:500px"
+    >
+  </div>
+
+    <div id="sort" >
+  <span class="sp">  Sort Price by : </span>
+    <button onclick="lowToHigh()"  class="btn"> low to high</button>
+    <button onclick="highTolow()"  class="btn"> high to low</button>
+    <br>
+<br>
+    <label for="filter" class="sp">Filter By:</label>
+    <select id="filter" class="btn">
+        <option value="all">All</option>
+        <option value="ultrabook"> ultrabook</option>
+        <option value="MacBook">Mac Book </option>
+        <option value="2in1">2 in 1 tablet cum laptop</option>
+        <option value="notebook"> Note Book </option>
+    </select>
+
+    </div>
+
+    
+    <section id="products">
+        <!-- Display product items here -->
+    </section>
+
+    
+<h1 style="color:#073e76">Related <u style="color: #dfab62;"> Product </u></h1>
+<div class="relatedprod">
+
+     <div><img src="https://m.media-amazon.com/images/I/81Tr3Jo8DvL._SX679_.jpg"  alt=""> <h4>Amkette EvoFox Elite Ops Wireless Gamepad for Android TV | Google TV | 8+ Hours of Play Time | Zero Lag Connectivity Upto 12 Feets | USB Extender for TV Included | - Dusk Grey</h4> <a href="prodDetails1.html"> </a><h2>  &#8377; 1,469</h2>
+        <button  onclick="addToCart()" class="btn">Add to Cart</button></div>
+
+     <div><img src="https://m.media-amazon.com/images/I/51Prg4Smx-L._SX679_.jpg"  alt=""> <h4>Sony Alpha ILCE-7M4K Full-Frame Hybrid Camera 33MP Interchangeable-Lens Mirrorless Camera with 28-70mm Digital Zoom Lens 4K 60P Video Recording, Real-Time </h4> <a href="prodDetails2.html"></a><h2>
+        &#8377; 2,30,989  
+     </h2>
+     <button  onclick="addToCart()" class="btn">Add to Cart</button> </div>
+
+      <div><img src="https://m.media-amazon.com/images/I/71BCum1YVzL._SX679_.jpg" alt=""> <h4>MSI GF63 Thin, Intel Core i5-11260H, 40CM FHD 144Hz Gaming Laptop (8GB/512GB NVMe SSD/Windows 11 Home/Nvidia GeForce GTX 1650, GDDR6 4GB/Black/1.8Kg), 11SC-1477IN</h4> <a href="prodDetails4.html"></a> <h2>
+        &#8377; 49,990
+      </h2>
+      <button  onclick="addToCart()" class="btn">Add to Cart</button></div>
+
+     <div><img src="https://m.media-amazon.com/images/I/61abLrCfF7L._AC_UY327_FMwebp_QL65_.jpg"  alt=""> <h4>OnePlus Nord CE 3 5G </h4> <a href="./prodDetails1.html"></a> <h2>&#8377; 26,999</h2>
+        <button  onclick="addToCart()" class="btn">Add to Cart</button></div>
+
+     <div><img src="https://m.media-amazon.com/images/I/71VR6c3j2bL._AC_UY327_FMwebp_QL65_.jpg"  alt=""> <h4>
+        Zebronics Jet PRO Premium Wired Gaming , Intel Core i5-11260H, 40CM FHD 144Hz Gaming Laptop (8GB/512GB NVMe SSD/Windows 11 Home/Nvidia 
+        </h4> <a href="./prodDetails1.html"></a> <h2>&#8377; 900</h4>
+        <button  onclick="addToCart()" class="btn">Add to Cart</button>
+    </div>
+    </div>
+
+
+
+    <!-- footer start -->
+    <section id="newsletter" class="section-p1 section-m1">
+      <div class="newstext">
+          <h4>Sign Up for Newsletter</h4>
+          <p>
+              Get E-mail update about out latest shop and
+              <span>Special Offers.</span>
+          </p>
+      </div>
+      <div class="form">
+          <input type="text" placeholder="Your email address" />
+          <button class="normal">Sign Up</button>
+      </div>
+  </section>
+  <footer class="section-p1" id="mainFooter">
+      <div class="col">
+          <img class="logo" src="image/footer.jpg" alt="" />
+          <h4>Contact</h4>
+          <p>
+              <strong>Address:</strong> Flipkart Internet Private Limited,
+              Bengaluru, 560103, Karnataka, India
+          </p>
+          <p><strong>Phone:</strong>Telephone: 044-45614700</p>
+          <p><strong>Hours:</strong>10:00AM</p>
+          <div class="follow">
+              <h4>Follow us</h4>
+              <div class="icon">
+                  <i class="fa-brands fa-facebook"></i>
+                  <i class="fa-brands fa-twitter"></i>
+                  <i class="fa-brands fa-instagram"></i>
+                  <i class="fa-brands fa-pinterest"></i>
+                  <i class="fa-brands fa-youtube"></i>
+              </div>
+          </div>
+      </div>
+      <div class="col">
+          <h4>About</h4>
+          <a href="#">About Us</a>
+          <a href="#">Delivery Information</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
+          <a href="#">Contact Us</a>
+      </div>
+      <div class="col">
+          <h4>My Account</h4>
+          <a href="#">Sign In</a>
+          <a href="#">View Cart</a>
+          <a href="#">My Wishlist</a>
+          <a href="#">Track My Order</a>
+          <a href="#">Help</a>
+      </div>
+      <div class="col install">
+          <h4>Install App</h4>
+          <p>From App Store or Google Play</p>
+          <div class="row">
+              <img src="img/pay/app.jpg" alt="">
+              <img src="img/pay/play.jpg" alt="">
+          </div>
+          <p>Secure Payment Gatewway</p>
+          <img src="img/pay/pay.png" alt="">
+      </div>
+      <div class="copyright">
+          <p>© 2007-2023 Flipkart.com</p>
+      </div>
+  </footer>
+
+  
+</body>
+</html>
+
+<script>
+  const products = [
+  {
+    name: 'HP Laptop 15s, 12th Gen Intel Core i3-1215U,FHD, 8GB DDR4, 512GB SSD, ',
+    price: 40990,
+    image: "https://m.media-amazon.com/images/I/816z4zx1peL._AC_UY327_FMwebp_QL65_.jpg",
+    type: 'ultrabook',
+  },
+ 
+  {
+    name: 'HP 14s, 11th Gen Intel Core i3-1115G4, 8GB RAM/256GB SSD 14-inch',
+    price: 35990,
+    image: "https://m.media-amazon.com/images/I/8154W2l-OOL._AC_UY327_FMwebp_QL65_.jpg",
+    type: 'ultrabook',
+  },
+ 
+  {
+    name: 'Honor MagicBook X16 (2023), 12th Gen Intel Core i5-12450H(8GB/512GB NVMe )',
+    price: 50990,
+    image: "https://m.media-amazon.com/images/I/61aaFLxqFKL._AC_UY327_FMwebp_QL65_.jpg",
+    type: 'ultrabook',
+  },
+ 
+  {
+    name: 'Sponsored Ad - Dell 14 Laptop, Intel i5-1135G7/8GB/512GB',
+    price: 46490,
+    image: "https://m.media-amazon.com/images/I/51hEf-tkHrL._AC_UY327_FMwebp_QL65_.jpg",
+    type: 'ultrabook',
+  },
+  {
+    name: 'Apple 2022 MacBook Air Laptop with M2 chip: 34.46',
+    price: 110799,
+    image: "https://m.media-amazon.com/images/I/71eXNIDUGjL._AC_UY327_FMwebp_QL65_.jpg",
+    type: 'MacBook',
+  },
+  {
+    name: 'Apple 2022 MacBook Air Laptop with M2 chip: 34.46 cm ',
+    price: 107990,
+    image: "https://m.media-amazon.com/images/I/710TJuHTMhL._AC_UY327_FMwebp_QL65_.jpg",
+    type: 'MacBook',
+  },
+  {
+    name: 'Apple 2023 MacBook Air laptop with M2 chip: 38.91cm ',
+    price: 154990,
+    image: "https://m.media-amazon.com/images/I/81UFHe-hH5L._AC_UY327_FMwebp_QL65_.jpg",
+    type: 'MacBook',
+  },
+  {
+    name: 'Apple 2023 MacBook Air laptop with M2 chip: 38.91cm',
+    price: 134990,
+    image: "https://m.media-amazon.com/images/I/81xW62KXNhL._AC_UY327_FMwebp_QL65_.jpg",
+    type: 'MacBook',
+  },
+  
+  {
+    name: 'Dell Inspiron 7420 2in1 Laptop, Intel i5-1235U, 16GB DDR4',
+    price: 84990,
+    image: "https://m.media-amazon.com/images/I/51tRMZKn4tL._AC_UY327_FMwebp_QL65_.jpg",
+    type: '2in1',
+  },
+  {
+    name: 'Samsung Galaxy Book3 Pro 360 Intel 13th Gen i7 EvoTM',
+    price: 164990,
+    image: "https://m.media-amazon.com/images/I/71ef1yicMJL._AC_UY327_FMwebp_QL65_.jpg",
+    type: '2in1',
+  },
+  {
+    name: 'Lenovo IdeaPad Flex 5 11th Gen Intel Core i7 14 inches(35cm)',
+    price: 134990,
+    image: "https://m.media-amazon.com/images/I/61ta6vDkCRL._AC_UY327_FMwebp_QL65_.jpg",
+    type: '2in1',
+  },
+  {
+    name: 'HP Envy x360 12th Gen Intel core i5-1235U 15.6inch(39.6cm)',
+    price: 79990,
+    image: "https://m.media-amazon.com/images/I/51lFjtu1lIL._AC_UY327_FMwebp_QL65_.jpg",
+    type: '2in1'
+
+  },
+  {
+    name: 'Xiaomi Notebook Ultra Max 11th Gen Intel Core i5-11320H Thin',
+    price: 42990,
+    image: "https://m.media-amazon.com/images/I/710aJMxsUXL._AC_UY327_FMwebp_QL65_.jpg",
+    type: 'notebook',
+  },
+  {
+    name: 'Walker Notebook/Laptop Pc Model No-Nu14A1,14.1',
+    price: 16599,
+    image: "https://m.media-amazon.com/images/I/51Qy7Yjx5PL._AC_UY327_FMwebp_QL65_.jpg",
+    type: 'notebook',
+  },
+  {
+    name: 'Xiaomi [Smartchoice] Notebook Pro Qhd+Ips Antiglare Display',
+    price: 61690,
+    image: "https://m.media-amazon.com/images/I/71iiXU7HHkL._AC_UY327_FMwebp_QL65_.jpg",
+    type: 'notebook',
+  },
+  {
+    name: 'HP 250 G8 Notebook PC, 11th Gen Intel Core i3-1115G4',
+    price: 32890,
+    image: "https://m.media-amazon.com/images/I/71V2Q8g87XL._AC_UY327_FMwebp_QL65_.jpg",
+    type: 'notebook',
+  },
+
+
+ 
+  // Add more product objects as needed
+];
+
+
+    // Display products on the page
+    function displayProducts(products) {
+  const productsSection = document.getElementById('products');
+  productsSection.innerHTML = '';
+
+  products.forEach(product => {
+    var div = document.createElement('div');
+    var h2 = document.createElement('p');
+    var image = document.createElement('img');
+    var h3 = document.createElement('h3');
+    var add=document.createElement('button');
+    var buy=document.createElement('button');
+   
+    h2.innerText = product.name;
+    h3.innerHTML = "&#8377;" + product.price;
+    image.src = product.image;
+    add.innerText="add to cart";
+    buy.innerText="buy now";
+
+    add.setAttribute('class','btn');
+    buy.setAttribute('class','btn');
+    add.setAttribute('onclick','add()');
+    buy.setAttribute('onclick','buy()');
+    div.appendChild(image);
+    div.appendChild(h2);
+    div.appendChild(h3);
+    div.appendChild(add);
+    div.appendChild(buy);
+
+
+
+   
+    // Append the div to productsSection
+    productsSection.appendChild(div);
+  });
+}
+
+
+    function lowToHigh() {
+      products.sort((a, b) => a.price - b.price);
+      displayProducts(products);
+    }
+  
+    function highToLow() {
+      products.sort((a, b) => b.price - a.price);
+      displayProducts(products);
+    }
+  
+
+    // Function to filter products based on user selection
+    function filterProducts() {
+      const filterValue = document.getElementById('filter').value;
+
+      let filteredProducts = products;
+  
+      if (filterValue === '2in1') {
+      filteredProducts = products.filter(product => product.type==='2in1');
+      }
+      else if (filterValue === 'notebook') {
+        filteredProducts = products.filter(product => product.type=='notebook');
+      }
+      else if (filterValue === 'ultrabook') {
+        filteredProducts = products.filter(product => product.type === 'ultrabook');
+      }
+      else if (filterValue === 'MacBook') {
+        filteredProducts = products.filter(product => product.type === 'MacBook');
+      }
+  
+      displayProducts(filteredProducts);
+    }
+
+  
+    // Call filterProducts when the user selects an option
+    const filterSelect = document.getElementById('filter');
+    filterSelect.addEventListener('change', filterProducts);
+  
+    // Initially display all products
+    displayProducts(products);
+
+
+function add(){
+alert("someone clicked me")
+}
+
+function buy(){
+  alert("someone clicked me")
+}
+  
+  </script>
+
+
+
+
+<!-- sliding image images  -->
+<script>
+const images = [
+"https://www.91-cdn.com/hub/wp-content/uploads/2022/07/amd_advantage_laptops_featured-3.png",
+"https://i.pinimg.com/originals/0b/5f/c8/0b5fc864c174f4bea7e93892e5eeb00a.jpg",
+"https://c0.wallpaperflare.com/preview/145/373/142/turned-on-silver-macbook-pro.jpg",
+"https://w.forfun.com/fetch/0b/0bc739968eeb709d8eebbdb132141cb8.jpeg"
+];
+
+const sliderImage = document.getElementById('slider');
+let currentImageIndex = 0;
+
+function updateSliderImage() {
+  sliderImage.src = images[currentImageIndex];
+  currentImageIndex = (currentImageIndex + 1) % images.length;
+}
+
+// Set the interval to change the slider image every 3 seconds
+setInterval(updateSliderImage, 2000);
+</script>
+<script type="module">
+
+  import topSec from "./component/topSection.js"
+  let topContainer = document.getElementById("top");
+  topContainer.innerHTML = topSec();
+
+
+  import dropdown from "./component/dropdown.js"
+  let dropdownContainer = document.getElementById("drop-down");
+  dropdownContainer.innerHTML = dropdown();
+
+  import newslater from "./component/newslater.js"
+  let newsContainer = document.getElementById("newsletter");
+  newsContainer.innerHTML = newslater();
+
+  import footer1 from "./component/footer.js"
+  let footerContainer = document.getElementById("mainFooter");
+  footerContainer.innerHTML = footer1();
+</script>

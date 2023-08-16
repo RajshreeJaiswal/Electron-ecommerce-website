@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="/styles/slider.css">
+    <link rel="stylesheet" href="/styles/shop.css">
+    <link rel="stylesheet" href="/styles/cart.css">
+    <link rel="stylesheet" href="styles/checkout.css">
+    <link rel="stylesheet" href="styles/payment.css">
+    <style>
+
+        body{
+            background-color: white;
+        }
+        img{
+            width: 250px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <section id="top">
+
+    </section>
+
+    <section id="header">
+        <a href="#"><img src="/image/final.png" width="160px" height="90px" class="logo" alt="" /></a>
+        <div class="form">
+            <input type="text" placeholder="Search any items" />
+            <button class="normal">Search</button>
+        </div>
+        <div>
+            <ul id="navbar">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li class="dropdown-1">
+                    <a href="#" class="dropbtn-1">Account</a>
+                    <div class="dropdown-content-1">
+                        <span id="displayName"></span>
+                        <a href="login.html" id="loginLink">Login</a>
+                        <a href="signup.html" id="signupLink">SignUp</a>
+                        <a href="#" id="signoutLink" style="display: none;">SignOut</a>
+                    </div>
+                </li>
+            
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li id="lg-bag">
+                    <a href="cart.html"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i></a>
+                    <span id="cart-count">0</span> 
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="drop-down">
+
+    </section>
+    <section id="cart" class="section-p1">
+
+        <table width="100%" class="cart-content">
+            <thead>
+                <tr>
+                    <td > </td>
+                    <td>Product</td>
+                    <td>Price</td>
+                    <td>Quantity</td>
+                    <td>Subtotal</td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <div class="right-section">
+            <h2>Cart Total</h2>
+
+            <div class="total-section cart-content">
+                <p>Subtotal : <span id="total">0.00</span></p>
+            </div>
+            <div class="line"></div>
+
+            <div class="coupon-section cart-content">
+                <input type="text" id="coupon-code" placeholder="Enter coupon code">
+                <button id="apply-coupon">Apply Coupon</button>
+                <p class="discount-text">Discount: <span id="discount">0.00</span></p>
+            </div>
+
+            <div class="checkout-button empty-cart cart-content">
+                <a href="checkout.html" class="normal">Proceed to Checkout</a>
+            </div>
+        </div>
+
+        <div class="empty-cart-button">
+            <img src="https://assets.materialup.com/uploads/16e7d0ed-140b-4f86-9b7e-d9d1c04edb2b/preview.png"
+                alt="Empty Cart Image" id="empty-cart-image">
+            <p>No Item in Cart</p>
+
+            <a href="index.html"><button id="shopping-button">Click for Shopping</button></a>
+        </div>
+    </section>
+
+    <section id="newsletter" class="section-p1 section-m1">
+
+    </section>
+    <footer class="section-p1" id="mainFooter">
+
+    </footer>
+
+</html>
+<script src="Script/slider.js"></script>
+<script src="Script/responsive.js"></script>
+<script src="Script/search.js"></script>
+<script src="Script/cart.js"></script>
+<script src="Script/index.js"></script>
+<script src="Script/payment.js"></script>
+<script src="Script/checkout.js"></script>
+<script type="module">
+
+    import topSec from "./component/topSection.js"
+    let topContainer = document.getElementById("top");
+    topContainer.innerHTML = topSec();
+
+
+    import dropdown from "./component/dropdown.js"
+    let dropdownContainer = document.getElementById("drop-down");
+    dropdownContainer.innerHTML = dropdown();
+
+    import newslater from "./component/newslater.js"
+    let newsContainer = document.getElementById("newsletter");
+    newsContainer.innerHTML = newslater();
+
+    import footer1 from "./component/footer.js"
+    let footerContainer = document.getElementById("mainFooter");
+    footerContainer.innerHTML = footer1();
+</script>

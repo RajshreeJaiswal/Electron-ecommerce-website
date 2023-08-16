@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="styles/slider.css">
+    <link rel="stylesheet" href="styles/shop.css">
+
+
+</head>
+
+<body>
+    <section id="top">
+        
+    </section>
+
+    <section id="header">
+        <a href="#"><img src="/image/final.png"  width="160px" height="90px" class="logo" alt="" /></a>
+        <div class="form">
+            <input type="text" placeholder="Search any items" />
+            <button class="normal">Search</button>
+        </div>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="shop.html">Shop</a></li>
+                <li class="dropdown-1">
+                    <a href="#" class="dropbtn-1">Account</a>
+                    <div class="dropdown-content-1">
+                        <a href="login.html">Login</a>
+                        <a href="signup.html">SignUp</a>
+                    </div>
+                </li>
+                
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li id="lg-bag">
+                    <a href="cart.html"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i></a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section id="drop-down">
+        
+
+    </section>
+    <section id="page-header">
+ 
+    </section>
+    <section id="productList" class="product-section"></section>
+    <section id="pagination" class="section-p1">
+
+     
+    </section>
+
+</section>
+<section id="newsletter" class="section-p1 section-m1">
+    <div class="newstext">
+        <h4>Sign Up for Newsletter</h4>
+        <p>
+            Get E-mail update about out latest shop and
+            <span>Special Offers.</span>
+        </p>
+    </div>
+    <div class="form">
+        <input type="text" placeholder="Your email address" />
+        <button class="normal">Sign Up</button>
+    </div>
+</section>
+<footer class="section-p1" id="mainFooter">
+    <div class="col">
+        <img class="logo" src="image/footer.jpg" alt="" />
+        <h4>Contact</h4>
+        <p>
+            <strong>Address:</strong> Flipkart Internet Private Limited,
+            Bengaluru, 560103, Karnataka, India
+        </p>
+        <p><strong>Phone:</strong>Telephone: 044-45614700</p>
+        <p><strong>Hours:</strong>10:00AM</p>
+        <div class="follow">
+            <h4>Follow us</h4>
+            <div class="icon">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-pinterest"></i>
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <h4>About</h4>
+        <a href="#">About Us</a>
+        <a href="#">Delivery Information</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Contact Us</a>
+    </div>
+    <div class="col">
+        <h4>My Account</h4>
+        <a href="#">Sign In</a>
+        <a href="#">View Cart</a>
+        <a href="#">My Wishlist</a>
+        <a href="#">Track My Order</a>
+        <a href="#">Help</a>
+    </div>
+    <div class="col install">
+        <h4>Install App</h4>
+        <p>From App Store or Google Play</p>
+        <div class="row">
+            <img src="img/pay/app.jpg" alt="">
+            <img src="img/pay/play.jpg" alt="">
+        </div>
+        <p>Secure Payment Gatewway</p>
+        <img src="img/pay/pay.png" alt="">
+    </div>
+    <div class="copyright">
+        <p>© 2007-2023 Flipkart.com</p>
+    </div>
+</footer>
+</body>
+</html>
+<script src="Script/slider.js"></script>
+<script src="Script/responsive.js"></script>
+<script src="Script/shop.js"></script>
+
+<script type="module">
+
+    import topSec from "./component/topSection.js"
+    let topContainer = document.getElementById("top");
+    topContainer.innerHTML = topSec();
+
+
+    import dropdown from "./component/dropdown.js"
+    let dropdownContainer = document.getElementById("drop-down");
+    dropdownContainer.innerHTML = dropdown();
+
+    import newslater from "./component/newslater.js"
+    let newsContainer = document.getElementById("newsletter");
+    newsContainer.innerHTML = newslater();
+
+    import footer1 from "./component/footer.js"
+    let footerContainer = document.getElementById("mainFooter");
+    footerContainer.innerHTML = footer1();
+</script>

@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prod Details Mobile</title>
+    <link rel="stylesheet" href="./product.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="/styles/slider.css">
+    <link rel="stylesheet" href="/styles/shop.css">
+    <link rel="stylesheet" href="/styles/cart.css">
+    <link rel="stylesheet" href="styles/checkout.css">
+    <link rel="stylesheet" href="styles/payment.css">
+</head>
+
+<body>
+
+    <section id="top">
+        
+    </section>
+
+    <section id="header">
+        <a href="#"><img src="/image/final.png" width="160px" height="90px" class="logo" alt="" /></a>
+        <div class="form">
+            <input type="text" placeholder="Search any items" />
+            <button class="normal">Search</button>
+        </div>
+        <div>
+            <ul id="navbar">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li class="dropdown-1">
+                    <a href="#" class="dropbtn-1">Account</a>
+                    <div class="dropdown-content-1">
+                        <span id="displayName"></span>
+                        <a href="login.html" id="loginLink">Login</a>
+                        <a href="signup.html" id="signupLink">SignUp</a>
+                        <a href="#" id="signoutLink" style="display: none;">SignOut</a>
+                    </div>
+                </li>
+            
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li id="lg-bag">
+                    <a href="cart.html"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i></a>
+                    <span id="cart-count">0</span> 
+                </li>
+            </ul>
+        </div>
+    </section>
+    
+    <section id="drop-down">
+        
+
+    </section>
+
+
+
+
+    <div class="main">
+        <div class="subImg">
+            <img src="https://m.media-amazon.com/images/I/61abLrCfF7L._SX679_.jpg" alt="images">
+            <img src="https://m.media-amazon.com/images/I/61WJTQBCXqL._SX679_.jpg" alt="images">
+            <img src="https://m.media-amazon.com/images/I/61Rq4ZfYAmL._SX679_.jpg" alt="images">
+            <img src="https://m.media-amazon.com/images/I/71MWoyX0CLL._SX679_.jpg" alt="images">
+        </div>
+
+        <div class="mainImg"  style="background-color: #ccc;">
+            <img src="https://m.media-amazon.com/images/I/61abLrCfF7L._SX679_.jpg" alt="images" id="mainImg">
+        </div>
+       
+
+         <div class="details">
+            <h2> ⭐ 4.9 | 1530 reviews ✅</h2> 
+
+            <h3>OnePlus Nord CE 3 5G (Grey Shimmer, 8GB RAM, 128GB Storage)</h2>
+            <p>Earbuds with 13mm drivers, BEAST™ Mode for Gamers, ENx™ Technology</p>
+      
+           <h2>&#8377;<span id="price"> 21999.00    </span>   <span  style="color: red;  text-decoration: line-through; font-size: medium;">&#8377; 29000.00 </span> </h2>
+
+           
+      
+            <div class="payment">
+            <span class="pApps" style="background-color: rgb(239, 243, 162); padding: 10px; border-radius: 10px;">
+            15% Discount on all payment Methoed     
+            <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/paytm_icon_fa75a315-11a2-4c8e-a241-18af809eb683.svg?v=1682575951" style="margin-left: 30px;">
+            <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/gpay_icon_503ebbda-a3e1-4659-af32-0686aecec227.svg?v=1682575951" alt="">
+            <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/phone_pe_icon_f9872d32-f8cf-43ca-8fa2-78db125fcdad.svg?v=1682575951" alt="">
+            </span>
+            </div>
+      
+            
+<form>
+<div style="display: flex; ">
+<input type="text" placeholder="Enter pin for exact delivery date"  id="code" style="border-top-left-radius: 10px; border-bottom-left-radius: 10px; width: 320px; border: 1px solid rgb(46, 45, 45);">
+<input type="image" src="https://www.pngitem.com/pimgs/m/170-1701988_transparent-delivery-png-free-shipping-logo-png-png.png" alt="Submit" width="70px" height="48" onclick="showdiliverTime()" style="border-top-right-radius: 10px; border-bottom-right-radius: 10px; border: 1px solid rgb(46, 45, 45);">
+</div>
+</form>
+
+ <p id="diliverTime"></p>
+
+    <span id="quantity" style=" font: bolder; font-size: larger;"> Quantity : <input type="number" id="quantityInput" value="1"></span>
+
+         <span class="color"  style="margin-left: 30px;  font: bolder; font-size: larger;">
+            color :
+        <input type="radio" id="blue" name="color">
+        <label for="blue"></label>
+        
+        <input type="radio" id="red" name="color">
+        <label for="red"></label>
+        
+        <input type="radio" id="black" name="color">
+        <label for="black"></label>
+        
+        <input type="radio" id="white" name="color">
+        <label for="white"></label>
+         </span>
+     
+            <div>
+            <button onclick="addToCart()" class="btn">Add To Cart </button>
+            <button onclick="buyNow()" class="btn"> Buy Now </button>
+            </div>
+
+          </div>
+          </div>
+
+        </div>
+    </div>
+
+    <div class="detailBar">
+        <h2><u>Description</u>
+        </h2>
+        <h2>Specifications</h2>
+        <h2>Reviews</h2>
+    </div>
+    <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/AD115_w.png?v=1650606765" alt="" width="100%">
+
+    <div class="advImg">
+        <img src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/fea9cb94-20cb-4947-9c13-79f7d58b25c2.__CR0,0,1464,600_PT0_SX1464_V1___.jpg" alt="">
+
+        <img src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/03fbbe5e-9ead-461e-8749-503719b1df6b.__CR0,0,1464,600_PT0_SX1464_V1___.jpg" alt="">
+
+        <img src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/9bfab69f-54d8-4370-8a7d-6a92ffc0bf75.__CR0,0,1464,600_PT0_SX1464_V1___.jpg" alt="">
+
+        <img src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/6f2ee19e-07d7-4f1a-83ef-d073034ae4a0.__CR0,0,1464,600_PT0_SX1464_V1___.jpg" alt="">
+
+        <img src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/4590d5b3-9bf5-4f6a-98b2-cba6e510e232.__CR0,0,1464,600_PT0_SX1464_V1___.jpg" alt="">
+
+        <img src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/2ea6bd2f-ab5b-41cb-952d-885d1a3e2c1e.__CR0,0,1464,600_PT0_SX1464_V1___.jpg" alt="">
+    </div>
+
+
+    <div class="spec">
+       
+     <table>
+    
+        <tbody>
+            <h1 style=" color: rgb(238, 229, 42); margin-left: 10px; "><u>Specifications</u></h1>
+            <tr>
+            <td>Brand</td>
+            <td>Amkette</td>
+            </tr>
+
+            <tr>
+            <td>Manufacturer</td>
+            <td>Allied Electronics & Magnetics Pvt. Ltd., Allied Electronics & Magnetics Private Limited C-64/4, Okhla Phase - 2, New Delhi - 110020</td>
+            </tr>
+          <tr>
+            <td>Model </td>
+            <td>579 </td>
+           </tr>
+           <tr>
+            <td>Model Name </td>
+            <td>EvoFox Elite Ops </td>
+           </tr>
+           <tr>
+            <td>Product Dimensions</td>
+            <td>180 x 140 x 50 cm; 250 Grams </td>
+           </tr>
+           <tr>
+            <td>Batteries </td>
+            <td>1 Lithium Ion batteries required. (included)</td>
+           </tr>
+           <tr>
+            <td>Item model number </td>
+            <td>579</td>
+           <tr>
+            <td>Flash memory type </td>
+            <td>Micro SD</td>
+           </tr>
+           <tr>
+            <td>Operating System </td>
+            <td>Windows </td>
+           </tr>
+           <tr>
+            <td>Hardware Platform </td>
+            <td>Television, Desktop</td>
+           </tr>
+
+            <tr>
+            <td>Compatible Devices </td>
+            <td>PC, Android </td>
+            </tr>
+            <tr>
+            <td>Includes Rechargeable Battery</td>
+            <td>Yes </td>
+            </tr>
+            <tr>
+            <td>Mounting Hardware </td>
+            <td>Gamepad, Charging Cable, USB Dongle, User manual </td>
+            </tr>
+            <tr>
+            <td>Mounting Hardware </td>
+            <td>Gamepad, Charging Cable, USB Dongle, User manual </td>
+            </tr>
+            <tr>
+            <td>Mounting Hardware </td>
+            <td>Gamepad, Charging Cable, USB Dongle, User manual </td>
+            </tr>
+        </tbody>
+     </table>
+    </div>
+
+    <div class="review" >
+        <img src="./images/Screenshot (222).png" alt="">
+        <img src="./images/Screenshot (220).png" alt="">
+        <img src="./images/Screenshot (226).png" alt="">
+    </div>
+
+<div  id="faq">
+ <h1> FAQ</h1>
+  Q. Do wireless earbuds work with all phones?<br>
+  Yes, our wireless earbuds work with all phones with Bluetooth. boAt Airdopes connect instantly and give a seamless connection for the ultimate music  <br><br>
+  Q. What is the difference between wireless and truly wireless earbuds?<br>
+  Wireless earbuds are audio devices that connect to your Phone/Tablet/PC wirelessly, and the left and the right earpiece are connected via a wire. Truly wireless earbuds on the other hand have no wires at all.
+  Can wireless earbuds be used individually?<br>
+  Yes, wireless earphones can be used individually. With wireless earbuds, you can keep one in the case and one plugged in your ear and still use it to groove to your <br><br><br>
+  Q.How to know that wireless earbuds are fully charged?<br>
+  boAt Airdopes will have led indicators on the charging case to show if the battery is fully charged. The LED indicators on the wireless earbuds vary from model to model. Please refer to the manual of the earbuds in the respective packaging for precise instructions.<br><br>
+  Q.How long does earbuds’ battery last?<br>
+  boAt earbuds battery backup varies from model to model. It also gets affected by the volume at which you listen to music on your wireless earbuds. Please refer to the manual of the earbuds in the respective packaging for prece <br><br><br>
+</div>
+
+
+
+ 
+<h1 style="color:#073e76">Related <u style="color: #dfab62;"> Product </u></h1>
+<div class="relatedprod">
+
+     <div><img src="https://m.media-amazon.com/images/I/81Tr3Jo8DvL._SX679_.jpg"  alt=""> <h4>Amkette EvoFox Elite Ops Wireless Gamepad for Android TV | Google TV | 8+ Hours of Play Time | Zero Lag Connectivity Upto 12 Feets | USB Extender for TV Included | - Dusk Grey</h4> <a href="prodDetails1.html"> </a><h2>  &#8377; 1,469</h2>
+        <button  onclick="addToCart()" class="btn">Add to Cart</button></div>
+
+     <div><img src="https://m.media-amazon.com/images/I/51Prg4Smx-L._SX679_.jpg"  alt=""> <h4>Sony Alpha ILCE-7M4K Full-Frame Hybrid Camera 33MP Interchangeable-Lens Mirrorless Camera with 28-70mm Digital Zoom Lens 4K 60P Video Recording, Real-Time </h4> <a href="prodDetails2.html"></a><h2>
+        &#8377; 2,30,989  
+     </h2>
+     <button  onclick="addToCart()" class="btn">Add to Cart</button> </div>
+
+      <div><img src="https://m.media-amazon.com/images/I/71BCum1YVzL._SX679_.jpg" alt=""> <h4>MSI GF63 Thin, Intel Core i5-11260H, 40CM FHD 144Hz Gaming Laptop (8GB/512GB NVMe SSD/Windows 11 Home/Nvidia GeForce GTX 1650, GDDR6 4GB/Black/1.8Kg), 11SC-1477IN</h4> <a href="prodDetails4.html"></a> <h2>
+        &#8377; 49,990
+      </h2>
+      <button  onclick="addToCart()" class="btn">Add to Cart</button></div>
+
+     <div><img src="https://m.media-amazon.com/images/I/61abLrCfF7L._AC_UY327_FMwebp_QL65_.jpg"  alt=""> <h4>OnePlus Nord CE 3 5G (Grey Shimmer, 8GB RAM, 128GB Storage)</h4> <a href="./prodDetails1.html"></a> <h2>&#8377; 26,999</h2>
+        <button  onclick="addToCart()" class="btn">Add to Cart</button></div>
+
+     <div><img src="https://m.media-amazon.com/images/I/71VR6c3j2bL._AC_UY327_FMwebp_QL65_.jpg"  alt=""> <h4>
+        Zebronics Jet PRO Premium Wired Gaming On Ear Headphone with LED for Headband + earcups, 40mm Neodymium Drivers, 2 Meter B...
+        </h4> <a href="./prodDetails1.html"></a> <h2>&#8377; 900</h2>
+        <button  onclick="addToCart()" class="btn">Add to Cart</button>
+    </div>
+   
+    </div>
+
+
+
+<section id="newsletter" class="section-p1 section-m1">
+    <div class="newstext">
+        <h4>Sign Up for Newsletter</h4>
+        <p>
+            Get E-mail update about out latest shop and
+            <span>Special Offers.</span>
+        </p>
+    </div>
+    <div class="form">
+        <input type="text" placeholder="Your email address" />
+        <button class="normal">Sign Up</button>
+    </div>
+</section>
+<footer class="section-p1" id="mainFooter">
+    <div class="col">
+        <img class="logo" src="image/footer.jpg" alt="" />
+        <h4>Contact</h4>
+        <p>
+            <strong>Address:</strong> Flipkart Internet Private Limited,
+            Bengaluru, 560103, Karnataka, India
+        </p>
+        <p><strong>Phone:</strong>Telephone: 044-45614700</p>
+        <p><strong>Hours:</strong>10:00AM</p>
+        <div class="follow">
+            <h4>Follow us</h4>
+            <div class="icon">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-pinterest"></i>
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <h4>About</h4>
+        <a href="#">About Us</a>
+        <a href="#">Delivery Information</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Contact Us</a>
+    </div>
+    <div class="col">
+        <h4>My Account</h4>
+        <a href="#">Sign In</a>
+        <a href="#">View Cart</a>
+        <a href="#">My Wishlist</a>
+        <a href="#">Track My Order</a>
+        <a href="#">Help</a>
+    </div>
+    <div class="col install">
+        <h4>Install App</h4>
+        <p>From App Store or Google Play</p>
+        <div class="row">
+            <img src="img/pay/app.jpg" alt="">
+            <img src="img/pay/play.jpg" alt="">
+        </div>
+        <p>Secure Payment Gatewway</p>
+        <img src="img/pay/pay.png" alt="">
+    </div>
+    <div class="copyright">
+        <p>© 2007-2023 Flipkart.com</p>
+    </div>
+</footer>
+
+
+   </body>
+</html>
+
+
+<script>
+ // Function to change the main image
+function changeMainImage(imageSrc) {
+    const mainImg = document.querySelector(".mainImg img");
+    mainImg.src = imageSrc;
+}
+const thumbnailImages = document.querySelectorAll(".subImg img");
+thumbnailImages.forEach(image => {
+    image.addEventListener("click", () => {
+        changeMainImage(image.src);
+    });
+});
+
+//function to check estimated Dilevery time
+function showdiliverTime(){
+    event.preventDefault();
+    var code=document.getElementById("code");
+    var p= document.getElementById("diliverTime");
+    console.log(code.value);
+    if(code.value.length<6   || code.value.length>6 ){
+    p.textContent="Please  Enter 6 digit valid pincode";
+     p.style.color="red";
+    }else{
+    p.textContent="Free delivery by Thursday, 20 august ,Order within 1 hr 22 mins";
+    p.style.color='green';
+    }
+    }
+
+
+     // incomplete functions|
+     const cart = [];
+     function addToCart() {
+    const productImage=document.querySelector('#mainImg').src;
+    const productName = document.querySelector(".details h3").textContent;
+    const productPrice = document.querySelector("#price").textContent;
+
+    const product = {
+        image :productImage,
+        name: productName,
+        price: productPrice,
+        quantity: quantity,
+         
+    };
+    console.log(product);
+
+    cart.push(product);
+
+    // Store cart items in local storage
+    localStorage.setItem('cartItems', JSON.stringify(cart));
+
+    // Show success alert
+    alert('Item added to cart successfully!');
+}
+
+// buy now 
+function buyNow(){
+
+}
+
+
+</script>
+<script type="module">
+
+    import topSec from "./component/topSection.js"
+    let topContainer = document.getElementById("top");
+    topContainer.innerHTML = topSec();
+
+
+    import dropdown from "./component/dropdown.js"
+    let dropdownContainer = document.getElementById("drop-down");
+    dropdownContainer.innerHTML = dropdown();
+
+    import newslater from "./component/newslater.js"
+    let newsContainer = document.getElementById("newsletter");
+    newsContainer.innerHTML = newslater();
+
+    import footer1 from "./component/footer.js"
+    let footerContainer = document.getElementById("mainFooter");
+    footerContainer.innerHTML = footer1();
+</script>

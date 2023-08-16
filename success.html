@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Successful</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .success-message {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            text-align: center;
+        }
+
+        .success-message h1 {
+            color: #4CAF50;  /* Green color for success */
+            margin-top: 0;
+        }
+
+        .success-message p {
+            margin: 20px 0;
+        }
+
+        .success-message a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .success-message a:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="success-message">
+        <h1>Payment Successful!</h1>
+        <p>Your order has been successfully placed. Congratulations!</p>
+        <a href="index.html">Return to Home</a>
+    </div>
+</body>
+</html>
+<script src="Script/slider.js"></script>
+<script src="Script/responsive.js"></script>
+<script src="Script/search.js"></script>
+<script src="Script/cart.js"></script>
+<script src="Script/index.js"></script>
+<script src="Script/payment.js"></script>
+<script src="Script/checkout.js"></script>
+
+<script>
+    // Function to get URL parameters
+
+    function clearCartOnSuccess() {
+        localStorage.removeItem("cartItems");
+        // If you have any other cart-related items in localStorage, clear them here
+    }
+    function getURLParameter(name) {
+        return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || null;
+    }
+
+    // Get the payment details from the URL
+    const paymentID = getURLParameter('payment_id');
+    const orderID = getURLParameter('order_id');
+    const signature = getURLParameter('signature');
+
+    // Display the payment details on the page
+    window.onload = function() {
+        clearCartOnSuccess();
+        const messageDiv = document.querySelector('.success-message');
+        messageDiv.innerHTML += `
+            <p>Payment ID: ${paymentID}</p>
+            <p>Order ID: ${orderID}</p>
+            <p>Signature: ${signature}</p>
+        `;
+    }
+</script>
+
+<script type="module">
+
+    import topSec from "./component/topSection.js"
+    let topContainer = document.getElementById("top");
+    topContainer.innerHTML = topSec();
+
+
+    import dropdown from "./component/dropdown.js"
+    let dropdownContainer = document.getElementById("drop-down");
+    dropdownContainer.innerHTML = dropdown();
+
+    import newslater from "./component/newslater.js"
+    let newsContainer = document.getElementById("newsletter");
+    newsContainer.innerHTML = newslater();
+
+    import footer1 from "./component/footer.js"
+    let footerContainer = document.getElementById("mainFooter");
+    footerContainer.innerHTML = footer1();
+</script>

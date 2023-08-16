@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="styles/slider.css">
+    <link rel="stylesheet" href="styles/shop.css">
+    <link rel="stylesheet" href="styles/cart.css">
+    <link rel="stylesheet" href="styles/checkout.css">
+    <link rel="stylesheet" href="styles/payment.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .banner {
+            position: relative;
+            text-align: center;
+
+            padding: 20px 0;
+
+
+            background-image: url("img/about/banner.png");
+            background-size: cover;
+            background-position: center;
+            height: 30vh;
+        }
+
+        .banner h2 {
+            font-weight: 600;
+            font-size: 80px;
+            color: white;
+            margin-top: 50px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .banner-text {
+            position: relative;
+            z-index: 2;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+            padding: 80px;
+        }
+
+        .left-box {
+            flex-basis: 35%;
+            /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; */
+            margin-left: 70px;
+        }
+
+
+        .left-box h3{
+            font-size: 25px;
+            color: brown;
+            font-weight: 900;
+            margin-left: 40px;
+            margin-top: 30px;
+        
+        }
+        address{
+            font-size: 20px;
+            font-weight: 400;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin-left: 40px;
+
+        }
+        .right-box {
+            flex-basis: 45%;
+            /* Adjusted the right box width */
+            height: 400px;
+            /* This is to make sure the Google Map embed will take the full height of the box */
+            overflow: hidden;
+            /* This will cut off any overflowed content */
+            border: 1px solid #ccc;
+            /* Added a border to clearly define the box boundaries */
+            margin-left: 2%;
+            /* Some margin to space out from the left box */
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        }
+
+        .right-box h2 {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: brown;
+        }
+
+        .right-box p {
+            font-size: 20px;
+            line-height: 26px;
+        }
+
+        .left-box img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+        }
+
+        /* ... (your previous CSS content) ... */
+
+        form {
+            margin-top: 20px;
+            margin-left: 40px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            width: 70%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        button[type="submit"] {
+            background-color: brown;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #8a4b2a;
+        }
+    </style>
+
+</head>
+
+<body>
+    <section id="top">
+
+    </section>
+
+    <section id="header">
+        <a href="#"><img src="/image/final.png" width="160px" height="90px" class="logo" alt="" /></a>
+        <div class="form">
+            <input type="text" placeholder="Search any items" />
+            <button class="normal">Search</button>
+        </div>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li class="dropdown-1">
+                    <a href="#" class="dropbtn-1">Account</a>
+                    <div class="dropdown-content-1">
+                        <span id="displayName"></span>
+                        <a href="login.html" id="loginLink">Login</a>
+                        <a href="signup.html" id="signupLink">SignUp</a>
+                        <a href="#" id="signoutLink" style="display: none;">SignOut</a>
+                    </div>
+                </li>
+            
+                <li><a href="about.html">About</a></li>
+                <li><a class="active" href="contact.html">Contact</a></li>
+                <li id="lg-bag">
+                    <a href="cart.html"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i></a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="drop-down">
+
+    </section>
+    <div class="banner">
+        <h2>#Contact Us</h2>
+    </div>
+    <div class="content">
+        <!-- Left Box for the Address and Contact Form -->
+        <div class="left-box">
+            <h3>Office Address</h3>
+            <address>
+                Electon Private Limited <br>
+                Gurugram, 203455 <br>
+                India <br>
+                Phone: (123) 456-7890 <br>
+                Email: electon@google.com <br>
+            </address>
+
+            <!-- Contact Form -->
+            <form id="contact-form" action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact-number">Contact Number:</label>
+                    <input type="tel" id="contact-number" name="contact-number" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Submit Form</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Right Box for Google Maps Embed -->
+        <div class="right-box">
+            <iframe src="https://www.google.com/maps/embed?pb=YOUR_GOOGLE_MAP_EMBED_CODE" width="100%" height="400"
+                style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+
+
+    <section id="newsletter" class="section-p1 section-m1">
+
+    </section>
+    <footer class="section-p1" id="mainFooter">
+
+    </footer>
+
+</html>
+<script src="Script/slider.js"></script>
+<script src="Script/responsive.js"></script>
+<script src="Script/search.js"></script>
+<script src="Script/cart.js"></script>
+<script src="Script/index.js"></script>
+<script src="Script/payment.js"></script>
+<script src="Script/checkout.js"></script>
+<script type="module">
+
+    import topSec from "./component/topSection.js"
+    let topContainer = document.getElementById("top");
+    topContainer.innerHTML = topSec();
+
+
+    import dropdown from "./component/dropdown.js"
+    let dropdownContainer = document.getElementById("drop-down");
+    dropdownContainer.innerHTML = dropdown();
+
+    import newslater from "./component/newslater.js"
+    let newsContainer = document.getElementById("newsletter");
+    newsContainer.innerHTML = newslater();
+
+    import footer1 from "./component/footer.js"
+    let footerContainer = document.getElementById("mainFooter");
+    footerContainer.innerHTML = footer1();
+</script>

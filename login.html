@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="/styles/slider.css">
+    <link rel="stylesheet" href="/styles/shop.css">
+    <link rel="stylesheet" href="/styles/cart.css">
+    <link rel="stylesheet" href="styles/checkout.css">
+    <link rel="stylesheet" href="styles/payment.css">
+    <link rel="stylesheet" href="styles/login.css">
+   
+
+</head>
+
+<body>
+    <section id="top">
+        
+    </section>
+
+    <section id="header">
+      <a href="#"><img src="/image/final.png"  width="160px" height="90px" class="logo" alt="" /></a>
+      <div class="form">
+          <input type="text" placeholder="Search any items" />
+          <button class="normal">Search</button>
+      </div>
+      <div>
+          <ul id="navbar">
+              <li><a class="active" href="index.html">Home</a></li>
+              <li><a href="shop.html">Shop</a></li>
+              <li class="dropdown-1">
+                  <a href="#" class="dropbtn-1">Account</a>
+                  <div class="dropdown-content-1">
+                    <a href="login.html" id="loginIcon">Login</a>
+
+                      <a href="signup.html">SignUp</a>
+                  </div>
+              </li>
+             
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li id="lg-bag">
+                  <a href="cart.html"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i></a>
+                  <span id="cart-count">0</span> 
+              </li>
+          </ul>
+      </div>
+  </section>
+  
+    <section id="drop-down">
+        
+
+    </section>
+
+    <section id="login">
+      <div class="container">
+        <form id="register_form">
+          <h2>Login</h2>
+          <div class="line"></div>
+            <div id="error-message" class="error-message"></div> <!-- Error message placeholder -->
+            <div>
+                <label>Email</label>
+                <input required type="email" id="login_email" placeholder="Enter Email id" />
+                <label>Password</label>
+                <input required type="password" id="login_password" placeholder="Enter password" />
+                <button type="button" id="login_btn">Login</button>
+            </div>
+            <div style="margin-top: 10px;">
+                <button id="logout-btn" style="display: none">logout</button>
+            </div>
+            <div class="signup-link">
+                <a href="./signUp.html">Create New Account</a>
+            </div>
+        </form>
+    </div>
+    </section>
+    
+
+<section id="newsletter" class="section-p1 section-m1">
+
+</section>
+<footer class="section-p1" id="mainFooter">
+   
+</footer>
+
+</html>
+<script src="Script/slider.js"></script>
+<script src="Script/responsive.js"></script>
+<script src="Script/search.js"></script>
+<script src="Script/cart.js"></script>
+<script src="Script/index.js"></script>
+<script src="Script/payment.js"></script>
+<script src="Script/checkout.js"></script>
+<script type="module">
+
+    import topSec from "./component/topSection.js"
+    let topContainer = document.getElementById("top");
+    topContainer.innerHTML = topSec();
+
+
+    import dropdown from "./component/dropdown.js"
+    let dropdownContainer = document.getElementById("drop-down");
+    dropdownContainer.innerHTML = dropdown();
+
+    import newslater from "./component/newslater.js"
+    let newsContainer = document.getElementById("newsletter");
+    newsContainer.innerHTML = newslater();
+
+    import footer1 from "./component/footer.js"
+    let footerContainer = document.getElementById("mainFooter");
+    footerContainer.innerHTML = footer1();
+</script>
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics.js";
+
+  import {
+    getAuth,
+    signInWithEmailAndPassword,
+    signOut,
+  } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
+
+  import {
+    getDatabase,
+    ref,
+    onValue,
+  } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js";
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyBhmOoAIMsZyc10v6ljfC8Z-1qzNX0qXFw",
+    authDomain: "myproject-58656.firebaseapp.com",
+    projectId: "myproject-58656",
+    storageBucket: "myproject-58656.appspot.com",
+    messagingSenderId: "332827951988",
+    appId: "1:332827951988:web:a047ef463eb1afce8ee221",
+    measurementId: "G-FP2C2ZGBYC",
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  const db = getDatabase();
+
+  document.getElementById("login_btn").addEventListener("click", function () {
+    let email = document.getElementById("login_email").value;
+    let password = document.getElementById("login_password").value;
+    const errorElement = document.getElementById("error-message"); // Get the error message element
+
+    const auth = getAuth();
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        const user = userCredential.user;
+        const starCountRef = ref(db, "users/" + user.uid);
+        onValue(starCountRef, (snapshot) => {
+          const data = snapshot.val();
+          console.log(data);
+        });
+
+        console.log(user);
+        alert("Login Successfully");
+        document.getElementById("logout-btn").style.display = "block";
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        
+        if (errorCode === "auth/user-not-found") {
+            errorElement.textContent = "User not registered.";
+        } else if (errorCode === "auth/wrong-password") {
+            errorElement.textContent = "Incorrect email or password.";
+        } else {
+            errorElement.textContent = errorMessage;
+        }
+        
+        errorElement.style.display = "block"; // Show the error message
+        console.log(error.message);
+      });
+  });
+
+  document.getElementById("logout-btn").addEventListener("click", function () {
+    const auth = getAuth();
+    signOut(auth)
+      .then(() => {
+        alert("logout Successfully");
+        location.href = "./signup.html";
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+  });
+
+</script>
+

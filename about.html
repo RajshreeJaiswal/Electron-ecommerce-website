@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="styles/slider.css">
+    <link rel="stylesheet" href="styles/shop.css">
+    <link rel="stylesheet" href="styles/cart.css">
+    <link rel="stylesheet" href="styles/checkout.css">
+    <link rel="stylesheet" href="styles/payment.css">
+    <style>
+               body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .banner {
+            position: relative;
+            text-align: center;
+           
+            padding: 20px 0;
+            
+           
+            background-image: url("img/about/banner.png");
+            background-size: cover;
+            background-position: center;
+            height: 30vh;
+        }
+
+        .banner h2{
+            font-weight: 600;
+            font-size: 80px;
+            color: white;
+            margin-top: 50px;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .banner-text {
+            position: relative;
+            z-index: 2;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+            padding: 40px;
+        }
+
+        .left-box {
+            flex-basis: 40%;
+        }
+
+        .right-box {
+            flex-basis: 55%;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .right-box h2{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: brown;
+        }
+        .right-box p{
+            font-size: 20px;
+            line-height: 26px;
+        }
+
+        .left-box img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        
+        }
+    </style>
+
+</head>
+
+<body>
+    <section id="top">
+        
+    </section>
+
+    <section id="header">
+        <a href="#"><img src="/image/final.png" width="160px" height="90px" class="logo" alt="" /></a>
+        <div class="form">
+            <input type="text" placeholder="Search any items" />
+            <button class="normal">Search</button>
+        </div>
+        <div>
+            <ul id="navbar">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li class="dropdown-1">
+                    <a href="#" class="dropbtn-1">Account</a>
+                    <div class="dropdown-content-1">
+                        <span id="displayName"></span>
+                        <a href="login.html" id="loginLink">Login</a>
+                        <a href="signup.html" id="signupLink">SignUp</a>
+                        <a href="#" id="signoutLink" style="display: none;">SignOut</a>
+                    </div>
+                </li>
+            
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li id="lg-bag">
+                    <a href="cart.html"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i></a>
+                    <span id="cart-count">0</span> 
+                </li>
+            </ul>
+        </div>
+    </section>
+    
+    <section id="drop-down">
+    
+    </section>
+    <div class="banner">
+       <h2> #Know About Us</h2>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+        <!-- Image Box -->
+        <div class="left-box">
+            <img src="img/about/a6.jpg" alt="About Us Image">
+        </div>
+
+        <!-- Text Box -->
+        <div class="right-box">
+            <h2>About Electon</h2>
+            <p>
+                Welcome to Electon, where innovation meets shopping convenience. Founded in 2023, we've rapidly grown into one of the premier online marketplaces, committed to delivering a seamless shopping experience to our customers worldwide. Our mission is to redefine e-commerce by merging the worlds of cutting-edge technology, diverse product offerings, and customer-centric service.
+
+                Driven by a passion for excellence and a vision for a world where shopping is synonymous with simplicity, we have carefully curated a range of top-quality products across various categories. From the latest in fashion to the newest tech gadgets, home essentials to beauty products, our vast selection ensures there's something for everyone.
+                
+                Our team comprises dedicated professionals, e-commerce veterans, and young innovators, all working cohesively to streamline the online shopping journey. With a commitment to sustainability, we also focus on responsible sourcing, ensuring our products not only cater to your needs but also contribute to a better tomorrow.
+                
+                Safety and trust lie at the core of our operations. With advanced encryption and stringent privacy measures, we guarantee secure transactions and safeguard your personal data. Moreover, our customer support team is always on standby, ensuring that any query, feedback, or concern is addressed promptly.
+                
+                At Electon, we believe that every shopping experience should be memorable. Whether you're browsing our site or unwrapping a package from us, we aim to bring a smile to your face. Join us on this exciting journey, and let's redefine the future of e-commerce together!
+            </p>
+        </div>
+    </div>
+
+<section id="newsletter" class="section-p1 section-m1">
+
+</section>
+<footer class="section-p1" id="mainFooter">
+   
+</footer>
+
+</html>
+<script src="Script/slider.js"></script>
+<script src="Script/responsive.js"></script>
+<script src="Script/search.js"></script>
+<script src="Script/cart.js"></script>
+<script src="Script/index.js"></script>
+<script src="Script/payment.js"></script>
+<script src="Script/checkout.js"></script>
+<script type="module">
+
+    import topSec from "./component/topSection.js"
+    let topContainer = document.getElementById("top");
+    topContainer.innerHTML = topSec();
+
+
+    import dropdown from "./component/dropdown.js"
+    let dropdownContainer = document.getElementById("drop-down");
+    dropdownContainer.innerHTML = dropdown();
+
+    import newslater from "./component/newslater.js"
+    let newsContainer = document.getElementById("newsletter");
+    newsContainer.innerHTML = newslater();
+
+    import footer1 from "./component/footer.js"
+    let footerContainer = document.getElementById("mainFooter");
+    footerContainer.innerHTML = footer1();
+</script>
+
