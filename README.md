@@ -42,6 +42,7 @@ This is a E-commerce website that sells eletronic gadgets.This project aims to p
 
 
 ## Deployment Link
+https://64dcee8acb8ee428e7b63db9--charming-bienenstitch-d89c77.netlify.app/
 
 
 ## Installation
