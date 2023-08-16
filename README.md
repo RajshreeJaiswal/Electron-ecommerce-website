@@ -42,8 +42,14 @@ This is a E-commerce website that sells eletronic gadgets.This project aims to p
 
 
 ## Deployment Link
-https://64dcee8acb8ee428e7b63db9--charming-bienenstitch-d89c77.netlify.app/
+   -[https://64dcee8acb8ee428e7b63db9--charming-bienenstitch-d89c77.netlify.app/]
 
+
+##Contributors
+1. Rajshree Jaiswal
+2. Vivek Verma
+3. Devender Shakya
+4. Thirumalai E
 
 ## Installation
 ```bash
