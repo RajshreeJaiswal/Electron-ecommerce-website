@@ -184,6 +184,8 @@
 </html>
 
 <script>
+
+  //product objects start 
   const products = [
   {
     name: 'Sponsored Ad - Qubo Smart 360',
@@ -276,10 +278,11 @@
 ];
 
 
+
     // Display products on the page
     function displayProducts(products) {
-  const productsSection = document.getElementById('products');
-  productsSection.innerHTML = '';
+const productsSection = document.getElementById('products');
+productsSection.innerHTML = '';
 
   products.forEach(product => {
     var div = document.createElement('div');
@@ -304,6 +307,7 @@
     div.appendChild(h3);
     div.appendChild(add);
     div.appendChild(buy);
+     
 
 
 
@@ -353,12 +357,26 @@
     displayProducts(products);
 
 
-function add(){
-alert("someone clicked me")
-}
+    products.forEach((product, index) => {
+  // ... your existing product rendering code ...
+
+  // Create the "Add to Cart" button
+  const addToCartButton = document.createElement('button');
+  addToCartButton.innerText = 'Add to Cart';
+  addToCartButton.setAttribute('class', 'btn-add-to-cart');
+  addToCartButton.setAttribute('data-product-index', index);
+
+  div.appendChild(addToCartButton);
+});
+
+
+
+
+
+
 
 function buy(){
-  alert("someone clicked me")
+  alert("someone click");
 }
   
   </script>

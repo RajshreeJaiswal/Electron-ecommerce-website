@@ -5,17 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>prod Details Dslr</title>
     <link rel="stylesheet" href="./product.css">
-    <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-    <link rel="stylesheet" href="/styles/slider.css">
-    <link rel="stylesheet" href="/styles/shop.css">
-    <link rel="stylesheet" href="/styles/cart.css">
-    <link rel="stylesheet" href="styles/checkout.css">
-    <link rel="stylesheet" href="styles/payment.css">
+    <style>
+        
+        .main{
+          justify-content: space-evenly;
+          display: flex;
+          padding: 10px;
+          flex-wrap: wrap;
+          justify-content: center;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        .mainImg{
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            width: 600px;
+            border-radius: 10px;
+            background-color: #ccc;
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+        .details{
+            flex-grow: 2;
+        }
+        .details h2{
+            font-size: 20px;
+        }
+        .details h3{
+            font-size: 20px;
+        }
+        
+        
+        
+            </style>
 </head>
 
 <body>
-    <section id="top">
+    <section id="top"  style="height: 10px;">
         
     </section>
 
@@ -65,17 +90,17 @@
         </div>
 
         <div class="mainImg">
-            <img src="https://m.media-amazon.com/images/I/81Tr3Jo8DvL._SX679_.jpg" alt="images">
+            <img src="https://m.media-amazon.com/images/I/81Tr3Jo8DvL._SX679_.jpg" alt="images" id="mainImg">
         </div>
        
 
          <div class="details">
-            <h2> ⭐ 4.9 | 2300 reviews ✅</h2> 
+            <h3> ⭐ 4.9 | 2300 reviews ✅</h3> 
 
-            <h3>Sony Alpha ILCE-7M4K Full-Frame Hybrid Camera 33MP Interchangeable-Lens Mirrorless Camera with 28-70mm Digital Zoom Lens (4K 60P Video Recording, Real-Time Eye AF for Humans, Birds, Animals) - Black</h2>
+            <h2>Sony Alpha ILCE-7M4K Full-Frame Hybrid Camera 33MP Interchangeable-Lens Mirrorless Camera with 28-70mm Digital Zoom Lens (4K 60P Video Recording, Real-Time Eye AF for Humans, Birds, Animals) - Black</h2>
             <p>Earbuds with 13mm drivers, BEAST™ Mode for Gamers, ENx™ Technology</p>
       
-           <h2>&#8377; 2,30,989     <span  style="color: red;  text-decoration: line-through; font-size: medium;">&#8377; 2,60,100</span> </h2>
+           <h2>&#8377;<span id="price">230989  </span>    <span  style="color: red;  text-decoration: line-through; font-size: medium;">&#8377; 2,60,100</span> </h2>
 
         
               
@@ -369,20 +394,28 @@ function showdiliverTime(){
 
 
  // incomplete functions|
+ const cart = [];
     //  add to cart started here 
-    const cart = [];
-
-function addToCart() {
-    const productName = document.querySelector(".details h3").textContent;
-    const productPrice = document.querySelector(".details h2").textContent;
-
+    function addToCart() {
+    const productImage=document.querySelector('#mainImg').src;
+    const productName = document.querySelector(".details h2").textContent;
+    const productPrice = document.querySelector("#price").textContent;
+    const quantity=document.querySelector('#quantityInput').value;
     const product = {
+        image :productImage,
         name: productName,
-        price: productPrice
+        price: productPrice,
+        quantity: quantity,
     };
+    console.log(product);
 
     cart.push(product);
-    console.log("Added to cart:", cart);
+
+    // Store cart items in local storage
+    localStorage.setItem('cartItems', JSON.stringify(cart));
+
+    // Show success alert
+    alert('Item added to cart successfully!');
 }
 // buy now 
 function buyNow(){
@@ -390,6 +423,7 @@ function buyNow(){
 }
 
 </script>
+
 <script type="module">
 
     import topSec from "./component/topSection.js"

@@ -67,7 +67,7 @@
         </div>
 
         <div class="mainImg"  style="background-color: #ccc;">
-            <img src="https://m.media-amazon.com/images/I/61abLrCfF7L._SX679_.jpg" alt="images">
+            <img src="https://m.media-amazon.com/images/I/61abLrCfF7L._SX679_.jpg" alt="images" id="mainImg">
         </div>
        
 
@@ -77,7 +77,7 @@
             <h3>OnePlus Nord CE 3 5G (Grey Shimmer, 8GB RAM, 128GB Storage)</h2>
             <p>Earbuds with 13mm drivers, BEAST™ Mode for Gamers, ENx™ Technology</p>
       
-           <h2>&#8377; 1499.oo       <span  style="color: red;  text-decoration: line-through; font-size: medium;">&#8377; 2900.00 </span> </h2>
+           <h2>&#8377;<span id="price"> 21999.00    </span>   <span  style="color: red;  text-decoration: line-through; font-size: medium;">&#8377; 29000.00 </span> </h2>
 
            
       
@@ -374,21 +374,30 @@ function showdiliverTime(){
 
 
      // incomplete functions|
-    //  add to cart started here 
-const cart = [];
-
-function addToCart() {
+     const cart = [];
+     function addToCart() {
+    const productImage=document.querySelector('#mainImg').src;
     const productName = document.querySelector(".details h3").textContent;
-    const productPrice = document.querySelector(".details h2").textContent;
+    const productPrice = document.querySelector("#price").textContent;
 
     const product = {
+        image :productImage,
         name: productName,
-        price: productPrice
+        price: productPrice,
+        quantity: quantity,
+         
     };
+    console.log(product);
 
     cart.push(product);
-    console.log("Added to cart:", cart);
+
+    // Store cart items in local storage
+    localStorage.setItem('cartItems', JSON.stringify(cart));
+
+    // Show success alert
+    alert('Item added to cart successfully!');
 }
+
 // buy now 
 function buyNow(){
 

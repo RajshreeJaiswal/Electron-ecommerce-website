@@ -12,7 +12,11 @@
     <link rel="stylesheet" href="/styles/cart.css">
     <link rel="stylesheet" href="styles/checkout.css">
     <link rel="stylesheet" href="styles/payment.css">
+    <style>
+        
+    </style>
 </head>
+
 
 <body>
 
@@ -66,7 +70,7 @@
         </div>
 
         <div class="mainImg">
-            <img src="https://m.media-amazon.com/images/I/71BCum1YVzL._SX679_.jpg" alt="images">
+            <img src="https://m.media-amazon.com/images/I/71BCum1YVzL._SX679_.jpg" alt="images" id="mainImg">
         </div>
        
 
@@ -76,7 +80,7 @@
             <h3>MSI GF63 Thin, Intel Core i5-11260H, 40CM FHD 144Hz Gaming Laptop (8GB/512GB NVMe SSD/Windows 11 Home/Nvidia GeForce GTX 1650, GDDR6 4GB/Black/1.8Kg), 11SC-1477IN</h3>
             <p>Earbuds with 13mm drivers, BEAST™ Mode for Gamers, ENx™ Technology</p>
       
-           <h2>&#8377; 1499.oo       <span  style="color: red;  text-decoration: line-through; font-size: medium;">&#8377; 2900.00 </span> </h2>
+           <h2>&#8377;<span id="price">  53990.oo</span>       <span  style="color: red;  text-decoration: line-through; font-size: medium;">&#8377; 59999.00 </span> </h2>
 
         
               
@@ -380,20 +384,27 @@ function showdiliverTime(){
 
 
      // incomplete functions|
-    //  add to cart started here 
-const cart = [];
-
-function addToCart() {
+     const cart = [];
+     function addToCart() {
+    const productImage=document.querySelector('#mainImg').src;
     const productName = document.querySelector(".details h3").textContent;
-    const productPrice = document.querySelector(".details h2").textContent;
+    const productPrice = document.querySelector("#price").textContent;
 
     const product = {
+        image :productImage,
         name: productName,
-        price: productPrice
+        price: productPrice,
+        quantity: quantity,
     };
+    console.log(product);
 
     cart.push(product);
-    console.log("Added to cart:", cart);
+
+    // Store cart items in local storage
+    localStorage.setItem('cartItems', JSON.stringify(cart));
+
+    // Show success alert
+    alert('Item added to cart successfully!');
 }
 // buy now 
 function buyNow(){

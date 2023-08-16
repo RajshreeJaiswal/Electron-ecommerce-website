@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>prod Details gaming controler</title>
     <link rel="stylesheet" href="./product.css">
-    <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-    <link rel="stylesheet" href="/styles/slider.css">
-    <link rel="stylesheet" href="/styles/shop.css">
-    <link rel="stylesheet" href="/styles/cart.css">
-    <link rel="stylesheet" href="styles/checkout.css">
-    <link rel="stylesheet" href="styles/payment.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/checkout.css">
+    <link rel="stylesheet" href="./styles/shop.css">
 </head>
 <body>
 
-    <section id="top">
+    <section id="top" style="height: 10px;">
         
-    </section>
+    </section >
 
     <section id="header">
         <a href="#"><img src="/image/final.png" width="160px" height="90px" class="logo" alt="" /></a>
@@ -66,7 +64,7 @@
 
         
         <div class="mainImg">
-            <img src="https://m.media-amazon.com/images/I/51Prg4Smx-L._SX679_.jpg" alt="images">
+     <img src="https://m.media-amazon.com/images/I/51Prg4Smx-L._SX679_.jpg" alt="" id="mainImg">
         </div>
        
 
@@ -76,7 +74,7 @@
             <h3>Amkette EvoFox Elite Ops Wireless Gamepad for Android TV | Google TV | 8+ Hours of Play Time | Zero Lag Connectivity Upto 12 Feets | USB Extender for TV Included | - Dusk Grey</h2>
             <p>Earbuds with 13mm drivers, BEAST™ Mode for Gamers, ENx™ Technology</p>
       
-           <h2>&#8377; 1499.oo <span  style="color: red;  text-decoration: line-through; font-size: medium;">&#8377; 2900.00 </span> </h2>
+           <h2>&#8377;<span id="price"> 1499.oo</span> <span  style="color: red;  text-decoration: line-through; font-size: medium;">&#8377; 2900.00 </span> </h2>
 
         
               
@@ -94,7 +92,7 @@
             
 <form>
 <div style="display: flex; ">
-<input type="text" placeholder="Enter pin for exact delivery date"  id="code" style="border-top-left-radius: 10px; border-bottom-left-radius: 10px; width: 320px; border: 1px solid rgb(46, 45, 45);">
+<input type="text" placeholder="Enter pin for exact delivery date"  id="code" style="border-top-left-radius: 10px; border-bottom-left-radius: 10px; width: 320px; border: 1px solid rgb(46, 45, 45); padding: 5px;">
 <input type="image" src="https://www.pngitem.com/pimgs/m/170-1701988_transparent-delivery-png-free-shipping-logo-png-png.png" alt="Submit" width="70px" height="48" onclick="showdiliverTime()" style="border-top-right-radius: 10px; border-bottom-right-radius: 10px; border: 1px solid rgb(46, 45, 45);">
 </div>
 </form>
@@ -369,27 +367,36 @@ function showdiliverTime(){
 
 
     // incomplete functions|
-    //  add to cart started here 
+    //  add to cart started her<!-- ... (your HTML code above) .
 const cart = [];
 
 function addToCart() {
+    const productImage=document.querySelector('#mainImg').src;
     const productName = document.querySelector(".details h3").textContent;
-    const productPrice = document.querySelector(".details h2").textContent;
+    const productPrice = document.querySelector("#price").textContent;
 
     const product = {
+        image :productImage,
         name: productName,
-        price: productPrice
+        price: productPrice,
+        quantity: quantity,
     };
+    console.log(product);
 
     cart.push(product);
-    console.log("Added to cart:", cart);
-}
-// buy now 
-function buyNow(){
 
+    // Store cart items in local storage
+    localStorage.setItem('cartItems', JSON.stringify(cart));
+
+    // Show success alert
+    alert('Item added to cart successfully!');
 }
 
+// buy now
+function buyNow() {
+}
 </script>
+
 <script type="module">
 
     import topSec from "./component/topSection.js"
@@ -409,3 +416,5 @@ function buyNow(){
     let footerContainer = document.getElementById("mainFooter");
     footerContainer.innerHTML = footer1();
 </script>
+<script src="./Script/cart.js"></script>
+<script src="./Script/index.js"></script>
