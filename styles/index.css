@@ -173,7 +173,7 @@ body {
 #navbar li a{
     text-decoration: none;
     font-size: 25px;
-    font-weight: 700;
+    font-weight: 200;
     color:white;
     transition: 0.3s ease;
 }
