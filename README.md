@@ -5,6 +5,7 @@
 - [Key Features](#key-features)
 - [Technology Stack Used](#technology-stack-used)
 - [Deployment Link](#deployment-link)
+- [Contributors](#contributors)
 - [Installation](#installation)
 
 
@@ -45,7 +46,7 @@ This is a E-commerce website that sells eletronic gadgets.This project aims to p
    -[https://64dcee8acb8ee428e7b63db9--charming-bienenstitch-d89c77.netlify.app/]
 
 
-##Contributors
+## Contributors
 1. Rajshree Jaiswal
 2. Vivek Verma
 3. Devender Shakya
